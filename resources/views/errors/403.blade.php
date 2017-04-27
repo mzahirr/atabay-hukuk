@@ -17,14 +17,14 @@
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
           type="text/css"/>
-    <link href="/storage/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="/storage/assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css"/>
-    <link href="/storage/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css"/>
+    <link href="/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN PAGE LEVEL STYLES -->
-    <link href="/storage/assets/pages/css/error.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/pages/css/error.min.css" rel="stylesheet" type="text/css"/>
     <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
     <!-- END THEME LAYOUT STYLES -->
@@ -34,18 +34,18 @@
 
 <body class=" page-404-3">
 <div class="page-inner">
-    <img src="/storage/assets/pages/media/pages/earth.jpg" class="img-responsive" alt=""></div>
+    <img src="/assets/pages/media/pages/earth.jpg" class="img-responsive" alt=""></div>
 <div class="container error-404">
     <h1>{{$exception->getStatusCode()}}</h1>
     <h2>Houston, we have a problem.</h2>
     <p> {{$exception->getMessage()}} </p>
     <p>
-        <a href="{{route('backend.dashboard')}}" class="btn red btn-outline"> Return home </a>
+        <a href="{{url('/')}}" class="btn red btn-outline"> Return home </a>
         <br></p>
 </div>
 <!--[if lt IE 9]>
-<script src="/storage/assets/global/plugins/respond.min.js"></script>
-<script src="/storage/assets/global/plugins/excanvas.min.js"></script>
+<script src="/assets/global/plugins/respond.min.js"></script>
+<script src="/assets/global/plugins/excanvas.min.js"></script>
 <![endif]-->
 
 </body>

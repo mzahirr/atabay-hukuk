@@ -5,35 +5,30 @@
             <div class="portlet-title">
                 <div class="caption font-green">
                     <i class="icon-pin font-green"></i>
-                    <span class="caption-subject bold"> User Edit</span>
+                    <span class="caption-subject bold"> Kullanıcı düzenle</span>
                 </div>
             </div>
             <div class="portlet-body form">
-                <form role="form" action="{{route('user.update',$user->id)}}" method="POST">
+                <form role="form" action="{{route('users.update',$user->id)}}" method="POST">
                     {{csrf_field()}}
                     {{method_field('PUT')}}
                     <div class="form-body">
                         <div class="form-group form-md-line-input form-md-floating-label has-success">
                             <input type="text" name="name" value="{{$user->name}}" class="form-control" id="name">
-                            <label for="name">Name</label>
-                        </div>
-                        <div class="form-group form-md-line-input form-md-floating-label has-success">
-                            <input type="text" name="username" value="{{$user->username}}" class="form-control"
-                                   id="username">
-                            <label for="username">Username</label>
+                            <label for="name">Ad soyad</label>
                         </div>
                         <div class="form-group form-md-line-input form-md-floating-label has-success">
                             <input type="text" name="email" value="{{$user->email}}" class="form-control" id="email">
-                            <label for="email">Email</label>
+                            <label for="email">E-posta adresi</label>
                         </div>
                         <div class="form-group form-md-line-input form-md-floating-label has-success">
                             <input type="password" name="password" class="form-control"
                                    id="password">
-                            <label for="password">Password</label>
+                            <label for="password">Şifre</label>
                         </div>
                         @if($roles->count())
                             <div class="form-group">
-                                <label>Roles</label>
+                                <label>Roller</label>
                                 <div class="input-group">
                                     <div class="icheck">
                                         @foreach($roles as $role)
@@ -53,7 +48,7 @@
                         @endif
                         @if($permissions->count())
                             <div class="form-group">
-                                <label>Permissions</label>
+                                <label>İzinler</label>
                                 <div class="input-group">
                                     <div class="icheck">
                                         @foreach($permissions as $permission)
@@ -73,8 +68,8 @@
                         @endif
                     </div>
                     <div class="form-actions noborder">
-                        <button type="submit" class="btn green">Submit</button>
-                        <button type="reset" class="btn default">Cancel</button>
+                        <button type="submit" class="btn green">Kaydet</button>
+                        <button type="reset" class="btn default">İptal</button>
                     </div>
                 </form>
             </div>

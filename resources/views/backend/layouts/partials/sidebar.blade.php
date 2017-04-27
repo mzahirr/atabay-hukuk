@@ -29,58 +29,58 @@
 
             @can(env('SYSTEM_MANAGEMENT'))
                 <li class="heading">
-                    <h3 class="uppercase">System Management</h3>
+                    <h3 class="uppercase">Sistem Yönetimi</h3>
                 </li>
-                <li class="nav-item @if(request()->is('permission/*') || request()->is('permission')) active open @endif">
+                <li class="nav-item @if(request()->is('permissions/*') || request()->is('permissions')) active open @endif">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="icon-layers"></i>
-                        <span class="title">Permissions</span>
-                        @if(request()->is('permission/*') || request()->is('permission'))
+                        <span class="title">İzinler</span>
+                        @if(request()->is('permissions/*') || request()->is('permissions'))
                             <span class="selected"></span>
                         @endif
                         <span class="arrow open"></span>
                     </a>
                     <ul class="sub-menu">
-                        <li class="nav-item @if(request()->is('permission/create')) active open @endif">
-                            <a href="{{route('permission.create')}}" class="nav-link ">
-                                <span class="title">Create</span>
-                                @if(request()->is('permission/create'))
+                        <li class="nav-item @if(request()->is('permissions/create')) active open @endif">
+                            <a href="{{route('permissions.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('permissions/create'))
                                     <span class="selected"></span>
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item @if(request()->is('permission')) active open @endif">
-                            <a href="{{route('permission.index')}}" class="nav-link ">
-                                <span class="title">List</span>
-                                @if(request()->is('permission'))
+                        <li class="nav-item @if(request()->is('permissions')) active open @endif">
+                            <a href="{{route('permissions.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('permissions'))
                                     <span class="selected"></span>
                                 @endif
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if(request()->is('role/*') || request()->is('role')) active open @endif">
+                <li class="nav-item @if(request()->is('roles/*') || request()->is('roles')) active open @endif">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="icon-layers"></i>
-                        <span class="title">Roles</span>
-                        @if(request()->is('role/*') || request()->is('role'))
+                        <span class="title">Roller</span>
+                        @if(request()->is('roles/*') || request()->is('roles'))
                             <span class="selected"></span>
                         @endif
                         <span class="arrow open"></span>
                     </a>
                     <ul class="sub-menu">
-                        <li class="nav-item @if(request()->is('role/create')) active open @endif">
-                            <a href="{{route('role.create')}}" class="nav-link ">
-                                <span class="title">Create</span>
-                                @if(request()->is('role/create'))
+                        <li class="nav-item @if(request()->is('roles/create')) active open @endif">
+                            <a href="{{route('roles.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('roles/create'))
                                     <span class="selected"></span>
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item @if(request()->is('role')) active open @endif">
-                            <a href="{{route('role.index')}}" class="nav-link ">
-                                <span class="title">List</span>
-                                @if(request()->is('role'))
+                        <li class="nav-item @if(request()->is('roles')) active open @endif">
+                            <a href="{{route('roles.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('roles'))
                                     <span class="selected"></span>
                                 @endif
                             </a>
@@ -91,30 +91,30 @@
 
             @can(env('USER_MANAGEMENT'))
                 <li class="heading">
-                    <h3 class="uppercase">User Management</h3>
+                    <h3 class="uppercase">Kullanıcı Yönetimi</h3>
                 </li>
-                <li class="nav-item @if(request()->is('user/*') || request()->is('user')) active open @endif">
+                <li class="nav-item @if(request()->is('users/*') || request()->is('users')) active open @endif">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="icon-layers"></i>
-                        <span class="title">Users</span>
-                        @if(request()->is('user/*') || request()->is('user'))
+                        <span class="title">Kullanıcılar</span>
+                        @if(request()->is('users/*') || request()->is('users'))
                             <span class="selected"></span>
                         @endif
                         <span class="arrow open"></span>
                     </a>
                     <ul class="sub-menu">
-                        <li class="nav-item @if(request()->is('user/create')) active open @endif">
-                            <a href="{{route('user.create')}}" class="nav-link ">
-                                <span class="title">Create</span>
-                                @if(request()->is('user/create'))
+                        <li class="nav-item @if(request()->is('users/create')) active open @endif">
+                            <a href="{{route('users.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('users/create'))
                                     <span class="selected"></span>
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item @if(request()->is('user')) active open @endif">
-                            <a href="{{route('user.index')}}" class="nav-link ">
-                                <span class="title">List</span>
-                                @if(request()->is('user'))
+                        <li class="nav-item @if(request()->is('users')) active open @endif">
+                            <a href="{{route('users.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('users'))
                                     <span class="selected"></span>
                                 @endif
                             </a>

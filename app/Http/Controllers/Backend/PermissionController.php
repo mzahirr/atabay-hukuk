@@ -16,6 +16,7 @@ class PermissionController extends Controller
      * Display a listing of the resource.
      *
      * @param PermissionsDataTable $dataTable
+     *
      * @return \Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
     public function index(PermissionsDataTable $dataTable)
@@ -37,18 +38,21 @@ class PermissionController extends Controller
      * Store a newly created resource in storage.
      *
      * @param PermissionStore|Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(PermissionStore $request)
     {
         Permission::create($request->only('label'));
-        return back()->withNotify('Permission Created!');
+
+        return back()->withNotify('İzin Oluşturuldu!');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param Permission $permission
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
@@ -62,25 +66,29 @@ class PermissionController extends Controller
      *
      * @param PermissionUpdate|Request $request
      * @param Permission $permission
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
     public function update(PermissionUpdate $request, Permission $permission)
     {
         $permission->update($request->only('label'));
-        return back()->withNotify('Permission Updated!');
+
+        return back()->withNotify('İzin Güncellendi!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param Permission $permission
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
     public function destroy(Permission $permission)
     {
         $permission->delete();
-        return back()->withNotify('Permission Deleted!');
+
+        return back()->withNotify('İzin Silindi!');
     }
 }

@@ -57,7 +57,7 @@ class PermissionsDataTable extends DataTable
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->ajax(route('permission.index'))
+            ->ajax(route('permissions.index'))
             ->addAction(["data" => "action", "name" => "action", "title" => "Action", 'width' => '15%'])
             ->parameters($this->getBuilderParameters());
     }

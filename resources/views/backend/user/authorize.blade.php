@@ -5,16 +5,16 @@
             <div class="portlet-title">
                 <div class="caption font-green">
                     <i class="icon-pin font-green"></i>
-                    <span class="caption-subject bold"> User Authorize</span>
+                    <span class="caption-subject bold"> Kullanıcı yetkilendir</span>
                 </div>
             </div>
             <div class="portlet-body form">
-                <form role="form" action="{{route('user.authorize',$user->id)}}" method="POST">
+                <form role="form" action="{{route('users.authorize',$user->id)}}" method="POST">
                     {{csrf_field()}}
                     <div class="form-body">
                         @if(count($permissions)>0)
                             <div class="form-group">
-                                <label>Permissions</label>
+                                <label>İzinler</label>
                                 <div class="input-group">
                                     <div class="icheck">
                                         @foreach($permissions as $permission)
@@ -34,7 +34,7 @@
                         @endif
                         @if(count($roles)>0)
                             <div class="form-group">
-                                <label>Roles</label>
+                                <label>Roller</label>
                                 <div class="input-group">
                                     <div class="icheck">
                                         @foreach($roles as $role)
@@ -54,7 +54,7 @@
                         @endif
                     </div>
                     <div class="form-actions noborder">
-                        <button type="submit" class="btn green">Submit</button>
+                        <button type="submit" class="btn green">Kaydet</button>
                     </div>
                 </form>
             </div>

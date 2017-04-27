@@ -57,7 +57,7 @@ class RolesDataTable extends DataTable
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->ajax(route('role.index'))
+            ->ajax(route('roles.index'))
             ->addAction(["data" => "action", "name" => "action", "title" => "Action", 'width' => '25%'])
             ->parameters($this->getBuilderParameters());
     }

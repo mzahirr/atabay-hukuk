@@ -5,15 +5,15 @@
             <div class="portlet-title">
                 <div class="caption font-green">
                     <i class="icon-pin font-green"></i>
-                    <span class="caption-subject bold"> Role Authorize</span>
+                    <span class="caption-subject bold"> Rol Yetkilendir</span>
                 </div>
             </div>
             <div class="portlet-body form">
-                <form role="form" action="{{route('role.authorize',$role->id)}}" method="POST">
+                <form role="form" action="{{route('roles.authorize',$role->id)}}" method="POST">
                     {{csrf_field()}}
                     <div class="form-body">
                         <div class="form-group">
-                            <label>Permissions</label>
+                            <label>İzinler</label>
                             <div class="input-group">
                                 <div class="icheck">
                                     @foreach($permissions as $permission)
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="form-actions noborder">
-                        <button type="submit" class="btn green">Submit</button>
+                        <button type="submit" class="btn green">Kaydet</button>
                     </div>
                 </form>
             </div>

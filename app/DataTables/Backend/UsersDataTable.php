@@ -10,11 +10,11 @@ class UsersDataTable extends DataTable
     /**
      * @var array
      */
-    protected $exportColumns = ['name', 'username', 'email', 'created_at', 'updated_at'];
+    protected $exportColumns = ['name', 'email', 'created_at', 'updated_at'];
     /**
      * @var array
      */
-    protected $printColumns = ['name', 'username', 'email', 'created_at', 'updated_at'];
+    protected $printColumns = ['name', 'email', 'created_at', 'updated_at'];
 
     /**
      * Build DataTable class.
@@ -57,7 +57,7 @@ class UsersDataTable extends DataTable
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->ajax(route('user.index'))
+            ->ajax(route('users.index'))
             ->addAction(["data" => "action", "name" => "action", "title" => "Action", 'width' => '25%'])
             ->parameters($this->getBuilderParameters());
     }
@@ -71,14 +71,13 @@ class UsersDataTable extends DataTable
     {
         return [
             ["data" => "name", "name" => "name", "title" => "Name"],
-            ["data" => "username", "name" => "username", "title" => "Username"],
             ["data" => "email", "name" => "email", "title" => "Email"],
             ["data" => "created_at", "name" => "created_at", "title" => "Created At"],
             [
-                "data" => "updated_at",
-                "name" => "updated_at",
-                "title" => "Updated At",
-                "orderable" => false,
+                "data"       => "updated_at",
+                "name"       => "updated_at",
+                "title"      => "Updated At",
+                "orderable"  => false,
                 "searchable" => false,
             ],
         ];
@@ -90,13 +89,13 @@ class UsersDataTable extends DataTable
     public function getBuilderParameters()
     {
         return [
-            'dom' => 'lBftip',
-            'buttons' => ['export', 'print', 'reset', 'reload'],
+            'dom'        => 'lBftip',
+            'buttons'    => ['export', 'print', 'reset', 'reload'],
             'lengthMenu' => [
                 [10, 25, 50, 100, -1],
                 ['10', '25', '50', '100', 'All'],
             ],
-            'order' => [[0, 'desc']],
+            'order'      => [[0, 'desc']],
 
         ];
     }

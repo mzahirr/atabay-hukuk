@@ -18,6 +18,7 @@ class UserController extends Controller
      * Display a listing of the resource.
      *
      * @param UsersDataTable $dataTable
+     *
      * @return \Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
     public function index(UsersDataTable $dataTable)
@@ -33,18 +34,21 @@ class UserController extends Controller
     public function create()
     {
         $permissions = Permission::doesntHave('roles')->get();
-        $roles = Role::all();
+        $roles       = Role::all();
+
         return view('backend.user.create', compact('permissions', 'roles'));
     }
 
     /**
      * @param User $user
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(User $user)
     {
         $permissions = Permission::doesntHave('roles')->get();
-        $roles = Role::all();
+        $roles       = Role::all();
+
         return view('backend.user.authorize', compact('permissions', 'roles', 'user'));
     }
 
@@ -53,6 +57,7 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      *
      * @param UserStore|Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(UserStore $request)
@@ -60,20 +65,23 @@ class UserController extends Controller
         $user = User::create($request->only('name', 'email', 'username', 'password'));
         $user->giveMultipleRole($request->input('roles', []));
         $user->giveMultiplePermission($request->input('permissions', []));
-        return back()->withNotify('User Created!');
+
+        return back()->withNotify('Kullanıcı Oluşturuldu!');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param User $user
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
     public function edit(User $user)
     {
         $permissions = Permission::doesntHave('roles')->get();
-        $roles = Role::all();
+        $roles       = Role::all();
+
         return view('backend.user.edit', compact('permissions', 'roles', 'user'));
     }
 
@@ -82,6 +90,7 @@ class UserController extends Controller
      *
      * @param UserUpdate|Request $request
      * @param User $user
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
@@ -94,30 +103,35 @@ class UserController extends Controller
         }
         $user->giveMultipleRole($request->input('roles', []));
         $user->giveMultiplePermission($request->input('permissions', []));
-        return back()->withNotify('User Updated!');
+
+        return back()->withNotify('Kullanıcı Düzenlendi!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param User $user
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
     public function destroy(User $user)
     {
         $user->delete();
-        return back()->withNotify('User Deleted!');
+
+        return back()->withNotify('Kullanıcı Silindi!');
     }
 
     /**
      * @param User $user
+     *
      * @return mixed
      */
-    public function authorizeuser(User $user)
+    public function authorizeusers(User $user)
     {
         $user->giveMultipleRole(request('roles', []));
         $user->giveMultiplePermission(request('permissions', []));
-        return back()->withNotify('Authorization successful.');
+
+        return back()->withNotify('Yetkilendirme Başarılı.');
     }
 }

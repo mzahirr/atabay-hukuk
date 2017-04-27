@@ -27,7 +27,7 @@
     <script type="text/javascript">
         @foreach($errors->all() as $error)
             new PNotify({
-            title: 'Error',
+            title: 'Hata',
             text: '{{$error}}',
             type: 'error'
         });
@@ -40,7 +40,7 @@
 @if(session('notify'))
     <script type="text/javascript">
         new PNotify({
-            title: 'Success',
+            title: 'Başarılı',
             text: '{{session('notify')}}',
             type: 'success'
         });

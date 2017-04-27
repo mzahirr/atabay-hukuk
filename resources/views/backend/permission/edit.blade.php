@@ -5,23 +5,23 @@
             <div class="portlet-title">
                 <div class="caption font-green">
                     <i class="icon-pin font-green"></i>
-                    <span class="caption-subject bold uppercase"> Permission Edit</span>
+                    <span class="caption-subject bold uppercase"> İzin düzenle</span>
                 </div>
             </div>
             <div class="portlet-body form">
-                <form role="form" action="{{route('permission.update',$permission->id)}}" method="POST">
+                <form role="form" action="{{route('permissions.update',$permission->id)}}" method="POST">
                     {{csrf_field()}}
                     {{method_field('PUT')}}
                     <div class="form-body">
                         <div class="form-group form-md-line-input form-md-floating-label has-success">
                             <input type="text" name="label" value="{{$permission->label}}" class="form-control"
                                    id="label">
-                            <label for="label">Permission label</label>
+                            <label for="label">İzin adı</label>
                         </div>
                     </div>
                     <div class="form-actions noborder">
-                        <button type="submit" class="btn green">Submit</button>
-                        <button type="reset" class="btn default">Cancel</button>
+                        <button type="submit" class="btn green">Kaydet</button>
+                        <button type="reset" class="btn default">İptal</button>
                     </div>
                 </form>
             </div>

@@ -16,6 +16,7 @@ class RoleController extends Controller
      * Display a listing of the resource.
      *
      * @param RolesDataTable $dataTable
+     *
      * @return \Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
     public function index(RolesDataTable $dataTable)
@@ -37,24 +38,28 @@ class RoleController extends Controller
      * Store a newly created resource in storage.
      *
      * @param RoleStore|Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(RoleStore $request)
     {
         Role::create($request->only('label'));
-        return back()->withNotify('Role Created!');
+
+        return back()->withNotify('Rol Oluşturuldu!');
     }
 
     /**
      * Display the specified resource.
      *
      * @param Role $role
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
     public function show(Role $role)
     {
         $permissions = Permission::all();
+
         return view('backend.role.authorize', compact('role', 'permissions'));
     }
 
@@ -62,6 +67,7 @@ class RoleController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param Role $role
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
@@ -75,43 +81,50 @@ class RoleController extends Controller
      *
      * @param RoleUpdate|Request $request
      * @param Role $role
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
     public function update(RoleUpdate $request, Role $role)
     {
         $role->update($request->only('label'));
-        return back()->withNotify('Role Updated!');
+
+        return back()->withNotify('Rol Güncellendi!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param Role $role
+     *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
     public function destroy(Role $role)
     {
         $role->delete();
-        return back()->withNotify('Role Deleted!');
+
+        return back()->withNotify('Rol Silindi!');
     }
 
 
     /**
      * @param Role $role
+     *
      * @return mixed
      */
-    public function authorizerole(Role $role)
+    public function authorizeroles(Role $role)
     {
         $this->dynamicPermissions($role, request('permissions'));
         $role->syncPermission(request('permissions'));
-        return redirect()->route('role.show', $role->id)->withNotify('Authorization successful.');
+
+        return redirect()->route('role.show', $role->id)->withNotify('Yetkilendirme başarılı.');
     }
 
     /**
      * @param $role
      * @param $request
+     *
      * @return void
      */
     private function dynamicPermissions($role, $request)

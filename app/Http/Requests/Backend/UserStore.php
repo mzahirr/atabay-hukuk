@@ -25,17 +25,13 @@ class UserStore extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'username' => [
-                'required',
-                Rule::unique('users')
-            ],
-            'email' => [
+            'name'     => 'required',
+            'email'    => [
                 'required',
                 Rule::unique('users'),
-                'email'
+                'email',
             ],
-            'password' => 'required|min:6'
+            'password' => 'required|min:6',
         ];
     }
 

@@ -34,6 +34,7 @@ trait Authorize
 
     /**
      * @param $role
+     *
      * @return mixed
      */
     public function assignRole($role)
@@ -46,18 +47,20 @@ trait Authorize
 
     /**
      * @param $permission
+     *
      * @return mixed
      */
     public function assignPermission($permission)
     {
         return $this->specialPermissions()->save(
-            Permission::whereName($permission)->firstOrFail()
+            Permission::whereName($permission->name)->firstOrFail()
         );
     }
 
 
     /**
      * @param $role
+     *
      * @return bool
      */
     public function hasRole($role)
@@ -65,12 +68,14 @@ trait Authorize
         if (is_string($role)) {
             return $this->roles->contains('name', $role);
         }
-        return !!$role->intersect($this->roles)->count();
+
+        return ! ! $role->intersect($this->roles)->count();
     }
 
 
     /**
      * @param Permission $permission
+     *
      * @return bool
      */
     public function hasPermission(Permission $permission)
@@ -78,12 +83,14 @@ trait Authorize
         if ($this->hasUserPermission($permission)) {
             return true;
         }
+
         return $this->hasRole($permission->roles);
     }
 
 
     /**
      * @param Permission $permission
+     *
      * @return mixed
      */
     public function hasUserPermission(Permission $permission)
