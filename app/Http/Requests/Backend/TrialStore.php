@@ -5,7 +5,7 @@ namespace App\Http\Requests\Backend;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class RoleStore extends FormRequest
+class TrialStore extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +14,7 @@ class RoleStore extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->can('' . env('SİSTEM-YÖNETİMİ') . '');
+        return $this->user()->can('' . env('DAVA-YÖNETİMİ') . '');
     }
 
     /**
@@ -27,8 +27,8 @@ class RoleStore extends FormRequest
         return [
             'label' => [
                 'required',
-                Rule::unique('roles')
-            ]
+                Rule::unique('permissions'),
+            ],
         ];
     }
 

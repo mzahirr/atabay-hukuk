@@ -22,12 +22,12 @@
             <li class="nav-item @if(request()->is('dashboard')) active @endif">
                 <a href="{{route('backend.dashboard')}}" class="nav-link nav-toggle">
                     <i class="icon-home"></i>
-                    <span class="title">Dashboard</span>
+                    <span class="title">Panel</span>
                     @if(request()->is('dashboard')) <span class="selected"></span> @endif
                 </a>
             </li>
 
-            @can(env('SYSTEM_MANAGEMENT'))
+            @can(env('SİSTEM-YÖNETİMİ'))
                 <li class="heading">
                     <h3 class="uppercase">Sistem Yönetimi</h3>
                 </li>
@@ -89,7 +89,7 @@
                 </li>
             @endcan
 
-            @can(env('USER_MANAGEMENT'))
+            @can(env('KULLANICI-YÖNETİMİ'))
                 <li class="heading">
                     <h3 class="uppercase">Kullanıcı Yönetimi</h3>
                 </li>
@@ -113,6 +113,76 @@
                         </li>
                         <li class="nav-item @if(request()->is('users')) active open @endif">
                             <a href="{{route('users.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('users'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
+
+
+            @can(env('MÜVEKKİL-YÖNETİMİ'))
+                <li class="heading">
+                    <h3 class="uppercase">Müvekkil Yönetimi</h3>
+                </li>
+                <li class="nav-item @if(request()->is('clients/*') || request()->is('clients')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Müvekkiller</span>
+                        @if(request()->is('clients/*') || request()->is('clients'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('clients/create')) active open @endif">
+                            <a href="{{route('clients.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('clients/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('clients')) active open @endif">
+                            <a href="{{route('trials.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('clients'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
+
+
+            @can(env('DAVA-YÖNETİMİ'))
+                <li class="heading">
+                    <h3 class="uppercase">Dava Yönetimi</h3>
+                </li>
+                <li class="nav-item @if(request()->is('trials/*') || request()->is('trials')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Davalar</span>
+                        @if(request()->is('trials/*') || request()->is('trials'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('trials/create')) active open @endif">
+                            <a href="{{route('trials.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('trials/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('trials')) active open @endif">
+                            <a href="{{route('trials.index')}}" class="nav-link ">
                                 <span class="title">Listele</span>
                                 @if(request()->is('users'))
                                     <span class="selected"></span>

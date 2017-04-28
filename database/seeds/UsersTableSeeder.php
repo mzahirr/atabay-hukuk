@@ -27,13 +27,13 @@ class UsersTableSeeder extends Seeder
         Permission::truncate();
 
         $systemPermission  = Permission::create([
-            'label' => 'SYSTEM MANAGEMENT',
+            'label' => 'SİSTEM YÖNETİMİ',
         ]);
         $userPermission    = Permission::create([
-            'label' => 'USER MANAGEMENT',
+            'label' => 'KULLANICI YÖNETİMİ',
         ]);
         $backendPermission = Permission::create([
-            'label' => 'BACKEND MANAGEMENT',
+            'label' => 'PANEL YÖNETİMİ',
         ]);
 
         DB::table('permission_user')->truncate();

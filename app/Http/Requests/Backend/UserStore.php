@@ -14,7 +14,7 @@ class UserStore extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->can('' . env('USER_MANAGEMENT') . '');
+        return $this->user()->can('' . env('KULLANICI-YÖNETİMİ') . '');
     }
 
     /**

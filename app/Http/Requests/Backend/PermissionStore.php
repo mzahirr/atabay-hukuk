@@ -14,7 +14,7 @@ class PermissionStore extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->can('' . env('SYSTEM_MANAGEMENT') . '');
+        return $this->user()->can('' . env('SİSTEM-YÖNETİMİ') . '');
     }
 
     /**
