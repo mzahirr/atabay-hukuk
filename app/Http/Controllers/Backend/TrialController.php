@@ -38,6 +38,19 @@ class TrialController extends Controller
     }
 
     /**
+     * @param \App\Http\Models\Backend\Trial $trial
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show(Trial $trial)
+    {
+        $trial->load(['clients', 'attorneys']);
+
+        return view('backend.trial.show', compact('trial'));
+
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param TrialStore $request
