@@ -22,10 +22,24 @@ Route::group(['middleware' => 'can:' . env('PANEL-YÖNETİMİ') . ''], function 
     });
 
     Route::group(['middleware' => 'can:' . env('DAVA-YÖNETİMİ') . ''], function () {
+        Route::get('trials/{trial}/status', 'Backend\TrialController@status')->name('trials.status');
+        Route::post('trials/{trial}/status', 'Backend\TrialController@statusStore')->name('trials.statusStore');
+
+        Route::get('trials/{trial}/attorney', 'Backend\TrialController@attorney')->name('trials.attorney');
+        Route::post('trials/{trial}/attorney', 'Backend\TrialController@attorneyStore')->name('trials.attorneyStore');
+
+        Route::get('trials/{trial}/client', 'Backend\TrialController@client')->name('trials.client');
+        Route::post('trials/{trial}/client', 'Backend\TrialController@clientStore')->name('trials.clientStore');
+
         Route::resource('trials', 'Backend\TrialController');
+        Route::resource('statuses', 'Backend\StatusController');
     });
 
     Route::group(['middleware' => 'can:' . env('MÜVEKKİL-YÖNETİMİ') . ''], function () {
         Route::resource('clients', 'Backend\ClientController');
+    });
+
+    Route::group(['middleware' => 'can:' . env('AVUKAT-YÖNETİMİ') . ''], function () {
+        Route::resource('attorneys', 'Backend\AttorneyController');
     });
 });

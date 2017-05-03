@@ -5,7 +5,7 @@ namespace App\Http\Requests\Backend;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class TrialStore extends FormRequest
+class StatusStore extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,13 +25,10 @@ class TrialStore extends FormRequest
     public function rules()
     {
         return [
-            'number'      => [
+            'label' => [
                 'required',
-                Rule::unique('trials'),
+                Rule::unique('statuses'),
             ],
-            'court'       => 'required',
-            'subject'     => 'required',
-            'description' => 'nullable',
         ];
     }
 

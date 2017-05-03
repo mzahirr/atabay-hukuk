@@ -12,6 +12,14 @@
                 <form role="form" action="{{route('clients.store')}}" method="POST">
                     {{csrf_field()}}
                     <div class="form-body">
+
+                        <div class="form-group form-md-line-input form-md-floating-label has-success">
+                            <input type="text" name="identity" value="{{old('identity')}}"
+                                   class="form-control"
+                                   id="identity">
+                            <label for="identity">Kimlik No</label>
+                        </div>
+
                         <div class="form-group form-md-line-input form-md-floating-label has-success">
                             <input type="text" name="name" value="{{old('name')}}" class="form-control" id="name">
                             <label for="name">Ad soyad</label>
@@ -34,52 +42,11 @@
                             </div>
                         </div>
 
-
-                        <div class="form-group form-md-line-input form-md-floating-label has-success">
-                            <textarea class="form-control" rows="3" title="address" id="address"></textarea>
-                            <label for="address">Açık adres</label>
-                        </div>
-
-
                         <div class="form-group form-md-line-input form-md-floating-label has-success">
                             <input type="password" name="password" class="form-control"
                                    id="password">
                             <label for="password">Şifre</label>
                         </div>
-                        @if($roles->count())
-                            <div class="form-group">
-                                <label>Roller</label>
-                                <div class="input-group">
-                                    <div class="icheck">
-                                        @foreach($roles as $role)
-                                            <label>
-                                                <input type="checkbox" name="roles[]"
-                                                       class="icheck" value="{{$role->id}}">
-                                                {{$role->label}}
-                                            </label>
-                                            <div style="clear: both"></div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-                        @if($permissions->count())
-                            <div class="form-group">
-                                <label>İzinler</label>
-                                <div class="input-group">
-                                    <div class="icheck">
-                                        @foreach($permissions as $permission)
-                                            <label>
-                                                <input type="checkbox" name="permissions[]"
-                                                       class="icheck" value="{{$permission->id}}">
-                                                {{$permission->label}}
-                                            </label>
-                                            <div style="clear: both"></div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
                     </div>
                     <div class="form-actions noborder">
                         <button type="submit" class="btn green">Kaydet</button>
@@ -91,8 +58,8 @@
     </div>
 @endsection
 @push('styles')
-<link href="/assets/global/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css"/>
+
 @endpush
 @push('scripts')
-<script src="/assets/global/plugins/icheck/icheck.min.js" type="text/javascript"></script>
+
 @endpush

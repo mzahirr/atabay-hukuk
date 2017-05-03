@@ -2,28 +2,29 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\DataTables\Backend\UsersDataTable;
-use App\Http\Models\Backend\Permission;
-use App\Http\Models\Backend\Role;
-use App\Http\Requests\Backend\UserStore;
-use App\Http\Requests\Backend\UserUpdate;
-use App\User;
-use Illuminate\Http\Request;
+use App\DataTables\Backend\ClientsDataTable;
+use App\Http\Models\Backend\Client;
+use App\Http\Requests\Backend\ClientStore;
+use App\Http\Requests\Backend\ClientUpdate;
 use App\Http\Controllers\Controller;
 
+/**
+ * Class ClientController
+ * @package App\Http\Controllers\Backend
+ */
 class ClientController extends Controller
 {
 
     /**
      * Display a listing of the resource.
      *
-     * @param UsersDataTable $dataTable
+     * @param ClientsDataTable $dataTable
      *
      * @return \Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
-    public function index(UsersDataTable $dataTable)
+    public function index(ClientsDataTable $dataTable)
     {
-        return $dataTable->render('backend.user.list');
+        return $dataTable->render('backend.client.list');
     }
 
     /**
@@ -33,105 +34,89 @@ class ClientController extends Controller
      */
     public function create()
     {
-        $permissions = Permission::doesntHave('roles')->get();
-        $roles       = Role::all();
-
-        return view('backend.client.create', compact('permissions', 'roles'));
+        return view('backend.client.create');
     }
 
     /**
-     * @param User $user
+     * @param Client $client
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show(User $user)
+    public function show(Client $client)
     {
-        $permissions = Permission::doesntHave('roles')->get();
-        $roles       = Role::all();
-
-        return view('backend.user.authorize', compact('permissions', 'roles', 'user'));
+        return view('backend.client.authorize', compact('client'));
     }
 
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param UserStore|Request $request
+     * @param ClientStore $request
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(UserStore $request)
+    public function store(ClientStore $request)
     {
-        $user = User::create($request->only('name', 'email', 'username', 'password'));
-        $user->giveMultipleRole($request->input('roles', []));
-        $user->giveMultiplePermission($request->input('permissions', []));
+        Client::create($request->only('identity', 'name', 'email', 'password', 'number'));
 
-        return back()->withNotify('Kullanıcı Oluşturuldu!');
+        return back()->withNotify('Müvekkil Oluşturuldu!');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param User $user
+     * @param Client $client
      *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
-    public function edit(User $user)
+    public function edit(Client $client)
     {
-        $permissions = Permission::doesntHave('roles')->get();
-        $roles       = Role::all();
-
-        return view('backend.user.edit', compact('permissions', 'roles', 'user'));
+        return view('backend.client.edit', compact('client'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param UserUpdate|Request $request
-     * @param User $user
+     * @param ClientUpdate $request
+     * @param Client $client
      *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
-    public function update(UserUpdate $request, User $user)
+    public function update(ClientUpdate $request, Client $client)
     {
         if ($request->has('password')) {
-            $user->update($request->only('name', 'email', 'username', 'password'));
+            $client->update($request->only('identity', 'name', 'email', 'password', 'number'));
         } else {
-            $user->update($request->only('name', 'email', 'username'));
+            $client->update($request->only('identity', 'name', 'email', 'number'));
         }
-        $user->giveMultipleRole($request->input('roles', []));
-        $user->giveMultiplePermission($request->input('permissions', []));
 
-        return back()->withNotify('Kullanıcı Düzenlendi!');
+        return back()->withNotify('Müvekkil Düzenlendi!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param User $user
+     * @param Client $client
      *
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
-    public function destroy(User $user)
+    public function destroy(Client $client)
     {
-        $user->delete();
+        $client->delete();
 
-        return back()->withNotify('Kullanıcı Silindi!');
+        return back()->withNotify('Müvekkil Silindi!');
     }
 
     /**
-     * @param User $user
+     * @param Client $client
      *
      * @return mixed
      */
-    public function authorizeusers(User $user)
+    public function authorizeclients(Client $client)
     {
-        $user->giveMultipleRole(request('roles', []));
-        $user->giveMultiplePermission(request('permissions', []));
-
         return back()->withNotify('Yetkilendirme Başarılı.');
     }
 }

@@ -123,6 +123,40 @@
                 </li>
             @endcan
 
+            @can(env('AVUKAT-YÖNETİMİ'))
+                <li class="heading">
+                    <h3 class="uppercase">Avukat Yönetimi</h3>
+                </li>
+                <li class="nav-item @if(request()->is('attorneys/*') || request()->is('attorneys')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Avukatlar</span>
+                        @if(request()->is('attorneys/*') || request()->is('attorneys'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('attorneys/create')) active open @endif">
+                            <a href="{{route('attorneys.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('attorneys/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('attorneys')) active open @endif">
+                            <a href="{{route('attorneys.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('clients'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
+
 
             @can(env('MÜVEKKİL-YÖNETİMİ'))
                 <li class="heading">
@@ -147,9 +181,44 @@
                             </a>
                         </li>
                         <li class="nav-item @if(request()->is('clients')) active open @endif">
-                            <a href="{{route('trials.index')}}" class="nav-link ">
+                            <a href="{{route('clients.index')}}" class="nav-link ">
                                 <span class="title">Listele</span>
                                 @if(request()->is('clients'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
+
+
+            @can(env('DAVA-YÖNETİMİ'))
+                <li class="heading">
+                    <h3 class="uppercase">Dosya Durumu</h3>
+                </li>
+                <li class="nav-item @if(request()->is('statuses/*') || request()->is('statuses')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Durumlar</span>
+                        @if(request()->is('statuses/*') || request()->is('statuses'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('statuses/create')) active open @endif">
+                            <a href="{{route('statuses.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('statuses/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('statuses')) active open @endif">
+                            <a href="{{route('statuses.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('statuses'))
                                     <span class="selected"></span>
                                 @endif
                             </a>

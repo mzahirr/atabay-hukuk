@@ -2,37 +2,24 @@
 
 namespace App\Http\Models\Backend;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
 
 /**
  * Class Trial
  * @package App\Http\Models\Backend
  */
-class Client extends Authenticatable
+class Attorney extends Model
 {
-    use Notifiable;
-
     /**
      * @var array
      */
     protected $fillable = [
-        'identity',
         'name',
         'email',
         'number',
-        'password',
-
+        'image',
     ];
-
-    /**
-     * @param $value
-     */
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

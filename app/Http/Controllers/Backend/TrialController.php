@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\DataTables\Backend\PermissionsDataTable;
-use App\Http\Models\Backend\Permission;
-use App\Http\Requests\Backend\PermissionStore;
-use App\Http\Requests\Backend\PermissionUpdate;
+use App\DataTables\Backend\TrialsDataTable;
+use App\Http\Models\Backend\Attorney;
+use App\Http\Models\Backend\Client;
+use App\Http\Models\Backend\Status;
+use App\Http\Models\Backend\Trial;
+use App\Http\Requests\Backend\TrialStore;
+use App\Http\Requests\Backend\TrialUpdate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,13 +18,13 @@ class TrialController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param PermissionsDataTable $dataTable
+     * @param TrialsDataTable $dataTable
      *
      * @return \Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
-    public function index(PermissionsDataTable $dataTable)
+    public function index(TrialsDataTable $dataTable)
     {
-        return $dataTable->render('backend.permission.list');
+        return $dataTable->render('backend.trial.list');
     }
 
     /**
@@ -37,58 +40,144 @@ class TrialController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param PermissionStore|Request $request
+     * @param TrialStore $request
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(PermissionStore $request)
+    public function store(TrialStore $request)
     {
-        Permission::create($request->only('label'));
+        Trial::create($request->only('number', 'court', 'subject', 'description'));
 
-        return back()->withNotify('İzin Oluşturuldu!');
+        return back()->withNotify('Dava Oluşturuldu!');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Permission $permission
+     * @param Trial $trial
      *
      * @return \Illuminate\Http\Response
-     * @internal param int $id
      */
-    public function edit(Permission $permission)
+    public function edit(Trial $trial)
     {
-        return view('backend.permission.edit', compact('permission'));
+        return view('backend.trial.edit', compact('trial'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param PermissionUpdate|Request $request
-     * @param Permission $permission
+     * @param TrialUpdate $request
+     * @param Trial $trial
      *
      * @return \Illuminate\Http\Response
-     * @internal param int $id
      */
-    public function update(PermissionUpdate $request, Permission $permission)
+    public function update(TrialUpdate $request, Trial $trial)
     {
-        $permission->update($request->only('label'));
+        $trial->update($request->only('number', 'court', 'subject', 'description'));
 
-        return back()->withNotify('İzin Güncellendi!');
+        return back()->withNotify('Dava Güncellendi!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Permission $permission
+     * @param Trial $trial
      *
      * @return \Illuminate\Http\Response
-     * @internal param int $id
      */
-    public function destroy(Permission $permission)
+    public function destroy(Trial $trial)
     {
-        $permission->delete();
+        $trial->delete();
 
-        return back()->withNotify('İzin Silindi!');
+        return back()->withNotify('Dava Silindi!');
+    }
+
+
+    /**
+     * @param \App\Http\Models\Backend\Trial $trial
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function status(Trial $trial)
+    {
+        $statuses = Status::all();
+
+        return view('backend.trial.status', compact('trial', 'statuses'));
+
+    }
+
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Http\Models\Backend\Trial $trial
+     *
+     * @return mixed
+     */
+    public function statusStore(Request $request, Trial $trial)
+    {
+        if ($request->has('status')) {
+            $status = Status::findOrFail($request->input('status'));
+            $trial->status()->associate($status);
+            $trial->save();
+
+            return back()->withNotify('Dosya durumu güncellendi!');
+        }
+        $trial->status_id = null;
+        $trial->save();
+
+        return back()->withNotify('Dosya durumu güncellendi!');
+
+    }
+
+    /**
+     * @param \App\Http\Models\Backend\Trial $trial
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function attorney(Trial $trial)
+    {
+        $attorneys = Attorney::with('trials')->get();
+
+        return view('backend.trial.attorney', compact('trial', 'attorneys'));
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Http\Models\Backend\Trial $trial
+     *
+     * @return mixed
+     */
+    public function attorneyStore(Request $request, Trial $trial)
+    {
+        $trial->attorneys()->sync($request->input('attorneys', []));
+
+        return back()->withNotify('Avukat ataması güncellendi!');
+
+    }
+
+    /**
+     * @param \App\Http\Models\Backend\Trial $trial
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function client(Trial $trial)
+    {
+        $clients = Client::with('trials')->get();
+
+        return view('backend.trial.client', compact('trial', 'clients'));
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Http\Models\Backend\Trial $trial
+     *
+     * @return mixed
+     */
+    public function clientStore(Request $request, Trial $trial)
+    {
+        $trial->clients()->sync($request->input('clients', []));
+
+        return back()->withNotify('Müvekkil ataması güncellendi!');
+
     }
 }

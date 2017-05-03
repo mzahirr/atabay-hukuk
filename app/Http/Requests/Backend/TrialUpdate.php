@@ -5,7 +5,7 @@ namespace App\Http\Requests\Backend;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class TrialStore extends FormRequest
+class TrialUpdate extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,7 @@ class TrialStore extends FormRequest
         return [
             'number'      => [
                 'required',
-                Rule::unique('trials'),
+                Rule::unique('trials')->ignore($this->route('trial')->id),
             ],
             'court'       => 'required',
             'subject'     => 'required',

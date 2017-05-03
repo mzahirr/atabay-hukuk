@@ -42,24 +42,24 @@ return [
     'exists'               => 'selected :attribute is invalid.',
     'file'                 => ':attribute must be a file.',
     'filled'               => ':attribute field must have a value.',
-    'image'                => ':attribute must be an image.',
+    'image'                => ':attribute geçerli bir "resim" dosyası olmalıdır.',
     'in'                   => 'selected :attribute is invalid.',
     'in_array'             => ':attribute field does not exist in :other.',
     'integer'              => ':attribute must be an integer.',
     'ip'                   => ':attribute must be a valid IP address.',
     'json'                 => ':attribute must be a valid JSON string.',
     'max'                  => [
-        'numeric' => ':attribute may not be greater than :max.',
+        'numeric' => ':attribute alanı :max karakterden fazla olamaz.',
         'file'    => ':attribute may not be greater than :max kilobytes.',
-        'string'  => ':attribute may not be greater than :max characters.',
+        'string'  => ':attribute alanı :max karakterden fazla olamaz.',
         'array'   => ':attribute may not have more than :max items.',
     ],
     'mimes'                => ':attribute must be a file of type: :values.',
     'mimetypes'            => ':attribute must be a file of type: :values.',
     'min'                  => [
-        'numeric' => ':attribute must be at least :min.',
+        'numeric' => ':attribute en az :min karakter olmalıdır.',
         'file'    => ':attribute must be at least :min kilobytes.',
-        'string'  => ':attribute must be at least :min characters.',
+        'string'  => ':attribute en az :min karakter olmalıdır.',
         'array'   => ':attribute must have at least :min items.',
     ],
     'not_in'               => 'selected :attribute is invalid.',
@@ -113,9 +113,13 @@ return [
     */
 
     'attributes' => [
-        'label' => 'Ad',
-        'email' => 'E-posta adresi',
-        'name'  => 'Ad soyad',
+        'label'    => 'Ad',
+        'email'    => 'E-posta adresi',
+        'name'     => 'Ad soyad',
+        'password' => 'Şifre',
+        'identity' => 'Kimlik numarası',
+        'number'   => 'Numara',
+        'image'    => 'Resim',
     ],
 
 ];

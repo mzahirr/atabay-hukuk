@@ -2,7 +2,6 @@
 
 namespace App\Http\Models\Backend;
 
-use App\Http\Traits\Backend\SlugHelper;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -11,12 +10,34 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Trial extends Model
 {
-    use SlugHelper;
-
     /**
      * @var array
      */
-    protected $fillable = ['name', 'label'];
+    protected $fillable = ['status_id', 'number', 'court', 'subject', 'description'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function attorneys()
+    {
+        return $this->belongsToMany(Attorney::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function clients()
+    {
+        return $this->belongsToMany(Client::class);
+    }
 
 
 }

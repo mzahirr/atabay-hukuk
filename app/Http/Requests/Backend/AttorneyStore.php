@@ -5,7 +5,7 @@ namespace App\Http\Requests\Backend;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class TrialStore extends FormRequest
+class AttorneyStore extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +14,7 @@ class TrialStore extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->can('' . env('DAVA-YÖNETİMİ') . '');
+        return $this->user()->can('' . env('AVUKAT-YÖNETİMİ') . '');
     }
 
     /**
@@ -25,13 +25,18 @@ class TrialStore extends FormRequest
     public function rules()
     {
         return [
-            'number'      => [
-                'required',
-                Rule::unique('trials'),
+            'name'   => 'required',
+            'number' => [
+                'min:10',
+                'max:11',
+                'nullable',
             ],
-            'court'       => 'required',
-            'subject'     => 'required',
-            'description' => 'nullable',
+            'email'  => [
+                'required',
+                Rule::unique('attorneys'),
+                'email',
+            ],
+            'image'  => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 
