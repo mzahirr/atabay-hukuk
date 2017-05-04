@@ -1,96 +1,528 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('frontend.layouts.master')
+@section('content')
+    <!-- #banner -->
+    <section id="banner">
+        <div class="banner-container">
+            <div class="banner home-v1">
+                <ul>
 
-        <title>Laravel</title>
+                    <li
+                            class="slider-1"
+                            data-transition="fade"
+                            data-slotamount="7"
+                            data-thumb="/img/slider/1.jpg"
+                            data-title="WE ARE AVAILABLE">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+                        <img
+                                src="/img/slider/1.jpg"
+                                data-bgrepeat="no-repeat"
+                                data-bgfit="cover"
+                                data-bgposition="center center"
+                                alt="slider image">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+                        <div class="caption sfl sfb tp-resizeme caption-bold-heading text-center"
+                             data-x="0"
+                             data-y="480"
+                             data-speed="700"
+                             data-start="1700"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>Equal . justic . under . law</h1>
+                        </div>
 
-            .full-height {
-                height: 100vh;
-            }
+                        <div class="caption sfr sfb tp-resizeme p-tag text-center"
+                             data-x="0"
+                             data-y="570"
+                             data-speed="700"
+                             data-start="2000"
+                             data-easing="easeOutBack"
+                        >
+                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus
+                                mal suada faci lisis.<br> Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum
+                                nec odio ipsum. </p>
+                        </div>
+                        <div class="caption sft tp-resizeme thm-btn text-center"
+                             data-x="0"
+                             data-y="660"
+                             data-speed="700"
+                             data-start="2800"
+                             data-easing="easeOutBack"
+                        >
+                            <a href="#">View Services <i class="fa fa-arrow-right"></i></a>
+                        </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+                    </li>
 
-            .position-ref {
-                position: relative;
-            }
+                    <li
+                            class="slider-3"
+                            data-transition="fade"
+                            data-slotamount="7"
+                            data-thumb="/img/slider/2.jpg"
+                            data-title="WE ARE AVAILABLE">
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+                        <img
+                                src="/img/slider/2.jpg"
+                                data-bgrepeat="no-repeat"
+                                data-bgfit="cover"
+                                data-bgposition="center center"
+                                alt="slider image">
 
-            .content {
-                text-align: center;
-            }
+                        <div class="caption sfl sfb tp-resizeme caption-1 text-center"
+                             data-x="0"
+                             data-y="400"
+                             data-speed="700"
+                             data-start="1700"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>We Offer Our Clients Only</h1>
+                        </div>
 
-            .title {
-                font-size: 84px;
-            }
+                        <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
+                             data-x="0"
+                             data-y="460"
+                             data-speed="700"
+                             data-start="2000"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>Expert Legal Advice</h1>
+                        </div>
+                        <div class="caption sft tp-resizeme caption-4 italic text-center"
+                             data-x="0"
+                             data-y="543"
+                             data-speed="700"
+                             data-start="2500"
+                             data-easing="easeOutBack"
+                        >
+                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br>
+                                cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
+                        </div>
+                        <div class="caption sft tp-resizeme border text-center"
+                             data-x="0"
+                             data-y="610"
+                             data-speed="700"
+                             data-start="2700"
+                             data-easing="easeOutBack"
+                        >
+                            <span></span>
+                        </div>
+                        <div class="caption sft tp-resizeme icon text-center"
+                             data-x="0"
+                             data-y="680"
+                             data-speed="700"
+                             data-start="3000"
+                             data-easing="easeOutBack"
+                        >
+                            <i class="flaticon-justice4"></i>
+                        </div>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+                    </li>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- /#banner -->
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+    <section class="call-to-action-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="dtc icon-box">
+                        <i class="icon icon-Phone2"></i>
+                    </div>
+                    <div class="dtc text-one">
+                        <h3>Get Free Legal Consultatnt: <span class="number">1800 245 6354</span></h3>
+                    </div>
+                    <div class="dtc text-two">
+                        <h4>7 days a Week From : 8.00 am to 2.30 pm</h4>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </section>
+
+    <section id="testimonial-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <div class="testimonial-list">
+                        <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <!--Start Testimonial Single Item-->
+                                <div class="item active">
+                                    <div class="single-testimonial-item text-center">
+                                        <div class="testimonial-image-holder">
+                                            <img src="/img/widget-icon-1.png" alt="">
+                                        </div>
+                                        <p>“We believe that analysis of your company and your customers is key in
+                                            responding effectively to your promotional needs and we will work with you
+                                            to fully understand your business to achieve the greatest amount of
+                                            publicity possible so that you can see a return from the advertising.11”</p>
+
+                                    </div>
+                                </div>
+                                <!--End Testimonial Single Item-->
+                                <!--Start Testimonial Single Item-->
+                                <div class="item">
+                                    <div class="single-testimonial-item text-center">
+                                        <div class="testimonial-image-holder">
+                                            <img src="/img/widget-icon-1.png" alt="">
+                                        </div>
+                                        <p>“We believe that analysis of your company and your customers is key in
+                                            responding effectively to your promotional needs and we will work with you
+                                            to fully understand your business to achieve the greatest amount of
+                                            publicity possible so that you can see a return from the advertising.11”</p>
+
+                                    </div>
+                                </div>
+                                <!--End Testimonial Single Item-->
+                                <a class="left testimonial-control" href="#testimonial-carousel" role="button"
+                                   data-slide="prev"><i class="fa fa-long-arrow-left testimonial-ctl-button"></i></a>
+                                <a class="right testimonial-control" href="#testimonial-carousel" role="button"
+                                   data-slide="next"><i class="fa fa-long-arrow-right testimonial-ctl-button"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="featured-services-area">
+        <div class="container">
+            <div class="featured-services">
+                <div class="section-title text-center">
+                    <span>Our Practice Areas</span>
+                    <h2><span>Our featured services</span></h2>
+                </div>
+                <div class="row">
+                    <div class="top-featured">
+                        <!--Star Single Featured Services-->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-featured">
+                                <div class="single-featured-icon alignleft">
+                                    <i class="flaticon-familiar17"></i>
+                                </div>
+                                <div class="single-featured-text">
+                                    <h5>family law</h5>
+                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
+                                        esuada fames ant infaucibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Featured Services-->
+                        <!--Star Single Featured Services-->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-featured">
+                                <div class="single-featured-icon alignleft">
+                                    <i class="flaticon-justice4"></i>
+                                </div>
+                                <div class="single-featured-text">
+                                    <h5>criminal law</h5>
+                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
+                                        esuada fames ant infaucibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Featured Services-->
+                        <!--Star Single Featured Services-->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-featured">
+                                <div class="single-featured-icon alignleft">
+                                    <i class="flaticon-transport111"></i>
+                                </div>
+                                <div class="single-featured-text">
+                                    <h5>auto Accident law</h5>
+                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
+                                        esuada fames ant infaucibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Featured Services-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bottom-featured">
+                        <!--Star Single Featured Services-->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-featured">
+                                <div class="single-featured-icon alignleft">
+                                    <i class="flaticon-rain7"></i>
+                                </div>
+                                <div class="single-featured-text">
+                                    <h5>real estate law</h5>
+                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
+                                        esuada fames ant infaucibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Featured Services-->
+                        <!--Star Single Featured Services-->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-featured">
+                                <div class="single-featured-icon alignleft">
+                                    <i class="flaticon-medical85"></i>
+                                </div>
+                                <div class="single-featured-text">
+                                    <h5>Drug Offence</h5>
+                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
+                                        esuada fames ant infaucibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Featured Services-->
+                        <!--Star Single Featured Services-->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-featured">
+                                <div class="single-featured-icon alignleft">
+                                    <i class="flaticon-sprain"></i>
+                                </div>
+                                <div class="single-featured-text">
+                                    <h5>personal injury</h5>
+                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
+                                        esuada fames ant infaucibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Featured Services-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Start latest news area-->
+    <section id="latest-news-area" class="anim-5-all">
+        <div class="container">
+            <div class="row">
+                <div class="latest-news">
+                    <div class="section-title text-center">
+                        <span>Attorney News</span>
+                        <h2><span>latest news of attorney</span></h2>
+                    </div>
+                    <!--Start Single news item-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bottom">
+                        <div class="single-news-item">
+                            <div class="news-image-holder">
+                                <img src="/img/news-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="published-date-wrapper">
+                                    <div class="published-date">
+                                        <h3>05</h3>
+                                        <p>Aug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-news-text">
+                                <ul class="meta text-center">
+                                    <li><a href="#"><i class="fa fa-user"></i> By: Michale John</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> Comments: 5</a></li>
+                                </ul>
+                                <h4>Heading of Blog</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus iste natus iste natus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single news item-->
+                    <!--Start Single news item-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bottom">
+                        <div class="single-news-item">
+                            <div class="news-image-holder">
+                                <img src="/img/news-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="published-date-wrapper">
+                                    <div class="published-date">
+                                        <h3>05</h3>
+                                        <p>Aug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-news-text">
+                                <ul class="meta text-center">
+                                    <li><a href="#"><i class="fa fa-user"></i> By: Michale John</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> Comments: 5</a></li>
+                                </ul>
+                                <h4>Heading of Blog</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus iste natus iste natus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single news item-->
+                    <!--Start Single news item-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bottom">
+                        <div class="single-news-item">
+                            <div class="news-image-holder">
+                                <img src="/img/news-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="published-date-wrapper">
+                                    <div class="published-date">
+                                        <h3>05</h3>
+                                        <p>Aug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-news-text">
+                                <ul class="meta text-center">
+                                    <li><a href="#"><i class="fa fa-user"></i> By: Michale John</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> Comments: 5</a></li>
+                                </ul>
+                                <h4>Heading of Blog</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus iste natus iste natus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single news item-->
+                    <!--Start Single news item-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bottom">
+                        <div class="single-news-item">
+                            <div class="news-image-holder">
+                                <img src="/img/news-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="published-date-wrapper">
+                                    <div class="published-date">
+                                        <h3>05</h3>
+                                        <p>Aug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-news-text">
+                                <ul class="meta text-center">
+                                    <li><a href="#"><i class="fa fa-user"></i> By: Michale John</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> Comments: 5</a></li>
+                                </ul>
+                                <h4>Heading of Blog</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus iste natus iste natus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single news item-->
+                    <!--Start Single news item-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bottom">
+                        <div class="single-news-item">
+                            <div class="news-image-holder">
+                                <img src="/img/news-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="published-date-wrapper">
+                                    <div class="published-date">
+                                        <h3>05</h3>
+                                        <p>Aug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-news-text">
+                                <ul class="meta text-center">
+                                    <li><a href="#"><i class="fa fa-user"></i> By: Michale John</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> Comments: 5</a></li>
+                                </ul>
+                                <h4>Heading of Blog</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus iste natus iste natus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single news item-->
+                    <!--Start Single news item-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bottom">
+                        <div class="single-news-item">
+                            <div class="news-image-holder">
+                                <img src="/img/news-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="published-date-wrapper">
+                                    <div class="published-date">
+                                        <h3>05</h3>
+                                        <p>Aug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-news-text">
+                                <ul class="meta text-center">
+                                    <li><a href="#"><i class="fa fa-user"></i> By: Michale John</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> Comments: 5</a></li>
+                                </ul>
+                                <h4>Heading of Blog</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus iste natus iste natus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single news item-->
+                    <!--Start Single news item-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bottom">
+                        <div class="single-news-item">
+                            <div class="news-image-holder">
+                                <img src="/img/news-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="published-date-wrapper">
+                                    <div class="published-date">
+                                        <h3>05</h3>
+                                        <p>Aug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-news-text">
+                                <ul class="meta text-center">
+                                    <li><a href="#"><i class="fa fa-user"></i> By: Michale John</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> Comments: 5</a></li>
+                                </ul>
+                                <h4>Heading of Blog</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus iste natus iste natus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single news item-->
+                    <!--Start Single news item-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bottom">
+                        <div class="single-news-item">
+                            <div class="news-image-holder">
+                                <img src="/img/news-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="published-date-wrapper">
+                                    <div class="published-date">
+                                        <h3>05</h3>
+                                        <p>Aug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-news-text">
+                                <ul class="meta text-center">
+                                    <li><a href="#"><i class="fa fa-user"></i> By: Michale John</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> Comments: 5</a></li>
+                                </ul>
+                                <h4>Heading of Blog</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus iste natus iste natus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Single news item-->
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!--End latest news area-->
+@endsection
+@push('styles')
+<style>
+    .bottom {
+        margin-bottom: 10px;
+    }
+</style>
+@endpush

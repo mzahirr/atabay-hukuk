@@ -123,6 +123,47 @@
                 </li>
             @endcan
 
+
+            @can(env('İÇERİK-YÖNETİMİ'))
+                <li class="heading">
+                    <h3 class="uppercase">İçerik Yönetimi</h3>
+                </li>
+                <li class="nav-item @if(request()->is('announcements/*') || request()->is('announcements')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Duyurular</span>
+                        @if(request()->is('announcements/*') || request()->is('announcements'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('announcements/create')) active open @endif">
+                            <a href="{{route('announcements.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('announcements/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('announcements')) active open @endif">
+                            <a href="{{route('announcements.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('announcements'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
+
+
+
+
+
+
+
             @can(env('AVUKAT-YÖNETİMİ'))
                 <li class="heading">
                     <h3 class="uppercase">Avukat Yönetimi</h3>
@@ -148,7 +189,7 @@
                         <li class="nav-item @if(request()->is('attorneys')) active open @endif">
                             <a href="{{route('attorneys.index')}}" class="nav-link ">
                                 <span class="title">Listele</span>
-                                @if(request()->is('clients'))
+                                @if(request()->is('attorneys'))
                                     <span class="selected"></span>
                                 @endif
                             </a>
@@ -253,7 +294,7 @@
                         <li class="nav-item @if(request()->is('trials')) active open @endif">
                             <a href="{{route('trials.index')}}" class="nav-link ">
                                 <span class="title">Listele</span>
-                                @if(request()->is('users'))
+                                @if(request()->is('trials'))
                                     <span class="selected"></span>
                                 @endif
                             </a>

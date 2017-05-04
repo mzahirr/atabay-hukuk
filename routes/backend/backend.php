@@ -39,6 +39,12 @@ Route::group(['middleware' => 'can:' . env('PANEL-YÖNETİMİ') . ''], function 
         Route::resource('clients', 'Backend\ClientController');
     });
 
+
+    Route::group(['middleware' => 'can:' . env('İÇERİK-YÖNETİMİ') . ''], function () {
+        Route::resource('announcements', 'Backend\AnnouncementController');
+    });
+
+
     Route::group(['middleware' => 'can:' . env('AVUKAT-YÖNETİMİ') . ''], function () {
         Route::resource('attorneys', 'Backend\AttorneyController');
     });

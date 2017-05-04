@@ -1,0 +1,635 @@
+
+/* Large Layout: 1200px. */
+@media only screen and (min-width: 1200px){
+
+.nav-collapser {
+  display: none;
+}
+
+
+
+}
+
+/* Medium screen  */ 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.lawyer-count h1 {
+  padding-left: 0;
+}
+.lawyer-count h1::before {
+  left: 20px;
+}
+
+.testimonial-control {
+  left: 280px;
+}
+.testimonial-control.right {
+  right: 280px;
+}
+.attorney-overlay .social-links {
+  margin-top: 160px;
+}
+
+/*Start legal-problem-area css */
+.get-free-consultation-button {
+  margin-left: -30px;
+}
+.get-free-consultation-button a {
+  padding: 0 14px;
+}
+/*End legal-problem-area css */
+
+/* Start=================================================blog-v3.html page css=====================================*/
+.fix.blog-post-date.bolg-v3-date {
+  left: 41%;
+  margin-right: 0;
+  top: -37px;
+}
+/*End=================================================blog-v3.html page css========================================*/
+
+/*Start=========================================================blog-v4.html page css==================================*/
+.fix.blog-post-date.bolg-v4-date {
+  left: 46%;
+}
+/*End=========================================================blog-v4.html page css==================================*/
+
+
+.practice-left-top-right-img {
+  float: left;
+  margin-top: 20px;
+}
+header .logo {
+  float: none !important;
+  text-align: center;
+}
+.mainmenu .nav-holder > ul > li > a {
+  line-height: 49px;
+  padding: 0px 12px;
+}
+.mainmenu {
+  float: none !important;
+  text-align: center;
+}
+.mainmenu .nav-expander .nav-collapser {
+  display: none;
+}
+header.stricky-fixed .logo img {
+  width: auto;
+  padding-top: 15px;
+}
+
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+/* Start=========================================================index.html page css================================== */	
+.container{
+	padding-left:15px;
+	padding-right:15px;
+}
+.single-attorney {
+  margin-bottom: 35px;
+}
+#our-attorneys-area {
+  padding-bottom: 40px;
+}
+.lawyer-info {
+  padding-top: 35px;
+}
+.lawyer-count h1 {
+  font-size: 60px;
+}
+.single-lawyer-info {
+  border-right: 0 solid #cccccc;
+  margin-bottom: 70px;
+}
+.widget-get-intouch {
+  padding-top: 20px;
+  padding-left:0px;
+}
+.testimonial-control {
+  left: 380px;
+  top: 16%;
+}
+.testimonial-control.right {
+  right: 380px;
+}
+.attorney-overlay .social-links {
+  margin-top: 270px;
+}
+#featured-services-area {
+  padding-bottom: 50px;
+  padding-top: 75px;
+}
+/* End=========================================================index.html page css=================================== */	
+
+/*Start legal-problem-area css */
+.get-free-consultation-button {
+  margin-left: -90px;
+}
+.get-free-consultation-button a {
+  padding: 15px 24px;
+}
+/*End legal-problem-area css */
+
+/* Start=================================================blog-v3.html page css=====================================*/
+.fix.blog-post-date.bolg-v3-date {
+  left: 40.5%;
+  top: -37px;
+  margin-right: 0;
+}
+
+/*End=================================================blog-v3.html page css========================================*/
+
+
+/*Start=========================================================blog-v4.html page css==================================*/
+.fix.blog-post-date.bolg-v4-date {
+  left: 46%;
+}
+/*End=========================================================blog-v4.html page css==================================*/
+
+/* Start=================================================practice-v5.html page css================================*/
+.practice-left-top-right-img {
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+.right-content-contact-box a {
+  margin-top: 20px;
+}
+/* End=================================================practice-v5.html page css====================================*/
+
+/*Start=======================================================Single-attorney.html page css==========================*/
+.single-attorney-right-padding0 {
+  padding-left: 15px;
+}
+.single-attorney-right {
+  margin-left: 0px;
+}
+.single-attorney-right-padding0 {
+  padding-left: 15px;
+}
+.single-attorney-right-content {
+  width: 50%;
+}
+/*End=======================================================Single-attorney.html page css===========================*/
+
+header .logo {
+  float: none !important;
+  text-align: center;
+}
+.mainmenu .nav-holder > ul > li > a {
+  line-height: 49px;
+  padding: 0px 12px;
+}
+.mainmenu {
+  float: none !important;
+}
+.mainmenu .nav-expander .nav-collapser {
+  display: none;
+}
+
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+/* Start=========================================================index.html page css================================== */	
+.container{
+	padding-left:15px;
+	padding-right:15px;
+}
+.single-featured {
+  margin-bottom: 35px;
+}
+#our-attorneys-area {
+  padding-bottom: 40px;
+}
+.single-attorney {
+  margin-bottom: 35px;
+}
+.lawyer-info {
+  padding-top: 35px;
+}
+.lawyer-count h1 {
+  font-size: 60px;
+}
+.single-lawyer-info {
+  border-right: 0 solid #cccccc;
+  margin-bottom: 70px;
+}
+.about-trust-text .section-title {
+  margin-bottom: 43px;
+  margin-top: 30px;
+}
+.single-news-item {
+  margin-bottom: 35px;
+}
+.legal-problem-text h2 {
+  padding-left:0px;
+}
+.widget-get-intouch {
+  padding-left: 0;
+}
+.section-title h1 {
+  line-height: 30px;
+}
+.single-footer-widget {
+  margin-bottom: 40px;
+}
+.attorney-overlay .social-links {
+  margin-top: 200px;
+}
+.testimonial-control {
+  left: 220px;
+  top: 10%;
+}
+.testimonial-control.right {
+  right: 220px;
+}
+.civil-titigation {
+  padding-bottom: 30px;
+}
+.our-law img {
+  padding-bottom: 20px;
+}
+.our-law {
+  padding-bottom: 30px;
+}
+#welcome-area {
+  padding: 40px 0;
+}
+
+#featured-services-area {
+  padding-bottom: 50px;
+  padding-top: 75px;
+}
+.single-featured {
+  border-bottom: 0px solid #e6e5e5;
+}
+/* End=========================================================index.html page css==================================== */	
+
+/* Start=======================================================attorney-v2.html page css===============================*/
+.single-attorney-right-info {
+  margin-left: 0px;
+}
+/* End=======================================================attorney-v2.html page css===============================*/
+
+/*Start breadcrumb css */
+.breadcrumb-text h1 {
+  background-size: contain;
+}
+/*End breadcrumb css */
+
+/*Start legal-problem-area css */
+.get-free-consultation-button {
+  margin-left: -15px;
+  margin-top: 20px;
+}
+/*End legal-problem-area css */
+
+/* Start===================================================blog-left-sidebar.html page css============================*/
+.blog-items {
+  margin-right: 0;
+}
+.left-sidebar {
+  margin-left: 0;
+}
+
+/* End===================================================blog-left-sidebar.html page css============================*/
+
+/* Start=================================================blog-right-sidebar.html page css===========================*/
+.right-sidebar {
+  margin-right: 0;
+}
+.blog-items-v2 {
+  margin-left: 0;
+  margin-top: 60px;
+}
+/* End=================================================blog-right-sidebar.html page css============================*/
+
+/* Start=================================================blog-v3.html page css=====================================*/
+.fix.blog-post-date.bolg-v3-date {
+  left: 39.5%;
+}
+/*End=================================================blog-v3.html page css========================================*/
+
+/*Start=========================================================blog-v4.html page css==================================*/
+.fix.blog-post-date.bolg-v4-date {
+  left: 40%;
+}
+/*End=========================================================blog-v4.html page css==================================*/
+
+/*Start=====================================================blog-details.html page css================================*/
+.blog-detalis-text-middle {
+  width: 100%;
+  text-align: justify;
+}
+.john-michila-text {
+  width: 100%;
+  text-align: justify;
+}
+.two-colum-text-left {
+  width: 100%;
+  text-align: justify;
+}
+.two-colum-text-right {
+  float: left;
+  padding-top: 30px;
+  text-align: justify;
+  width: 100%;
+}
+.socila-link-left-text {
+  width: 100%;
+  text-align: center;
+}
+.blog-details-social-right {
+  float: right;
+  width: 100%;
+  text-align: center;
+}
+.adminostrator-text {
+  width: 100%;
+  text-align: justify;
+}
+.comment-form form input.name {
+  width: 100%;
+  margin-bottom:25px;
+}
+.comment-form form input.email {
+  width: 100%;
+}
+.comment-image-holder {
+  padding-left: 0;
+}
+.comment-text {
+  padding-top: 15px;
+  width: 100%;
+}
+/*End=====================================================blog-details.html page css================================*/
+
+/*Start=====================================================contact.html page css===================================*/
+.contact-right {
+  margin-top: 50px;
+}
+/*End=====================================================contact.html page css===================================*/
+
+/* Start=================================================practice-v4.html page css================================*/
+.practice-v4-right-sidebar{
+  margin-right: 0;
+}
+.practice-v4-right-content-wrapper {
+  margin-left: 0;
+  margin-top: 60px;
+}
+/* End=================================================practice-v4.html page css============================*/
+
+/* Start=================================================practice-v5.html page css================================*/
+.practice-right-sidebar{
+  margin-right: 0;
+}
+.practice-left-content {
+  margin-left: 0;
+  margin-top: 60px;
+}
+
+.practice-left-top-right-img {
+  float: left;
+  margin-top: 20px;
+}
+.practice-left-middle-text {
+  text-align: justify;
+}
+.practice-bottom-right-text {
+  float: left;
+  margin-top: 30px;
+  width: 100%;
+}
+.right-content-contact-box a {
+  margin-top: 30px;
+}
+/* End=================================================practice-v5.html page css====================================*/
+
+/*Start=======================================================Single-attorney.html page css==========================*/
+.single-attorney-right {
+  margin-left: 15px;
+  margin-right: 0;
+}
+.single-attorney-right-content {
+  left: 15px;
+  width: 250px;
+}
+a.appintment-button {
+  bottom: -40px;
+  left: 5px;
+  padding: 12px 15px;
+}
+.single-attorney-bottom {
+  padding-bottom: 30px;
+  padding-top: 100px;
+}
+.single-attorney-right img {
+  height: 660px;
+}
+/*End=======================================================Single-attorney.html page css==========================*/
+
+.tab-1-right .section-title {
+  margin-bottom: 29px;
+  margin-top: 30px;
+}
+
+
+
+/* navigation styles */
+
+.nav-collapser {
+  display: block;
+}
+
+header.stricky {
+  position: static;
+  background: #1F1F1F;
+}
+header .logo {
+  float: none !important;
+  /* margin-bottom: 0; */
+  line-height: 0;
+  margin: 14px 0;
+  display: block;
+  text-align: center;
+}
+.mainmenu .nav-expander ul li i.icon-Search {
+  position: relative;
+  bottom: 6px;
+}
+.call-to-action-area {
+  overflow: hidden;
+  margin-top: 0;
+}
+.call-to-action-area .dtc {
+    display: block;
+    text-align: center;
+}
+.call-to-action-area .text-one h3 {
+  font-size: 16px;
+}
+.call-to-action-area .text-two h3 {
+  font-size: 16px;
+}
+.call-to-action-area .text-one  {
+  margin-top: 20px;
+}
+.call-to-action-area .text-two  {
+  margin-top: 10px;
+  padding: 0 15px;
+}
+.call-to-action-area .text-two h4 {
+  font-size: 21px;
+  line-height: 38px;
+}
+.case-evaluation-form {
+  padding-right: 0px;
+}
+
+
+}
+
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+/* Start=========================================================index.html page css ==================================*/	
+.container{
+	padding-left:15px;
+	padding-right:15px;
+}
+.single-news-item {
+  margin-bottom: 35px;
+}
+.legal-problem-text h2 {
+  padding-left:0px;
+}
+.widget-get-intouch {
+  padding-left: 0;
+}
+.attorney-overlay .social-links {
+  margin-top: 350px;
+}
+.testimonial-control {
+  left: 312px;
+  top: 12%;
+}
+.testimonial-control.right {
+  right: 312px;
+}
+/* End=========================================================index.html page css==================================== */
+	
+/*Start=========================================================blog-v4.html page css==================================*/
+.fix.blog-post-date.bolg-v4-date {
+  left: 43%;
+}
+/*End=========================================================blog-v4.html page css==================================*/
+
+/*Start=======================================================Single-attorney.html page css==========================*/
+.single-attorney-right img {
+  height: 530px;
+}
+.single-attorney-right-padding0 {
+  padding-left: 15px;
+}
+.single-attorney-right {
+  margin-left: 0px;
+}
+.single-attorney-right-padding0 {
+  padding-left: 15px;
+}
+.single-attorney-right-content {
+  left: 25px;
+  width: 400px;
+}
+/*End=======================================================Single-attorney.html page css==========================*/
+
+.mainmenu .nav-holder > ul {
+  width: 70%;
+  margin: auto;
+}
+.get-free-consultation-button {
+  text-align: center;
+}
+.get-free-consultation-button a {
+  float: none;
+}
+.call-to-action-area .text-one h3 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #271313;
+    line-height: 26px;
+}
+
+}
+
+
+
+
+/* menu responsive styles */
+
+
+@media only screen and (max-width: 767px) {
+  .mainmenu .nav-holder {
+    margin-bottom: 15px;
+  }
+  .mainmenu .nav-holder > ul {
+    transition: none;
+    display: none;
+  }
+  .mainmenu .nav-holder > ul > li,
+  header.stricky-fixed .mainmenu .nav-holder > ul > li > a,
+  header.stricky-fixed .mainmenu .nav-expander ul li button {
+    display: block;
+    line-height: 30px;
+  }
+  .mainmenu .nav-holder > ul > li > a {
+    display: block;
+    line-height: 40px;
+    border-bottom: 1px solid #2A2A2A;
+  }
+  .mainmenu .nav-holder ul li.dropdown a .fa {
+    display: inline-block;
+  }
+  .mainmenu .nav-holder > ul > li > ul {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: none;
+    display: none;  
+  }
+  .mainmenu .nav-holder > ul > li > ul > li > ul {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    visibility: visible; 
+    transition: none;
+    display: none;
+  }
+  .mainmenu .nav-expander,
+  .mainmenu .nav-holder {
+    display: block;
+  }
+  .mainmenu {
+    float: none !important;
+  }
+  .mainmenu .nav-expander {
+      padding-left: 20px;
+      padding-bottom: 11px;
+      text-align: center;
+  }
+  .mainmenu .nav-expander ul li {
+    padding-right: 15px;
+  }
+  .mainmenu .nav-holder > ul > li.dropdown > a:after {
+    display: none;
+  }
+  .mainmenu .nav-holder > ul > li.dropdown > ul > li.dropdown > a:after {
+    display: none;
+  }
+}

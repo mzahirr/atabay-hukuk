@@ -113,13 +113,14 @@ return [
     */
 
     'attributes' => [
-        'label'    => 'Ad',
-        'email'    => 'E-posta adresi',
-        'name'     => 'Ad soyad',
-        'password' => 'Şifre',
-        'identity' => 'Kimlik numarası',
-        'number'   => 'Numara',
-        'image'    => 'Resim',
+        'label'        => 'Ad',
+        'email'        => 'E-posta adresi',
+        'name'         => 'Ad soyad',
+        'password'     => 'Şifre',
+        'identity'     => 'Kimlik numarası',
+        'number'       => 'Numara',
+        'image'        => 'Resim',
+        'announcement' => 'Duyuru',
     ],
 
 ];

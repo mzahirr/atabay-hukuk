@@ -44,8 +44,11 @@ class UsersTableSeeder extends Seeder
             'label' => 'MÜVEKKİL YÖNETİMİ',
         ]);
 
-        $attorneyPermission = Permission::create([
+        $attorneyPermission     = Permission::create([
             'label' => 'AVUKAT YÖNETİMİ',
+        ]);
+        $announcementPermission = Permission::create([
+            'label' => 'İÇERİK YÖNETİMİ',
         ]);
 
         DB::table('permission_user')->truncate();
@@ -56,6 +59,7 @@ class UsersTableSeeder extends Seeder
         $user->assignPermission($casePermission);
         $user->assignPermission($clientPermission);
         $user->assignPermission($attorneyPermission);
+        $user->assignPermission($announcementPermission);
 
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
 

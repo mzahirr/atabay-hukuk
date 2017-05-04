@@ -1,0 +1,4015 @@
+/***********************************
+******** TABLE OF CONTENT **********
+************************************
+ 1  imported styles 
+ 2  Base CSS 
+ 3  Section Title
+ 4  Breadcrumb area css 
+ 5  index.html page css
+ 6  Top area CSS 
+ 7  Header Area Css
+ 8  Slider Area Css
+ 9  Slider bottom text 
+ 10 Welcome area css
+ 11 Featured Services area css
+ 12 Case Evaluation area css
+ 13 Our Attorneys area css
+ 14 ABout Trust area css
+ 15 Testimonial Area Css
+ 16 Latest News Area Css
+ 17 Branding area css
+ 18 Legal problem area css 
+ 19 Footer widget area css 
+ 20 Footer area css 
+ 21 index2.html page css
+ 22 About.html page css
+ 23 mission vision area css 
+ 24 Featured service area 2 css 
+ 25 Featured services area 3 css 
+ 26 Lawyer information area css 
+ 27 Attorney-v1.html page css 
+ 28 best attorney area css 
+ 29 Attorney-v2.html page css
+ 30 we have best attorney area title
+ 31 we have best attorney area
+ 32 we have best attorney area title
+ 33 practice-v1.html page css 
+ 34 practice v1 tabmenu area css
+ 35 practice v1 Tab all content-area css
+ 36 practice v1 choose us area css
+ 37 practice v1 lawyer info area css
+ 38 practice-v2.html page css 
+ 39 practice-v3.html page css 
+ 40 practice-v4.html page css
+ 41 practice-v5.html page css
+ 42 blog-left-sidebar.html page css 
+ 43 bolg v1 area css
+ 44 left sidebar css
+ 45 sidebar widget title
+ 46 search box  widget 
+ 47 practice  widget items 
+ 48 category  widget items 
+ 49 text  widget 
+ 50 Tag cloude  widget 
+ 51 meet attorney  widget 
+ 52 blog-right-sidebar.html page css 
+ 53 blog-v3.html page css 
+ 54 blog-v4.html page css 
+ 55 blog-details.html page css 
+ 56 blog details top text 
+ 57 blog details middle text 
+ 58 blog details bottom text 
+ 59 John Michaila Info 
+ 60 Two Colum Text 
+ 61 Socila Link  
+ 62 Adminostrator Text  
+ 63 Comment Part  
+ 64 Comment title 
+ 65 Meet Attorneys Comment form 
+ 66 contact.html page css 
+ 67 single-attorney.html page css 
+ 68 skill area css
+ 69 Leave Comment Area css
+ 70 header update styles 
+ 71 call to action area styles 
+ 72 contact google map styles 
+
+*********************************************
+*********************************************/
+
+
+
+
+/* imported styles */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic);
+@import url('bootstrap.css');
+@import url('font-awesome.min.css');
+@import url('normalize.css');
+@import url('slicknav.css');
+@import url('owl.carousel.css');
+@import url('owl.theme.default.min.css');
+@import url('owl.transitions.css');
+@import url('strocke-gap-icons-style.css');
+@import url('settings.css');
+@import url('flaticon.css');
+
+
+
+/*Start Base CSS */
+html,
+body { height: 100% }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #878787;
+}
+body * {
+  letter-spacing: .03em;
+}
+img {
+  max-width: 100%;
+  height:auto;
+}
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline:0 solid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  margin: 0 0 12px;
+}
+.fix { overflow: hidden }
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.container{
+  padding-left:0;
+  padding-right:0;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+::-webkit-input-placeholder {
+   color: #aba9a9;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #aba9a9;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #aba9a9;  
+}
+:-ms-input-placeholder {  
+   color: #aba9a9;  
+}
+.anim-3,
+.anim-3-all * {
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.anim-5,
+.anim-5-all * {
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.anim-7,
+.anim-7-all * {
+  transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+}
+
+/*End Base CSS */
+
+
+/*Start Section Title*/
+.welcome-attorney .section-title {
+  margin-bottom: 33px;
+}
+.about-trust-text .section-title {
+  margin-bottom: 43px;
+  margin-top: -5px;
+}
+.latest-news .section-title {
+  margin-bottom: 46px;
+}
+.section-title {
+  margin-bottom: 46px;
+}
+.section-title > span {
+  color: #727272;
+  display: inline-block;
+  font-family: "PT Serif",sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 21px;
+  margin-bottom: 8px;
+}
+.section-title h1 {
+  color: #000000;
+  display: block;
+  font-family: "Raleway",sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.section-title h1::after {
+  background: #b89b5e none repeat scroll 0 0;
+  content: " ";
+  display: inline-block;
+  height: 2px;
+  width: 70px;
+}
+.section-title h1 span {
+  display: block;
+}
+
+
+.section-title h2 {
+  color: #000000;
+  display: block;
+  font-family: "Raleway",sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.section-title h2::after {
+  background: #b89b5e none repeat scroll 0 0;
+  content: " ";
+  display: inline-block;
+  height: 2px;
+  width: 70px;
+}
+.section-title h2 span {
+  display: block;
+}
+
+
+
+/*End Section Title*/
+
+
+/*Start Breadcrumb area css */
+.breadcrumb-area {
+  background: rgba(0, 0, 0, 0) url("../img/breadcrumb-bg.jpg") no-repeat;
+  background-position: center;
+  background-size:cover;
+  position: relative;
+}
+.breadcrumb-area::before {
+  background: #000000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.breadcrumb-text {
+  padding-bottom: 93px;
+  padding-top: 199px;
+}
+.breadcrumb-text h1 {  
+  color: #ffffff;
+  font-size: 45px;
+  font-style: italic;
+  text-transform: capitalize;
+  font-family: "PT Serif",sans-serif;
+  display: inline-block;
+}
+.breadcrumb-text ul.breadcrumbs {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+.breadcrumb-text ul.breadcrumbs li{
+  float:none;
+  display:inline-block;
+}
+.breadcrumb-text ul.breadcrumbs li a{
+  font-size:14px;
+  color:#ffffff;
+  font-style:italic;
+    font-family: "PT Serif",sans-serif;
+}
+.breadcrumb-text ul.breadcrumbs li i {
+  color: #fff;
+  padding-left: 12px;
+  padding-right: 5px;
+  font-style:italic;
+}
+/*End Breadcrumb area css */
+
+
+
+
+
+/*Start======================================================================index.html page css=========================*/
+/*Start Top area CSS */
+.top-area{
+  position:relative;
+}
+.top-area-bg {
+  background: rgba(0, 0, 0, 0) url("../img/top-bg.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.top-area-bg::before {
+  background: #000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.25;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+/*Start Header Area Css*/
+.header-area {
+  padding-bottom: 20px;
+  padding-top: 25px;
+  position: relative;
+}
+.header-area::before {
+  border-bottom: 1px solid #a29a7e;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.mainmenu {
+  position: relative;
+}
+.mainmenu ul.nav {
+  text-align: right;
+  float:none;
+}
+.mainmenu ul.nav li {
+  display: inline-block;
+  float: none;
+}
+.mainmenu ul.nav li a{
+  color:#ffffff;
+  font-size:14px;
+  text-transform:uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight:700;
+}
+.mainmenu ul.nav li a:hover{
+  background:none;
+}
+.searchbar {
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+/*End Header Area Css*/
+
+
+/*Start Slider Area Css*/
+.slider-text {
+  padding-bottom: 125px;
+  padding-top: 125px;
+  padding-left: 60px;
+}
+.slider-text h1 {
+  color: #f6d877;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin:0;
+  font-family: 'Raleway', sans-serif;
+  font-weight:800;
+}
+.slider-text h2 {
+  color: #ffffff;
+  font-size: 36px;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight:700;
+}
+.slider-text ul {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+  display: inline-block;
+  list-style: outside none none;
+  overflow: hidden;
+  padding:5px 5px;
+  margin:10px 5px;
+}
+.slider-text ul li{
+  float:left;
+  padding:0 7px;
+  border-right:1px solid #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight:500;
+  color:#ffffff;
+  text-transform:uppercase;
+  font-size:14px;
+}
+.slider-text ul li:last-child{
+  border-right:0px solid;
+}
+.slider-text p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight:300;
+}
+.slider-text a {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Raleway",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 30px;
+  padding: 15px 40px;
+  text-transform: uppercase;
+}
+
+/*End Slider Area Css*/
+
+/*------------------------------------------------ (Start Slider bottom text )
+
+
+markup:
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="call-info">
+           <ul>
+        <li><img src="img/phone-icon.png" alt=""></li>
+        <li><h3>Get Free Legal Consultatnt:<span>1800 245 6354</span></h3></li>
+        <li><h2>7 days a Week From : 8.00 am to 2.30 pm</h2></li>
+          </ul>
+       </div>
+    </div>
+</div>
+
+css:
+
+.call-info {
+  background: #b89b5e none repeat scroll 0 0;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+}
+.call-info ul{
+  color:#271313;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.call-info ul li {
+  display: inline-block;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #cdb98f;
+}
+.call-info ul li:last-child{
+  border-right:none;
+}
+.call-info ul li h3 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+}
+.call-info ul li h3 span {
+  font-family: "Open Sans",sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  padding-left: 10px;
+  padding-right: 77px;
+}
+.call-info ul li h2 {
+  font-size: 22px;
+  font-style: italic;
+  font-family: 'PT Serif', serif;
+}
+
+
+---------------------------------------------------(End Slider bottom text )-------------------------*/
+
+/*End Top area CSS */
+
+
+/*Start Welcome area css*/
+#welcome-area {
+  padding: 90px 0;
+}
+.civil-titigation {
+  padding-top: 25px;
+}
+.civil-img-holder {
+  background: rgba(0, 0, 0, 0) url("../img/civil-border.png") no-repeat scroll left top;
+  padding-top: 7px;
+  padding-left: 7px;
+}
+.civil-text {
+  padding-left: 30px;
+}
+.civil-text h4 {
+  font-family: "Raleway",sans-serif;
+  color: #282c3d;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.civil-text a {
+  color: #b89b5e;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.our-law img {
+  padding-bottom: 40px;
+}
+.our-law h4 {
+  font-family: "Raleway",sans-serif;
+  color: #282c3d;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase; 
+}
+.our-law a {
+  color: #b89b5e;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*End Welcome area css*/
+
+
+/*Start Featured Services area css*/
+#featured-services-area {
+  background: #f7f6f6 url(../img/featured-service-bg.png) no-repeat center right;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding-top: 95px;
+  padding-bottom:50px;
+}
+.top-featured {
+  padding-bottom: 50px;
+}
+.single-featured {
+  border-bottom: 1px solid #e6e5e5;
+  padding-bottom: 33px;
+}
+.single-featured .single-featured-icon i:before {
+  font-size: 64px;
+  color: #BF9E58;
+  position: relative;
+  top: 15px;
+}
+.single-featured-text, .single-featured-icon {
+  display: table-cell;
+  vertical-align: top;
+}
+.single-featured-icon {
+  vertical-align: top;
+}
+.single-featured-text {
+  padding-left: 13px;
+}
+.single-featured-text p {
+  font-family: 'Open Sans', sans-serif; 
+}
+.single-featured-text h5:after {
+  content: '';
+  height: 2px;
+  width: 35px;
+  background: #DEBB7C;
+  display: block;
+  margin: 15px 0;
+}
+.single-featured-text h5 {
+  color: #3e3e3e;
+  font-family: "Raleway",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.bottom-featured {
+  padding-top: 50px;
+}
+.bottom-featured .single-featured {
+  border-bottom: medium none;
+}
+/*End Featured Services area css*/
+
+
+/*Start Case Evaluation area css*/
+#case-evaluation-area {
+  overflow:hidden;
+  background: url(../img/case-evaluation-area-bg.jpg) no-repeat;
+  background-position:left;
+  background-size:cover;
+}
+.case-evaluation-form {
+  padding-bottom: 64px;
+  padding-top: 70px;
+  padding-right: 70px;
+}
+.case-evaluation-form-title h1 {
+  background: rgba(0, 0, 0, 0) url("../img/case-form-title-bg.png") no-repeat scroll left top;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 34px;
+  padding-left: 53px;
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+.case-evaluation-form input[type="text"] {
+  color: #aba9a9;
+  height: 42px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  width: 100%;
+}
+.case-evaluation-form textarea {
+  height: 121px;
+  padding: 10px 20px 0;
+  width: 100%;
+  color:#8d8d8d;
+}
+.case-evaluation-form button[type="submit"] {
+  background: #b89b5e none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 9px 21px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+.case-evaluation-form button[type="submit"]:hover {
+  background: #3B3946;
+  border: 1px solid #fff;
+}
+.case-evaluation-form input[type="text"]:focus{
+  border:1px solid #b89b5e;
+}
+.case-evaluation-form textarea:focus {
+  border:1px solid #b89b5e;
+}
+.case-evaluation-image img {
+  float: left;
+  max-width: none;
+}
+.case-evaluation-image {
+  position: relative;
+}
+.case-evaluation-image:before {
+  content: '';
+  width: 2000px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 200%;
+  background: #B89B5E;
+  display: block;
+  opacity: .65;
+  transition: all .3s ease;
+  z-index: 999;
+}
+.case-evaluation-image:hover:before {
+  left: 0;
+}
+/*End Case Evaluation area css*/
+
+
+/*Start Our Attorneys area css*/
+#our-attorneys-area {
+  background: #f0f0f1 none repeat scroll 0 0;
+  padding-bottom: 94px;
+  padding-top: 95px;
+}
+.attorney-image-holder{
+  position:relative;
+  overflow:hidden;
+}
+.attorney-image-holder img {
+  width: 100%;
+}
+.attorney-plus-icon{
+  position:absolute;
+  right:0;
+  bottom:0;
+}
+.single-attorney:hover .attorney-overlay {
+  opacity: 1;
+}
+.attorney-overlay {
+  background:rgba(59, 57, 70, 0.90) none repeat scroll 0 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+}
+.attorney-overlay .social-links {
+  text-align: center;
+  display: block;
+  margin-top: 220px;
+}
+.social-links i.mysocial_style {
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 13px;
+  height: 30px;
+  margin: 0 2px;
+  padding-bottom: 0;
+  padding-left: 0px;
+  padding-top: 9px;
+  width: 30px;
+}
+.social-links i.mysocial_style:hover{
+  background:#ff4140;
+  border:1px solid #403859;
+}
+.attorney-ninus-icon {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.attorney-name {
+  background: #F0F0F0 none repeat scroll 0 0;
+  padding-bottom: 12px;
+  padding-top: 17px;
+  transition: all .5s ease;
+}
+.single-attorney:hover .attorney-name {
+  background: #B89B5E;
+}
+.single-attorney:hover .attorney-name h5 {
+  color: #fff;
+}
+.single-attorney:hover .attorney-name p {
+  color: #fff;
+}
+.attorney-name h5 {
+  color: #3b3946;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif; 
+  transition: all .5s ease;
+}
+.attorney-name p {
+  color: #3b3946;
+  font-family: "Open Sans",sans-serif;
+  font-size: 11px;
+  margin: 0;
+  text-transform: uppercase;
+  margin-top: 2px;
+  transition: all .5s ease;
+}
+
+.single-attorney:hover .attorney-image-holder .attorney-plus-icon{
+  display:none;
+}
+.single-attorney:hover .attorney-image-holder .attorney-overlay{
+  display:block;
+}
+
+.lawyer-info {
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+.single-lawyer-info {
+  border-right: 1px solid #cccccc;
+}
+.single-lawyer-info.no-norder {
+  border-right: medium none;
+}
+.lawyer-count h1 {
+  color: #4b3854;
+  font-family: "PT Serif",sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  padding-left: 22px;
+  padding-top: 11px;
+}
+.lawyer-text p {
+  font-family: "Open Sans",sans-serif;
+  color: #b89b5e;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.lawyer-count h1::before {
+  background: #4b3854 none repeat scroll 0 0;
+  content: "";
+  height: 5px;
+  left: 40px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+.lawyer-text {
+  padding-left: 10px;
+  padding-top: 30px;
+}
+/*End Our Attorneys area css*/
+
+
+/*Start ABout Trust area css*/
+#about-trust-area{
+  background:url(../img/texture.jpg) no-repeat;
+  background-size:cover;
+  padding:100px 0;
+  overflow: hidden;
+}
+.about-trust-image{
+  position:relative;
+}
+.trust-image-over {
+  bottom: -20px;
+  display: inline-block;
+  position: absolute;
+  right: -20px;
+}
+#about-trust-area .col-lg-7 {
+  padding-left: 0;
+}
+.about-trust-text {
+  margin-left: -12px;
+}
+.about-trust-text p {
+  color: #6b6b6b;
+}
+.about-trust-box {
+  background: #363636 none repeat scroll 0 0;
+  display: block;
+  font-size: 20px;
+  margin-top: 44px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-top: 16px;
+}
+.trust-box-text p {
+  color: #ffffff;
+  font-style:italic;
+  font-family: "PT Serif",sans-serif;
+  position: relative;
+  top: 7px;
+}
+.download-button {
+  float: right;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+.download-button a {
+  background: #b89b5e none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Raleway",sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 30px;
+  text-transform: uppercase;
+  border: 1px solid #b89b5e;
+}
+.download-button a:hover {
+  background: #363636;
+}
+.we-are-practice-text {
+  margin-top: 35px;
+}
+.we-are-practice h3 {
+  background: rgba(0, 0, 0, 0) url("../img/practice-text-bg-border.png") no-repeat scroll right bottom;
+  color: #727272;
+  font-family: "PT Serif",sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  background-position: 390px 22px;
+}
+/*End ABout Trust area css*/
+
+
+/*Start Testimonial Area Css*/
+#testimonial-area {
+  background: rgba(0, 0, 0, 0) url("../img/testimonial/testimonial-bg.jpg") no-repeat scroll center bottom / cover ;
+  padding-bottom: 46px;
+  padding-top: 63px;
+}
+.testimonial-control {
+  color: #ffffff;
+  font-size: 13px;
+  left: 335px;
+  position: absolute;
+  top: 0%;
+}
+.testimonial-control.right {
+    left: auto;
+    right: 335px;
+}
+.testimonial-ctl-button {
+  border: 1px solid #61626d;
+  height: 25px;
+  padding: 6px 9px;
+  width: 34px;
+}
+.testimonial-ctl-button:hover{
+  color:#ddd;
+}
+.single-testimonial-item p {
+  font-size:16px;
+  color:#ffffff;
+  line-height: 28px;
+  padding-top: 15px;
+  font-family: "Open Sans",sans-serif;
+}
+.testimonial-author h4 {
+  color: #b89b5e;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "Open Sans",sans-serif;
+}
+#testimonial-carousel:before{
+  font-family:FontAwesome;
+  content:"\f10d";
+  position:absolute;
+  left:-60px;
+  top:120px;
+  color:#b89b5e;
+  font-size:40px; 
+}
+/*End Testimonial Area Css*/
+
+
+/*Start Latest News Area Css*/
+#latest-news-area {
+  background: #f2f2f2 none repeat scroll 0 0;
+  padding-bottom: 90px;
+  padding-top: 93px;
+}
+.news-image-holder{
+  position:relative;
+  margin-bottom: 10px;
+}
+.news-image-holder:hover .overlay {
+  transform: scale(1.0);
+}
+.news-image-holder .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(184,155,94,.65);
+  transform: scale(0.0);
+}
+.news-image-holder .overlay a {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.news-image-holder .overlay a i {
+  display: table-cell;
+  vertical-align: middle;
+  color: #3B3946;
+  font-size: 18px;
+}
+.news-image-holder img {
+  height: auto;
+  width: 100%;
+}
+.published-date-wrapper {
+  position: absolute;
+  bottom: -10px;
+  left:0;
+  width: 100%;
+}
+.published-date {
+  background: #b89b5e none repeat scroll 0 0;
+  height: 63px;
+  text-align: center;
+  padding-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 63px;
+}
+.published-date h3 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Open Sans",sans-serif;
+}
+.published-date p {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+.news-info {
+  background: #3b3946 none repeat scroll 0 0;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-top: 7px;
+}
+.news-info ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.news-info ul li {
+  display: inline-block;
+  float: left;
+}
+.news-info ul li a {
+  border-left: 1px solid #f5f4f4;
+  color: #f5f4f4;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+.news-info ul li a:hover {
+  color: #B89B5E;
+}
+.news-info ul li.admin-border-leftnone a{
+  border-left:none;
+}
+.latest-news-text {
+  background: #FFFFFF;
+  border: 1px solid #F6F5F5;
+  padding: 20px 22px;
+}
+.latest-news-text .meta {
+  font-size: 0;
+  padding: 0;
+  padding-bottom: 10px;
+}
+.latest-news-text .meta li {
+  display: inline-block; 
+}
+.latest-news-text .meta li a{
+  font-size: 15px;
+  font-style: italic;
+  color: #959595;
+  padding: 0 15px;
+  font-family: 'PT Serif', sans-serif;
+}
+.latest-news-text .meta li a .fa {
+  color: #B89B5E;
+}
+.latest-news-text h4 {
+  color: #282c3d;
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.latest-news-text p {
+  font-family: "Open Sans",sans-serif;
+}
+/*End Latest News Area Css*/
+
+
+
+/*Start Branding area css*/
+#clients {
+  padding: 0px 0;
+}
+#clients .owl-carousel {
+  padding: 0 70px;
+  position: relative;
+}
+#clients .container .item {
+  height: 145px;
+  line-height: 145px;
+}
+#clients .container .item img {
+  transition: all 0.3s ease 0s;
+  display: inline;
+}
+#clients .container .owl-theme .owl-controls {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#clients .container .owl-theme .owl-nav {
+  margin: 0;
+}
+#clients .container .owl-theme .owl-nav div {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+#clients .container .owl-prev {
+  left: 0px;
+  position: absolute;
+  top: 0;
+  line-height: 145px;
+}
+#clients .container .owl-theme .owl-nav div .fa {
+  color: #b9b9b9;
+  font-size: 30px;
+}
+#clients .container .owl-theme .owl-nav div {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+#clients .container .owl-next {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  line-height: 145px;
+}
+#clients .container .owl-theme .owl-nav div .fa {
+  color: #b9b9b9;
+  font-size: 30px;
+}
+/*End Branding area css*/
+
+
+
+
+/*Start Legal problem area css */
+#legal-problem-area {
+  background: #BF9E58 none repeat scroll 0 0;
+  padding-bottom: 26px;
+  padding-top: 28px;
+}
+.legal-problem-text h2 {
+  color: #1f1f1f;
+  font-family: "PT Serif",sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  padding-left: 70px;
+  margin-top: 8px;
+}
+.get-free-consultation-button a {
+  background: #FFFFFF none repeat scroll 0 0;
+  color: #1F1F1F;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 1px;
+  padding: 0px 17px 0px 23px;
+  text-transform: uppercase;
+  border: 1px solid #FFFFFF;
+  float: right;
+  border-radius: 5px;
+  line-height: 42px;
+}
+.get-free-consultation-button a .fa {
+  color: #1F1F1F;
+  font-size: 14px;
+  border-left: 1px solid #D2D2D2;
+  padding-left: 15px;
+  margin-left: 20px;
+  line-height: 42px;
+}
+.get-free-consultation-button a:hover .fa {
+  color: #1f1f1f;
+  border-color: #1F1F1F;
+}
+
+.get-free-consultation-button a:hover {
+  background: #B89B5E;
+  color: #1f1f1f;
+  border-color: #1F1F1F;
+}
+/*End Legal problem area css */
+
+
+/*Start Footer widget area css */
+#footer-widget-area {
+  background: #1f1f1f none repeat scroll 0 0;
+  padding-bottom: 30px;
+  padding-top: 56px;
+}
+.footer-logo {
+  margin-top: -14px;
+}
+.widget-text {
+  padding-top: 23px;
+}
+.widget-text p {
+  color: #636363;
+  font-family: "Open Sans",sans-serif;
+}
+.footer-read-more a {
+  color: #b89b5e;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Open Sans",sans-serif;
+}
+.widget-social-links {
+  margin-top: 27px;
+}
+.widget-social-links a i.mysocial_style {
+  border: 1px solid #414242;
+  border-radius: 50%;
+  color: #8f8f8f;
+  font-size: 13px;
+  height: 30px;
+  margin: 0 4px 0 0;
+  padding-left: 10px;
+  padding-top: 8px;
+  width: 30px;
+}
+.widget-social-links a i.mysocial_style:hover{
+  border:1px solid #b89b5e;
+  color:#b89b5e;  
+}
+
+.single-footer-widget h3 {
+  border-bottom: 1px solid #363637;
+  color: #ffffff;
+  font-family: "PT Serif",sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 27px;
+  padding-bottom: 21px;
+}
+.single-footer-widget ul {
+  color: #636363;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+}
+.quick-links ul.left-quick-links {
+  margin-right: 30px;
+}
+.quick-links ul li {
+  margin-bottom: 12px;
+}
+.quick-links ul li i {
+  font-size: 16px;
+  padding-right: 12px;
+  trasition: all .3s ease;
+}
+.quick-links ul li a {
+  color: #636363;
+  font-family: "Open Sans",sans-serif;
+  font-size:14px;
+  transition: all .3s ease;
+}
+.quick-links ul li a:hover {
+  color: #BF9E58;
+}
+.quick-links ul li:hover i {
+  color: #BF9E58;
+}
+
+.widget-get-intouch {
+  padding-left: 90px;
+}
+.widget-get-intouch ul li {
+  margin-bottom: 19px;
+  padding-left: 35px;
+}
+.widget-get-intouch ul li.location {
+  background: rgba(0, 0, 0, 0) url("../img/location.png") no-repeat scroll 0 7px;
+}
+.widget-get-intouch ul li.phone {
+  background: rgba(0, 0, 0, 0) url("../img/phone.png") no-repeat scroll left top;
+  background-position: 0px 8px;
+}
+.widget-get-intouch ul li.envelop {
+  background: rgba(0, 0, 0, 0) url("../img/envelop.png") no-repeat scroll left top;
+  background-position: 0 8px;
+}
+.widget-get-intouch ul li.website {
+  background: rgba(0, 0, 0, 0) url("../img/website.png") no-repeat scroll left top;
+  background-position: 0 4px;
+}
+/*End Footer widget area css */
+
+
+/*Start Footer area css */
+#footer-area {
+  background: #191919 none repeat scroll 0 0;
+  padding-bottom: 17px;
+  padding-top: 27px;
+}
+.copy-right-text p {
+  color: #434546;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: "Open Sans",sans-serif;
+}
+.created-text p {
+  color: #434546;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: "Open Sans",sans-serif;
+}
+.created-text p a {
+  color: #434546;
+}
+/*End Footer area css */
+/*End======================================================================index.html page css=======================*/
+
+/*Start=================================================================index2.html page css=========================*/
+
+.top-area-bg-2 {
+  background: url(../img/top-bg.jpg-2.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/*End=================================================================index2.html page css=========================*/
+
+/*Start=================================================================About.html page css========================*/
+
+/*Start mission vision area css */
+.mission-vision-text .section-title {
+  margin-top: -5px;
+  margin-bottom: 41px;
+}
+#mission-vision-area {
+  padding: 100px 0;
+}
+.mission-vision-text {
+  padding-left: 40px;
+}
+.mission-vision-signature {
+  margin-top: 35px;
+}
+.mission-vision-right-img {
+  padding-top: 65px;
+}
+/*End mission vision area css */
+
+
+/*Start Featured service area 2 css */
+#featured-services-area-2 {
+  background: #f4f4f4 none repeat scroll 0 0;
+  padding-bottom: 83px;
+  padding-top: 95px;
+}
+.single-featured-item .featured-icon i {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  color: #C6A561;
+  background: #1F1F1F;
+  font-size: 42px;
+  height: 115px;
+  width: 115px;
+  line-height: 110px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  transition: all .3s ease;
+}
+.single-featured-item .featured-text h4 {
+  color: #3e3e3e;
+  font-family: "Raleway",sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  margin-top: 38px;
+  text-transform: uppercase;
+}
+.single-featured-item .featured-text p{
+  font-family: "Open Sans",sans-serif;
+}
+.single-featured-item:hover .featured-icon i{
+  background: #C6A561;
+  color: #fff;
+}
+.single-featured-item:hover .featured-text h4 {
+  color: #b89b5e; 
+}
+/*End Featured service area 2 css */
+
+
+/*Start Featured services area 3 css */
+#featured-services-area-3 {
+  background: #ffffff none repeat scroll 0 0;
+  padding-bottom: 100px;
+  padding-top: 95px;
+}
+.attorney-overlay .phone-and-mail {
+  color: #ffffff;
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  margin-top: 72%;
+  text-align: center;
+}
+.phone-and-mail p {
+  margin: 0 0 4px;
+}
+/*End Featured services area 3 css */
+
+
+/*Start Lawyer information area css */
+#lawer-information-area {
+  padding-bottom: 54px;
+  padding-top: 65px;
+}
+#lawer-information-area .lawyer-info {
+  padding: 0;
+}
+
+/*End Lawyer information area css */
+
+/*End=================================================================About.html page css=========================*/
+
+/*Start=========================================================Attorney-v1.html page css=========================*/
+
+/*Start best attorney area css */
+#best-attorney-area .our-attorneys .section-title h2 {
+  font-family: "Open Sans",sans-serif;
+  margin-bottom: 40px;
+}
+#best-attorney-area .our-attorneys .section-title p {
+  color: #777777;
+  line-height: 27px;
+}
+#best-attorney-area {
+  padding-bottom: 70px;
+  padding-top: 95px;
+}
+#best-attorney-area .our-attorneys .single-best-attorney {
+  margin-bottom: 30px;
+}
+.read-full-bio {
+  margin-top: 65%;
+  text-align: center;
+}
+.read-full-bio a {
+  background: #ffffff none repeat scroll 0 0;
+  display: inline-block;
+  padding: 6px 18px;
+  font-size: 15px;
+  color: #3b3946;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Open Sans",sans-serif;
+  margin:0;
+}
+.attorney-name h4 {
+  color: #3b3946;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 14px;
+  text-transform: uppercase;
+}
+.attorney-name p.practice {
+  color: #878787;
+  font-size: 14px;
+  text-transform: none;
+  font-family: "Open Sans",sans-serif;
+  transition: all .5s ease;
+}
+.attorney-name:hover p.practice {
+color: #fff;
+}
+.attorney-name .phone-and-mail-number {
+  background: #fff none repeat scroll 0 0;
+  margin: 17px 10px 0;
+  padding: 10px 0;
+  transition: all .5s ease;
+}
+.single-attorney:hover .attorney-name .phone-and-mail-number {
+  background: #3B3946;
+}
+.single-attorney:hover .attorney-name .phone-and-mail-number p {
+  color: #fff;
+}
+.attorney-name .phone-and-mail-number p {
+  color: #878787;
+  display: block;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  font-family: "Open Sans",sans-serif;
+}
+/*End best attorney area css */
+/*End===========================================================Attorney-v1.html page css=========================*/
+
+/*Start===========================================================Attorney-v2.html page css=======================*/
+/*Start we have best attorney area title*/
+#we-have-best-attorney-area-title {
+  padding-top: 95px;
+}
+#we-have-best-attorney-area-title .best-attorney .section-title h2 {
+  margin-bottom: 40px;
+}
+#we-have-best-attorney-area-title .best-attorney .section-title p{
+  color:#777777;
+  font-family: "Open Sans",sans-serif;
+  line-height:26px;
+}
+/*End we have best attorney area title*/
+
+/*Start we have best attorney area*/
+#we-have-best-attorney-area {
+  background: #e9e9e9 none repeat scroll 0 0;
+  padding-bottom: 70px;
+  padding-top: 100px;
+}
+.best-single-attorney-item{
+  margin-bottom:30px;
+}
+.single-attorney-left {
+}
+.single-attorney-left-img img{
+  width:100%;
+  height:100%;
+}
+.single-attorney-right-info {
+  background: #ffffff none repeat scroll 0 0;
+  margin-left: -30px;
+}
+.single-attorney-right-info:hover {
+  background: #3B3946;
+}
+.single-attorney-right-info:hover h4 {
+  color: #fff;
+}
+.single-attorney-right-info:hover p {
+  color: #fff;
+}
+.single-attorney-right-info:hover .lawyer-social-links a i {
+  background: #3b3946;
+  color: #ffffff;
+}
+
+.attorney-title-name {
+  background: #b89b5e none repeat scroll 0 0;
+  margin: 25px 20px 0;
+  padding-bottom: 4px;
+  padding-top: 11px;
+}
+.attorney-title-name h5 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Open Sans",sans-serif;
+}
+.attorney-title-name span {
+  font-size: 11px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Open Sans",sans-serif;
+}
+.single-attorney-right-info h4 {
+  color: #3b3946;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  margin-top: 28px;
+  text-transform: uppercase;
+}
+.single-attorney-right-info p {
+  color: #777777;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  line-height:22px;
+}
+.attorney-right-phn-mail p {
+  color: #848484;
+  margin: 0;
+  font-family: "Open Sans",sans-serif;
+}
+.attorney-right-phn-mail {
+  padding-top: 0px;
+}
+.lawyer-social-links {
+  padding-bottom: 16px;
+  padding-top: 14px;
+}
+.lawyer-social-links a i {
+  border: 1px solid #ededed;
+  border-radius: 50%;
+  color: #6a6a6a;
+  font-size: 13px;
+  height: 28px;
+  margin: 0 7px;
+  padding: 7px;
+  width: 28px;
+}
+.lawyer-social-links a i:hover{
+  background:#3b3946;
+  color:#ffffff;
+}
+/*Start we have best attorney area title*/
+
+/*End===========================================================Attorney-v2.html page css=========================*/
+
+/*Start===========================================================practice-v1.html page css=====================*/
+
+/*Start practice v1 tabmenu area css*/
+.practive-v1-tabmenu-area {
+  background: #3b3946 none repeat scroll 0 0;
+  padding: 38px 0;
+}
+.practice-v1-tabmenu ul.mytab {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.practice-v1-tabmenu ul.mytab li {
+  display: inline-block;
+  float: none;
+}
+.practice-v1-tabmenu ul.mytab li::after {
+  color: #ffffff;
+  content: "/";
+  display: inline-block;
+}
+.practice-v1-tabmenu ul.mytab li:last-child::after {
+  content: "";
+}
+.practice-v1-tabmenu ul.mytab li a {
+  color: #ffffff;
+  font-family: "Open Sans",sans-serif;
+  font-size: 13px;
+  margin: 0 18px;
+  text-transform: uppercase;
+}
+.practice-v1-tabmenu ul.mytab li.active a{
+  color:#b89b5e;
+}
+/*End practice v1 tabmenu area css*/
+
+/*Start practice v1 Tab all content-area css*/
+.tab-1-right .section-title {
+  margin-top: -3px;
+  margin-bottom: 29px;
+}
+#tab-all-content-area {
+  background: #f4f4f4 none repeat scroll 0 0;
+  padding-bottom: 100px;
+  line-height:26px;
+}
+.tab-content.tab-info {
+  padding-top: 60px;
+}
+.tab-1-top {
+  padding-bottom: 38px;
+}
+.tab-1-right {
+  padding-left: 30px;
+}
+.tab-1-right-text p {
+  color: #777777;
+  font-family: "Open Sans",sans-serif;
+}
+.tab-1-right-poinet-nm {
+  padding-top: 10px;
+}
+.tab-1-right-poinet-nm ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.tab-1-right-poinet-nm ul li {
+  background: rgba(0, 0, 0, 0) url("../img/tab-point-li-bg.png") no-repeat scroll 0 8px;
+  color: #383838;
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+.tab-1-content p {
+  color: #777777;
+  font-family: "Open Sans",sans-serif;
+}
+.tab-1-content h3 {
+  color: #2b2b2b;
+  font-size: 20px;
+  padding-bottom: 13px;
+  padding-top: 22px;
+}
+.contact-us-box {
+  background: #b89b5e none repeat scroll 0 0;
+  margin-right: 30px;
+  margin-top: 40px;
+  padding: 27px 0;
+}
+.contact-us-box-left h4 {
+  color: #ffffff;
+  float: left;
+  font-family: "PT Serif",sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  margin: 0;
+  overflow: hidden;
+  padding-left: 30px;
+  padding-top: 7px;
+}
+.contact-us-box-button {
+  float: right;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.contact-us-box-button a {
+  background: #3b3946 none repeat scroll 0 0;
+  color: #ffffff;
+  font-family: "Raleway",sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  padding: 7px 26px;
+}
+/*End practice v1 Tab all content-area css*/
+
+/*Start practice v1 choose us area css*/
+#choose-us-area {
+  padding-top: 95px;
+}
+.choose-single-item {
+  background: #f1f1f1 none repeat scroll 0 0;
+  padding: 30px;
+}
+.choose-single-item h4 {
+  color: #000000;
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 19px;
+  margin-top: 27px;
+  text-transform: uppercase;
+}
+.choose-single-item p {
+  color: #777777;
+  font-family: "Open Sans",sans-serif;
+}
+.choose-single-item:hover{
+  background:#3b3946; 
+}
+.choose-single-item:hover.choose-single-item h4{
+  color:#b89b5e;
+}
+.choose-single-item:hover.choose-single-item p{
+  color:#b2b2b3;
+}
+/*End practice v1 choose us area css*/
+
+/*Start practice v1 lawyer info area css*/
+#lawer-information-area.practice-v1-lawyerinfo {
+  padding-bottom: 94px;
+  padding-top: 105px;
+}
+/*End practice v1 lawyer info area css*/
+
+/*End===========================================================practice-v1.html page css=====================*/
+
+
+/*Start===========================================================practice-v2.html page css=======================*/
+#practice-v2-area {
+  background: #f4f4f4 none repeat scroll 0 0;
+  padding-top:99px;
+  padding-bottom:41px;
+}
+.practice-v2-single-item {
+  margin-bottom: 59px;
+}
+.practice-v2-single-item img {
+  background: #f4f4f4 none repeat scroll 0 0;
+}
+.practice-v2-single-item-title {
+  margin-bottom: 15px;
+  margin-top: 27px;
+}
+.practice-v2-single-item-title h4 {
+  color: #000000;
+  display: block;
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.practice-v2-single-item-title h4::after {
+  background: #b89b5e none repeat scroll 0 0;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 48px;
+}
+.practice-v2-single-item-title h4 span {
+  display: block;
+}
+.practice-v2-single-item-text p {
+  color: #777777;
+  line-height:26px;
+}
+.practice-v2-single-item-text a {
+  background: #b89b5e none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 16px;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+/*End===========================================================practice-v2.html page css=======================*/
+
+/*Start===========================================================practice-v3.html page css=====================*/
+
+#practice-v3-area {
+  background: #f4f4f4 none repeat scroll 0 0;
+  padding-bottom: 93px;
+  padding-top: 100px;
+}
+.practice-v3-single-item {
+  background: #ffffff none repeat scroll 0 0;
+  padding: 5px;
+  margin-bottom: 60px;
+}
+.practice-v3-single-item-border {
+  border: 1px solid #eaeaea;
+}
+.practice-v3-left-imge{
+  position:relative;
+}
+.practice-v3-overlay {
+  background: #3b3946 none repeat scroll 0 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  opacity:.75;
+  display:none;
+}
+.practice-v3-left-imge img {
+  height: auto;
+  width: 100%;
+}
+.practice-v3-right-content {
+  padding-left: 40px;
+  padding-right: 25px;
+}
+.practice-v3-right-content .practice-v3-title {
+  padding-top: 14px;
+  margin-bottom: 20px;
+}
+.practice-v3-single-item:hover{
+  box-shadow: 1px 1px 11px #D1CFCF; 
+-webkit-box-shadow: 1px 1px 11px #D1CFCF; 
+-moz-box-shadow: 1px 1px 11px #D1CFCF;  
+}
+.practice-v3-single-item:hover .practice-v3-overlay{
+  display:block;
+}
+.practice-v3-paginat{}
+.practice-v3-paginat ul.pagination {
+  margin: 0 0 0 -5px;
+}
+.practice-v3-paginat ul.pagination li{}
+.practice-v3-paginat ul.pagination li a {
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 0;
+  color: #8e8d8d;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 20px;
+  margin: 0 5px;
+  text-decoration: none;
+  width: 46px;
+  height: 46px;
+  padding-top: 8px;
+  padding-left: 16px;
+}
+.practice-v3-paginat ul.pagination li.active a{
+  background: #b89b5e;
+  color:#ffffff;
+  border:none;  
+}
+.practice-v3-paginat ul.pagination li a i {
+  width: 14px;
+}
+
+/*End=============================================================practice-v3.html page css=====================*/
+
+/*Start=============================================================practice-v4.html page css===================*/
+#practice-v4-area{
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.practice-v4-sidebar-title {
+  margin-bottom: 28px;
+  margin-top: 48px;
+}
+.practice-v4-sidebar-title h3 {
+color: #404040;
+display: block;
+font-family: "Raleway",sans-serif;
+font-size: 18px;
+font-weight: 700;
+line-height: 17px;
+margin-bottom: 0;
+text-transform: uppercase;
+}
+.practice-v4-sidebar-title h3::after {
+background: #b89b5e none repeat scroll 0 0;
+content: "";
+display: inline-block;
+height: 1px;
+width: 44px;
+}
+.practice-v4-sidebar-title h3 span {
+  display: block;
+  margin-bottom: 8px;
+}
+.doenload-items {
+   background: #f0f0f0; 
+}
+.doenload-items ul {
+  list-style: outside none none;
+  margin: 0 30px;
+  padding: 20px 0;
+}
+.doenload-items ul li {
+  background: rgba(0, 0, 0, 0) url("../img/dwn-icon.png") no-repeat scroll left top;
+  border-bottom: 1px solid #cecece;
+  padding: 15px 35px;
+  background-position: 0px 15px;
+}
+.doenload-items ul li a {
+  color: #323232;
+  font-family: "Open Sans",sans-serif;
+}
+.doenload-items ul li:last-child{
+  border-bottom:none;
+}
+.right-content-contact-box {
+  background: #3b3946 none repeat scroll 0 0;
+  margin-top: 75px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+}
+.right-content-contact-box h1 {
+  color: #ffffff;
+  float: left;
+  font-size: 24px;
+  margin-right: 50px;
+  font-family: "PT Serif",sans-serif;
+  font-style:italic;
+}
+.right-content-contact-box a {
+  background: #b89b5e none repeat scroll 0 0;
+  color: #1f1f1f;
+  display: inline-block;
+  font-family: "Raleway",sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 7px 25px;
+}
+
+/*End=============================================================practice-v4.html page css===================*/
+
+/*Start===========================================================practice-v5.html page css===================*/
+
+#practice-v5-area {
+  line-height: 26px;
+  padding: 100px 0;
+  font-family: "Open Sans",sans-serif;
+}
+.practice-right-sidebar {
+  margin-right: -30px;
+}
+.practice-left-content {
+  margin-left: 60px;
+}
+.practice-law-box {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+  padding: 0;
+}
+.single-law-box {
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  padding: 22px 20px;
+  border-left:7px solid transparent;
+  transition: all .5s ease;
+}
+.single-law-box a {
+  color: #202020;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .5s ease;
+}
+.single-law-box a i {
+  color: #7d7d7d;
+  display: block;
+  float: right;
+  font-size: 18px;
+  padding-top: 4px;
+  transition: all .3s ease;
+}
+.single-law-box:hover,
+.single-law-box.active {
+  border-left-color: #b89b5e;
+}
+.single-law-box:hover a,
+.single-law-box.active a {
+  color:#b89b5e;
+}
+
+.practice-left-top-left-img {
+  float: left;
+  margin-right: 30px;
+}
+.practice-left-middle-text h2 {
+  color: #000000;
+  font-family: "Raleway",sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 57px;
+  text-transform: uppercase;
+}
+.practice-left-bottom-text {
+  padding-top: 40px;
+}
+.practice-bottom-left-img {
+  float: left;
+  margin-right: 40px;
+}
+.practice-bottom-right-text h3 {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Raleway",sans-serif;
+  margin-bottom:20px;
+}
+
+/*End=============================================================practice-v5.html page css===================*/
+
+
+/*Start===========================================================blog-left-sidebar.html page css=============*/
+/*Start bolg v1 area css*/
+#blog-v1-area {
+  padding-top: 100px;
+  padding-bottom:93px;
+}
+.blog-items {
+  margin-right: 60px;
+}
+.single-blog-item {
+  padding-bottom:93px;
+}
+.single-blog-item.single-last-blog-item {
+  padding-bottom: 53px;
+}
+.single-blog-item img {
+  margin-bottom: 30px;
+}
+.blog-post-date {
+  background: #b89b5e none repeat scroll 0 0;
+  float: left;
+  height: 75px;
+  margin-right: 30px;
+  text-align: center;
+  width: 70px;
+}
+.blog-post-date h1 {
+  color: #ffffff;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+.blog-post-date h1 b {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+.single-bolg-title {
+  overflow: hidden;
+  padding: 10px 0;
+}
+.single-bolg-title h3 {
+  color: #000000;
+  font-family: "Raleway",sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.post-resource ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.post-resource ul li {
+  float: left;
+  padding-left: 24px;
+  padding-right: 30px;
+}
+.post-resource ul li.authors{
+  background:url(../img/author-icon.png) no-repeat;
+  background-position:left;
+}
+.post-resource ul li.tags{
+  background: url(../img/tags.png) no-repeat;
+  background-position:left; 
+}
+.post-resource ul li.comments{
+  background: url(../img/comments.png) no-repeat;
+  background-position:left;   
+}
+.post-resource ul li span {
+  padding-left: 7px;
+}
+.post-resource ul li a{
+  color:#959595;
+  font-size:16px;
+  font-style:italic;
+    font-family: "PT Serif",sans-serif;
+}
+.single-blog-text p {
+  font-family: "Open Sans",sans-serif;
+  line-height: 26px;
+  padding-bottom: 9px;
+  padding-top: 20px;
+}
+.single-blog-read-more a {
+  color: #b5985a;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "PT Serif",sans-serif;
+  text-transform: capitalize;
+}
+.single-blog-read-more i {
+  color: #b5985a;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/*Start left sidebar css*/
+
+.left-sidebar {
+  margin-left: -30px;
+}
+.left-sidebar-single-item {
+}
+
+/*Start sidebar widget title*/
+.sidebar-widget-title h3 {
+  color: #404040;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 22px;
+}
+.sidebar-widget-title h3::after {
+  background: #b89b5e none repeat scroll 0 0;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 44px;
+}
+.sidebar-widget-title h3 span {
+  display: block;
+  margin-bottom: -5px;
+}
+/*End sidebar widget title*/
+
+/*Start search box  widget */
+.searchme {
+  margin-bottom: 43px;
+}
+.searchme form{
+  width:100%;
+  height:48px;
+    border: 1px solid #e9e9e9;
+}
+.searchme form input.search {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  color: #cccccc;
+  font-size: 14px;
+  height: 100%;
+  outline: medium none;
+  padding-left: 20px;
+  width: 85%;
+  font-family: "Open Sans",sans-serif;
+  color: #3B3946;
+}
+.searchme form button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+}
+/*End search box  widget */
+
+/*Start practice  widget items */
+.practice-widget-items {
+  margin-bottom: 23px;
+}
+.practice-widget-single-item {
+  padding-bottom: 20px;
+}
+.widget-lawyer-image {
+  float: left;
+}
+.widget-lawyer-name {
+  border: 1px solid #e6e6e6;
+  height: 92px;
+  padding-left: 25px;
+  width: 178px;
+  transition: all .3s ease;
+}
+.widget-lawyer-name:hover {
+  background: #3B3946;
+}
+.widget-lawyer-name:hover h4 {
+  color: #fff;
+}
+.widget-lawyer-name h4 {
+  color: #202020;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 6px;
+  padding-top: 23px;
+  font-weight: 500;
+  transition: all .3s ease;
+}
+.widget-lawyer-name p a {
+  color: #b5985a;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "PT Serif",sans-serif;
+  padding-right:3px;
+}
+.widget-lawyer-name p i {
+  color: #b5985a;
+  font-size: 13px;
+}
+/*End practice  widget items */
+
+/*Start category  widget items */
+.sidebar-widget-category {
+  margin-top: -15px;
+  margin-bottom: 32px;
+}
+.sidebar-widget-category ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-widget-category ul li {
+}
+.sidebar-widget-category ul li a {
+  border-bottom: 1px solid #e6e6e6;
+  color: #878787;
+  display: block;
+  font-size: 14px;
+  line-height: 42px;
+  position: relative;
+  font-family: "Open Sans",sans-serif;
+}
+.sidebar-widget-category ul li a::before {
+  color: #878787;
+  content: "\f105";
+  font-family: "FontAwesome";
+  margin-right: 15px;
+  font-size:15px;
+}
+.sidebar-widget-category ul li:last-child a {
+    border: medium none;
+}
+.sidebar-widget-category ul li a:hover {
+    color: #b89b5e;
+}
+.sidebar-widget-category ul li a:hover::before {
+    color: #b89b5e;
+}
+/*End category  widget items */
+
+/*Start text  widget */
+.sidebar-text-widget {
+  margin-bottom: 38px;
+  margin-top: -7px;
+}
+.sidebar-text-widget p {
+   font-family: "Open Sans",sans-serif;
+   line-height:26px;
+}
+/*End text  widget */
+
+/*Start Tag cloude  widget */
+.sidebar-tags-cloude {
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.sidebar-tags-cloude ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-tags-cloude ul li {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.sidebar-tags-cloude ul li a {
+  border: 1px solid #e2e2e2;
+  color: #8d8d8d;
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 13px;
+  padding: 7px 23px;
+  text-transform: uppercase;
+}
+.sidebar-tags-cloude ul li a:hover{
+  background:#3b3946;
+  color:#b89b5e;
+  border:1px solid #ffffff;
+}
+/*End Tag cloude  widget */
+
+/*Start meet attorney  widget */
+.sidebar-meet-attorneys {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.sidebar-meet-attorneys img {
+  width: 100%;
+}
+.sidebar-meet-attorneys::before {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  content:"";
+  background:#000000;
+  opacity:.10;
+}
+.meet-attorney-name {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.meet-attorney-name h4 {
+  background: #3b3946 none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  padding: 7px 55px;
+  margin-bottom:0;
+  font-family: "PT Serif",sans-serif;
+  font-style:italic;
+}
+/*End meet attorney  widget */
+
+/*End bolg v1 area css*/
+/*End===========================================================blog-left-sidebar.html page css=============*/
+
+/*Start=========================================================blog-right-sidebar.html page css============*/
+.right-sidebar{
+  margin-right:-30px;
+}
+.blog-items-v2 {
+  margin-left:60px;
+}
+/*End=========================================================blog-right-sidebar.html page css============*/
+
+/*Start=========================================================blog-v3.html page css=====================*/
+#blog-v3-area {
+  padding-top:100px;
+  padding-bottom:93px;
+}
+.blog-v3-items {
+  padding-bottom: 40px;
+}
+.blog-v3-content-box {
+  background: #fdfdfd none repeat scroll 0 0;
+  border: 1px solid #e3e3e3;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: -20px;
+}
+.single-bolg-title.blog-title-v3 {
+  padding-top: 16px;
+}
+.single-bolg-title.blog-title-v3 h3 {
+  font-size: 18px;
+}
+.single-bolg-title.blog-title-v3 .post-resource {
+  padding-top: 5px;
+}
+.single-bolg-title.blog-title-v3 .post-resource ul li {
+  display: inline-block;
+  float: none;
+  text-align: center;
+  padding-left: 24px;
+  padding-right: 20px;
+}
+.blog-v3-border {
+  padding-bottom: 30px;
+  padding-top: 50px;
+  position: relative;
+}
+.blog-v3-border::before{
+  background:url(../img/blog-v3-border.png) scroll 0 0;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  position:absolute;
+  top:4px;
+  bottom:4px;
+  left:4px;
+  right:4px;
+  z-index:1;
+  content:"";
+}
+.single-blog-text.blog-3-text {
+  position: relative;
+  z-index: 999;
+}
+.single-blog-text.blog-3-text p {
+  padding: 7px 30px 2px;
+}
+.fix.blog-post-date.bolg-v3-date {
+  left: 42.5%;
+  position: absolute;
+  top: -37px;
+  z-index: 2;
+}
+
+/*End=========================================================blog-v3.html page css=====================*/
+/*Start=========================================================blog-v4.html page css===================*/
+#blog-v4-area {
+  padding-top:100px;
+  padding-bottom:93px;
+}
+.blog-v4-border {
+  padding-bottom: 36px;
+  padding-top: 50px;
+  position: relative;
+}
+.blog-v4-border::before{
+  background:url(../img/blog-v4-border.png) scroll 0 0;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  position:absolute;
+  top:4px;
+  bottom:4px;
+  left:4px;
+  right:4px;
+  z-index:1;
+  content:"";
+}
+.blog-v4-content-box {
+  background: #fdfdfd none repeat scroll 0 0;
+  border: 1px solid #e3e3e3;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: -40px;
+}
+.fix.blog-post-date.bolg-v4-date {
+  left: 47%;
+  position: absolute;
+  top: -37px;
+  z-index: 2;
+}
+.single-blog-text.blog-4-text {
+  position: relative;
+  z-index: 9999;
+  padding: 0 30px;
+}
+.single-blog-text.blog-4-text p {
+  padding-top: 7px;
+  padding-bottom: 10px;
+}
+
+/*End=========================================================blog-v4.html page css==================================*/
+/*Start======================================================blog-details.html page css==============================*/
+#blog-details-area {
+  padding: 100px 0;
+}
+.blog-details{
+  line-height:26px;
+    font-family: "Open Sans",sans-serif;
+}
+.blog-details img {
+  margin-bottom: 30px;
+}
+/*Start blog details top text */
+.blog-details-top-text {
+  padding-top: 30px;
+}
+/*End blog details top text */
+
+/*Start blog details middle text */
+.blog-details-middle-info {
+  padding-bottom: 22px;
+  padding-top: 25px;
+  overflow: hidden;
+}
+.blog-details-image {
+  float: left;
+  margin-right: 38px;
+  position:relative;
+}
+.blog-details-image::before {
+  border: 2px solid #ffffff;
+  bottom: 38px;
+  content: "";
+  left: 8px;
+  opacity: 0.5;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.blog-detalis-text-middle {
+  overflow: hidden;
+}
+.blog-details-image.dtc,
+.blog-detalis-text-middle.dtc {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+}
+.blog-detalis-text-middle.dtc {
+  padding-left: 30px;
+  margin: 0;
+}
+.blog-details-image {
+  width: 270px;  
+}
+.blog-detalis-text-middle p {
+  padding-top: 0;
+  margin-bottom: 15px;
+}
+/*End blog details middle text */
+
+/*Start blog details bottom text */
+.blog-details-bottom-text {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 30px;
+}
+/*End blog details bottom text */
+
+/*Start John Michaila Info */
+.john-michaila-info {
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+.john-michila-img {
+    float: left;
+    margin-right: 45px;
+}
+.john-michila-text {
+  padding-top: 15px;
+}
+.john-michila-text img {
+  float: left;
+  margin-bottom: 0;
+  padding-right: 20px;
+}
+.john-michila-text p {
+}
+.john-michila-text h4 {
+  color: #b89b5e;
+  float: right;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: normal;
+  margin-right: 20px;
+}
+/*End John Michaila Info */
+
+/*Start Two Colum Text */
+.two-colum-text-left {
+  float: left;
+  margin-right: 5%;
+  width: 45%;
+}
+.two-colum-text h3 {
+  color: #2d2d2d;
+  font-size: 20px;
+  margin: 0 0 20px;
+  font-weight:normal;
+  font-family: "Open Sans",sans-serif;
+}
+/*End Two Colum Text */
+
+/*Start Socila Link  */
+.socila-link-left-text {
+  float: left;
+  overflow: hidden;
+  width: 50%;
+}
+.blog-details-social-links {
+  border-bottom: 1px solid #cbcbcb;
+  border-top: 1px solid #cbcbcb;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  padding-top: 14px;
+}
+.blog-details-social-right {
+  float: right;
+}
+.blog-details-social-right a i {
+  color: #787c7f;
+  font-size: 16px;
+  margin: 0 10px;
+}
+.blog-details-social-right a i:hover{
+  color:#de5842;
+}
+/*End Socila Link  */
+
+/*Start Adminostrator Text  */
+.adminostrator-text {
+  overflow: hidden;
+  padding: 14px 0;
+}
+.adminostrator {
+  background: #3b3946 none repeat scroll 0 0;
+  overflow: hidden;
+  padding:20px;
+}
+.adminostrator-img img {
+  float: left;
+  margin-bottom: 0;
+  margin-right: 25px;
+}
+.adminostrator-text h4 {
+  color: #ffffff;
+  font-family: "Raleway",sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.adminostrator-text p {
+  color: #cccccc;
+}
+/*End Adminostrator Text  */
+
+/*Start Comment Part  */
+.comment-part {
+  margin-top: 44px;
+}
+.comment-box {
+  border-top:1px solid #efefef;
+  border-left:1px solid #efefef;
+  border-right:1px solid #efefef;
+}
+
+/*Start Comment title */
+.comment-title {
+  padding-bottom: 12px;
+}
+.comment-title h4 {
+  color: #404040;
+  display: block;
+  font-family: "Raleway",sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+}
+.comment-title h4::after {
+    background: #b89b5e none repeat scroll 0 0;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 44px;
+}
+.comment-title h4 span {
+  display: block;
+}
+/*End Comment title */
+
+.comment-image-holder {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.comment-image-holder img {
+  float: left;
+  margin-bottom: 0;
+  margin-right: 34px;
+}
+.comment-text {
+  overflow: hidden;
+}
+.comment-text h5 {
+  color: #1f1f1f;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.comment-text h5 span {
+    color: #b89b5e;
+    font-size: 13px;
+    padding-left: 5px;
+    text-transform: uppercase;
+  font-weight:600;
+  font-family: "Open Sans",sans-serif;
+}
+.comment-text p {
+  color: #959595;
+  font-family: "Open Sans",sans-serif;
+  margin: 0;
+}
+.comment-text a {
+  color: #b89b5e;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Open Sans",sans-serif;
+  font-weight:600;
+}
+.single-comment-box {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 22px;
+}
+.comment-reply-box {
+  padding-left: 70px;
+}
+/*End Comment Part  */
+
+/*Start Meet Attorneys Comment form */
+.meet-attorneys {
+  padding-top: 44px;
+}
+.comment-form form input.name {
+  border: 1px solid #e8e8e8;
+  float: left;
+  height: 50px;
+  padding: 0 21px;
+  width: 48%;
+  font-size: 16px;
+  color: #959595;
+  font-family: "PT Serif",sans-serif;
+  font-style:italic;
+}
+.comment-form form input.email{
+  border: 1px solid #e8e8e8;
+  float: right;
+  height: 50px;
+  padding: 0 21px;
+  width: 48%;
+  font-size: 16px;
+  color: #959595;
+  font-family: "PT Serif",sans-serif;
+  font-style:italic;  
+}
+.comment-form form textarea.comment {
+  border: 1px solid #e8e8e8;
+  color: #959595;
+  font-size: 16px;
+  height: 230px;
+  margin-top: 25px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 21px;
+  width: 100%;
+  font-family: "PT Serif",sans-serif;
+  font-style:italic;
+}
+.comment-form form button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #b89b5e;
+  color: #b5985a;
+  font-family: "PT Serif",sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 36px;
+  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-left: 23px;
+  padding-right: 23px;
+  display:inline-block;
+}
+.comment-form form button i {
+  padding-left: 6px;
+}
+.comment-form form button {
+  background: #1F1F1F none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 17px 0px 23px;
+  text-transform: uppercase;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  line-height: 42px;
+}
+.comment-form form button .fa {
+  color: #B89B5E;
+  font-size: 14px;
+  border-left: 1px solid #424242;
+  padding-left: 15px;
+  margin-left: 20px;
+  line-height: 42px;
+}
+.comment-form form button:hover .fa {
+  color: #1f1f1f;
+}
+
+.comment-form form button:hover {
+  background: #B89B5E;
+  color: #1f1f1f;
+}
+
+.comment-form form input.name:focus{
+  border:1px solid #b89b5e;
+}
+.comment-form form input.email:focus{
+  border:1px solid #b89b5e;
+}
+.comment-form form textarea.comment:focus{
+  border:1px solid #b89b5e;
+}
+/*End Meet Attorneys Comment form */
+/*End======================================================blog-details.html page css==============================*/
+
+/*Start======================================================contact.html page css=================================*/
+#contact-area {
+  padding-top:95px;
+  padding-bottom:100px;
+}
+.contact .section-title {
+  margin-bottom: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.contact .section-title p {
+  font-family: "Open Sans",sans-serif;
+  padding-top: 40px;
+}
+.contact-form form label.error {
+  display: none !important;
+}
+.contact-form form input.error,
+.contact-form form textarea.error {
+  border: 1px solid red !important;
+  outline: none !important;
+}
+.contact-form form input[type="text"] {
+  border: 1px solid #e8e8e8;
+  color: #959595;
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 0 24px;
+  width: 100%;
+  font-family: "PT Serif",sans-serif;
+  font-style:italic;
+}
+.contact-form form textarea {
+  border: 1px solid #e8e8e8;
+  color: #959595;
+  font-size: 16px;
+  height: 189px;
+  margin-bottom: 27px;
+  padding: 20px 24px;
+  width: 100%; 
+  font-family: "PT Serif",sans-serif;
+  font-style:italic;  
+}
+.contact-form form button[type="submit"] {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #959595;
+  color: #2a2a2a;
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 25px 7px 25px;
+  text-transform: uppercase;
+  background: #1F1F1F none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 17px 0px 23px;
+  text-transform: uppercase;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  line-height: 42px;
+}
+.contact-form form button[type="submit"] {
+  background: #1F1F1F none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 17px 0px 23px;
+  text-transform: uppercase;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  line-height: 42px;
+}
+.contact-form form button[type="submit"] .fa {
+  color: #B89B5E;
+  font-size: 14px;
+  border-left: 1px solid #424242;
+  padding-left: 15px;
+  margin-left: 20px;
+  line-height: 42px;
+}
+.contact-form form button[type="submit"]:hover .fa {
+  color: #1f1f1f;
+}
+
+.contact-form form button[type="submit"]:hover {
+  background: #B89B5E;
+  color: #1f1f1f;
+}
+
+
+.contact-form form input[type="text"]:focus{
+  border:1px solid #82c7f7; 
+}
+.contact-form form textarea:focus{
+  border:1px solid #82c7f7;
+}
+
+.contact-right {
+  background: #f1f1f1 none repeat scroll 0 0;
+  position: relative;
+}
+.contact-right::before {
+  border: 1px solid #ffffff;
+  content: "";
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+}
+.contact-right-img {
+  padding-top: 35px;
+  position: relative;
+  z-index: 999;
+}
+.contact-right-text h3 {
+  color: #444444;
+  font-family: "Open Sans",sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+.contact-right-text h5 {
+  color: #7e7e7e;
+  font-family: "Open Sans",sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 14px;
+}
+.contact-right-text {
+  position: relative;
+  z-index: 999;
+}
+.contact-right-text p {
+  color: #7e7e7e;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-family: "Open Sans",sans-serif;
+}
+.contact-right-social-link {
+  padding-bottom: 40px;
+  padding-top: 16px;
+  position: relative;
+  z-index: 999;
+}
+.contact-right-social-link a i {
+  color: #2a2a2a;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+
+#map-area {
+    position: relative;
+}
+#map-area::before {
+    background: #000000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*End======================================================contact.html page css=================================*/
+
+/*Start===================================================single-attorney.html page css==========================*/
+
+#single-attorney-top-area {
+  background: #ffffff none repeat scroll 0 0;
+  height: 378px;
+  position: relative;
+}
+#single-attorney-area {
+  background: #f4f4f4 none repeat scroll 0 0;
+}
+.single-attorney-inner {
+  margin-top: -278px;
+}
+.single-attorney-left-img {
+    position: relative;
+}
+.single-attorney-left-img::before {
+    border: 3px solid #ffffff;
+    bottom: 10px;
+    content: "";
+    left: 10px;
+    opacity: 0.8;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.single-attorney-right-padding0 {
+  padding-left: 0;
+}
+.single-attorney-right {
+  margin-left: -15px;
+  margin-right: -30px;
+  position: relative;
+}
+.single-attorney-right-content {
+  left: 100px;
+  position: absolute;
+  top: 47px;
+  width: 70%;
+}
+.single-attorney-name {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 28px;
+}
+.single-attorney-name h3 {
+  color: #000000;
+  font-family: "Raleway",sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.single-attorney-name h5 {
+  color: #727272;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: normal;
+  font-family: "PT Serif",sans-serif;
+}
+.single-attorney-info {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+.single-attorney-info ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.single-attorney-info ul li {
+  color: #848484;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+}
+
+.single-attorney-info ul li.single-attorney-phn {
+  background: rgba(0, 0, 0, 0) url("../img/single-attorney-phn.png") no-repeat scroll left top;
+  background-position: 0px 5px;
+}
+.single-attorney-info ul li.single-attorney-envelop{
+  background:url(../img/single-attorney-envelop.png) no-repeat;
+    background-position: 0px 5px;
+}
+
+.single-attorney-socila-link {
+  padding-bottom: 25px;
+  padding-top: 28px;
+}
+.single-attorney-socila-link a i {
+  color: #9a9a9a;
+  font-size: 20px;
+  padding-right: 25px;
+}
+.single-attorney-title {
+  padding-top: 25px;
+  margin-bottom: 16px;
+}
+.single-attorney-title h3 {
+  color: #3b3946;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.single-attorney-title h3::after {
+  background: #b89b5e none repeat scroll 0 0;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 70px;
+}
+.single-attorney-title h3 span {
+    display: block;
+}
+.single-attorney-law-list ul.left-law-list {
+  float: left;
+  margin-right: 100px;
+}
+.single-attorney-law-list ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.single-attorney-law-list ul li {
+  color: #777777;
+  font-family: "Open Sans",sans-serif;
+  line-height: 35px;
+}
+a.appintment-button {
+  background: #b89b5e none repeat scroll 0 0;
+  bottom: -46px;
+  color: #ffffff;
+  display: block;
+  font-family: "PT Serif",sans-serif;
+  font-size: 21px;
+  font-style: italic;
+  left:100px;
+  padding: 14px 55px 15px;
+  position: absolute;
+}
+
+.single-attorney-bottom {
+  padding-bottom: 90px;
+  padding-top: 100px;
+}
+.single-attorney-bottom .section-title {
+  margin-bottom: 40px;
+}
+.single-attorney-bottom-text p{
+  color: #777777;
+  font-family: "Open Sans",sans-serif;
+}
+.single-attorney-bottom-text h3 {
+  color: #656565;
+  font-family: "Open Sans",sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 30px;
+}
+.single-attorney-bottom-text p.bottom-text {
+  font-style: italic;
+  font-family: "Open Sans",sans-serif;
+}
+
+
+/*Start skill area css*/
+#skill-area {
+  padding-bottom: 60px;
+  padding-top: 95px;
+}
+.single-education-list {
+  padding-bottom: 30px;
+}
+.education-list-left {
+  float: left;
+  margin-right: 35px;
+  overflow: hidden;
+}
+.education-list-left h1 {
+  color: #b89b5e;
+  font-size: 35px;
+  font-style:italic;
+  font-family: "PT Serif",sans-serif;
+}
+.education-list-rught {
+  overflow: hidden;
+}
+.education-list-rught h4 {
+  color: #000000;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.education-list-rught p {
+  color: #777777;
+  font-family: "Open Sans",sans-serif;
+}
+
+
+
+.progress.slim {
+  height: 11px;
+}
+.progress {
+  background: #d4d4d4 none repeat scroll 0 0;
+  border-radius: 15px;
+  box-shadow: none;
+  margin-bottom: 30px;
+  overflow: visible;
+}
+.progress-label h4 {
+  color: #474747;
+  font-family: "Open Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+.progress-striped .progress-bar, .progress-bar-striped {
+  background-size: 40px 40px;
+  background-image:none;
+}
+.progress-bar-primary {
+  background-color: #b89b5e;
+}
+.progress-bar {
+  border-radius: 10px 0 0 10px;
+  box-shadow: none;
+  position: relative;
+}
+span.progress-bar-tooltip {
+  background: #fff none repeat scroll 0 0;
+  border: 2px solid #b99d61;
+  border-radius: 50%;
+  color: #000000;
+  display: block;
+  font-size: 10px;
+  height: 37px;
+  opacity: 0;
+  padding-left: 1px;
+  padding-top: 7px;
+  position: absolute;
+  right: -36px;
+  top: -14px;
+  width: 37px;
+  font-weight: 500;
+  font-family: "Open Sans",sans-serif;
+}
+/*End skill area css*/
+
+/*Start Leave Comment Area css*/
+#leave-comment-area {
+  background: #f4f4f4 none repeat scroll 0 0;
+  padding-bottom: 100px;
+  padding-top: 95px;
+}
+.leave-comment-form input[type="text"] {
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #e8e8e8;
+  color: #959595;
+  height: 50px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  font-style: italic;
+  font-size:16px;
+  font-family: "PT Serif",sans-serif;
+}
+.leave-comment-form textarea {
+  border: 1px solid #e8e8e8;
+  color: #959595;
+  font-style: italic;
+  height: 189px;
+  padding: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-family: "PT Serif",sans-serif;
+  margin-bottom:27px;
+}
+.leave-comment-form button[type="submit"] {
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #959595;
+  color: #2a2a2a;
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 28px 7px;
+  text-transform: uppercase;
+}
+.leave-comment-form input[type="text"]:focus{
+  border:1px solid #82c7f7;
+}
+.leave-comment-form button[type="submit"] {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #959595;
+  color: #2a2a2a;
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 25px 7px 25px;
+  text-transform: uppercase;
+  background: #1F1F1F none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 17px 0px 23px;
+  text-transform: uppercase;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  line-height: 42px;
+}
+.leave-comment-form button[type="submit"] {
+  background: #1F1F1F none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 17px 0px 23px;
+  text-transform: uppercase;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  line-height: 42px;
+}
+.leave-comment-form button[type="submit"] .fa {
+  color: #B89B5E;
+  font-size: 14px;
+  border-left: 1px solid #424242;
+  padding-left: 15px;
+  margin-left: 20px;
+  line-height: 42px;
+}
+.leave-comment-form button[type="submit"]:hover .fa {
+  color: #1f1f1f;
+}
+
+.leave-comment-form button[type="submit"]:hover {
+  background: #B89B5E;
+  color: #1f1f1f;
+}
+
+.leave-comment-form textarea:focus{
+  border:1px solid #82c7f7; 
+}
+/*End Leave Comment Area css*/
+
+/*End===================================================single-attorney.html page css==========================*/
+
+
+
+/* header update styles */
+
+
+header.stricky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  border-bottom: 1px solid rgba(174,174,174,.3);
+}
+header.stricky-fixed {
+  background: #1F1F1F;
+  border-bottom: 0;
+}
+header.stricky-fixed .logo {
+  line-height: 70px;
+}
+header.stricky-fixed .logo img {
+  width: 80%;
+  transition: all .3s ease;
+}
+header .logo img {
+  transition: all .3s ease;
+}
+
+header.stricky-fixed .mainmenu .nav-holder > ul > li > a {
+  line-height: 70px;
+  /*color: #242424;*/
+}
+header.stricky-fixed .mainmenu .nav-holder > ul > li > a:hover {
+  color: #B89B5E;
+}
+header.stricky-fixed .mainmenu .nav-holder > ul > li.dropdown > a:after {
+ /*color: #242424; */
+}
+header.stricky-fixed .mainmenu .nav-expander ul li button {
+  line-height: 70px;
+  /*color: #242424;*/
+}
+
+header .logo {
+  line-height: 100px;
+}
+
+header .container {
+  position: relative;
+}
+header .search-box {
+  display: none;
+  width: 300px;
+  background: #191919;
+  height: 60px;
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  padding: 10px 10px;
+  font-size: 0;
+  transition: none;
+  z-index: 999999;
+}
+header .search-box input {
+  width: 240px;
+  height: 40px;
+  border: 1px solid #2A2A2A;
+  background-color: transparent;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: none;
+}
+header .search-box button {
+  width: 40px;
+  background: #B89B5E;
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+
+
+
+
+.mainmenu .nav-holder > ul > li:hover > ul {
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.mainmenu .nav-holder > ul > li.dropdown > a {
+  position: relative;
+}
+.mainmenu .nav-holder > ul > li.dropdown > a:after {
+  content: '\f107';
+  font-family: 'FontAwesome';
+  color: #fff;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.mainmenu .nav-holder > ul > li.dropdown > ul > li.dropdown > a {
+  position: relative;
+}
+.mainmenu .nav-holder > ul > li.dropdown > ul > li.dropdown > a:after {
+  content: '\f105';
+  font-family: 'FontAwesome';
+  color: #828282;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.mainmenu .nav-holder > ul > li.dropdown:hover > a:after,
+.mainmenu .nav-holder > ul > li.dropdown.current > a:after {
+  color: #B89B5E;
+}
+.home-header .mainmenu .nav-holder > ul > li.dropdown:hover > a:after,
+.home-header .mainmenu .nav-holder > ul > li.dropdown.current > a:after {
+  color: #B89B5E;
+}
+.stricky-fixed .mainmenu .nav-holder > ul > li.dropdown:hover > a:after,
+.stricky-fixed .mainmenu .nav-holder > ul > li.dropdown.current > a:after {
+  color: #B89B5E;
+}
+.mainmenu .nav-holder > ul > li > ul {
+  position: absolute;
+  top: 200%;
+  padding: 0;
+  left: 0;
+  width: 240px;
+  background: #191919;
+  z-index: 99999;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.5s cubic-bezier(0.84, 0.35, 0.39, 0.74);
+  transition: all 0.5s cubic-bezier(0.84, 0.35, 0.39, 0.74);
+}
+.mainmenu .nav-holder > ul > li > ul > li {
+  position: relative;
+  overflow: hidden;
+  line-height: 30px;
+}
+.mainmenu .nav-holder > ul > li > ul > li:before {
+  content: '\f105';
+  font-family: 'FontAwesome';
+  color: #828282;
+  position: absolute;
+  left: 20px;
+  top: 4px;
+  font-size: 14px;
+  padding-left: 0;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.mainmenu .nav-holder > ul > li > ul > li:hover:before {
+  color: #B89B5E;
+}
+.mainmenu .nav-holder > ul > li > ul > li > a {
+  color: #828282;
+  display: block;
+  text-align: left;
+  padding: 5px 35px 0;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid #2A2A2A;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.mainmenu .nav-holder > ul > li > ul > li > a:hover {
+  color: #B89B5E;
+}
+.mainmenu .nav-holder > ul > li > ul > li:hover {
+  overflow: visible;
+}
+.mainmenu .nav-holder > ul > li > ul > li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  left: 100%;
+}
+.mainmenu .nav-holder > ul > li > ul > li:hover > ul.right-align {
+  left: auto;
+  right: 100%;
+}
+.mainmenu .nav-holder > ul > li > ul > li > ul.right-align {
+  left: auto;
+  right: 200%;
+}
+.mainmenu .nav-holder > ul > li > ul > li > ul > li > a:hover {
+  color: #B89B5E;
+}
+.mainmenu .nav-holder > ul > li > ul.right-align {
+  left: auto;
+  right: 0;
+}
+
+.mainmenu .nav-holder > ul > li > ul > li:hover > ul {
+  left: 100%;
+}
+.mainmenu .nav-holder > ul > li > ul > li > ul {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  left: 200%;
+  width: 240px;
+  background: #191919;
+  z-index: 99999;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.5s cubic-bezier(0.84, 0.35, 0.39, 0.74);
+  transition: all 0.5s cubic-bezier(0.84, 0.35, 0.39, 0.74);
+}
+.mainmenu .nav-holder > ul > li > ul > li > ul > li {
+  position: relative;
+  overflow: hidden;
+  line-height: 30px;
+}
+.mainmenu .nav-holder > ul > li > ul > li > ul > li:before {
+  content: '\f105';
+  font-family: 'FontAwesome';
+  color: #828282;
+  position: absolute;
+  left: 20px;
+  top: 4px;
+  font-size: 14px;
+  padding-left: 0;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.mainmenu .nav-holder > ul > li > ul > li > ul > li:hover:before {
+  color: #B89B5E;
+}
+.mainmenu .nav-holder > ul > li > ul > li > ul > li > a {
+  color: #828282;
+  display: block;
+  text-align: left;
+  padding: 5px 35px 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Open Sans';
+  border-bottom: 1px solid #2A2A2A;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.mainmenu .nav-holder > ul > li > ul > li > a:hover {
+  color: #B89B5E;
+}
+
+
+.mainmenu .nav-holder > ul li.dropdown > a .fa {
+     display: none; 
+    font-size: 12px;
+    border: 1px solid #fff;
+    padding: 4px 7px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+.mainmenu .nav-holder,
+.mainmenu .nav-expander {
+  display: inline-block;
+}
+.mainmenu .nav-holder > ul,
+.mainmenu .nav-expander > ul {
+  margin: 0;
+  padding: 0;
+}
+.mainmenu .nav-holder > ul > li,
+.mainmenu .nav-expander > ul > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.mainmenu .nav-holder > ul  {
+  font-size: 0;
+}
+.mainmenu .nav-holder > ul > li > a {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0 17px;
+  line-height: 100px;
+  transition: all .3s ease;
+}
+.mainmenu .nav-holder > ul > li:hover > a {
+  color: #B89B5E;
+}
+.mainmenu .nav-expander > ul {  
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+.mainmenu .nav-expander > ul > li > button {
+  font-size: 18px;
+  color: #FFFFFF;
+  opacity: .80;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  line-height: 18px;
+}
+.mainmenu .nav-expander .nav-collapser {
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#banner .slotholder:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .65;
+  background: #000;
+  z-index: 9;
+}
+#banner .caption {
+  z-index: 99;
+}
+#banner .caption-1 h1{
+  color: #f6d877;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+#banner .slider-2 .caption-1 h1{
+  color: #B89B5E;
+}
+#banner .caption-2 h1{
+  color: #ffffff;
+  font-size: 36px;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+#banner .caption-2.large h1{
+  font-size: 60px;
+}
+#banner .caption-3 ul {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+  display: inline-block;
+  list-style: outside none none;
+  overflow: hidden;
+  padding:5px 5px 5px 10px !important;
+}
+#banner .caption-3 ul li{
+  float:left;
+  padding:0 10px !important;
+  border-right:1px solid #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight:500;
+  color:#ffffff;
+  text-transform:uppercase;
+  font-size:14px;
+  letter-spacing: .40em;
+  line-height: 20px;
+}
+#banner .caption-3 ul li:last-child{
+  border-right:0px solid;
+}
+#banner .slider-2 .caption-3 ul li{
+  padding: 0 30px !important;
+  letter-spacing: .5em;
+}
+#banner .slider-2 .caption-3 ul li:first-child{
+  padding-left: 15px !important;
+}
+#banner .slider-2 .caption-3 ul li:last-child{
+  padding-right: 15px !important;
+}
+#banner .caption-4 p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+#banner .caption-4.italic p {
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 300;
+}
+#banner .caption-5 a {
+  border: 1px solid rgba(255,255,255,.3);
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Raleway",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px 40px;
+  text-transform: uppercase;
+}
+
+#banner .caption.text-center {
+  width: 100%;
+}
+#banner .caption-bold-heading h1 {
+  font-family: 'PT Serif', sans-serif;
+  font-size: 65px;
+  line-height: 63px;
+  color: #BF9E58;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#banner .p-tag p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  color: #fff;
+  font-style: italic;
+}
+#banner .thm-btn a {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  line-height: 25px;
+  border: 1px solid rgba(255,255,255, .65);
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 9px 16px;
+  font-weight: bold;
+}
+#banner .thm-btn a i {  
+  font-size: 14px;
+  color: #fff;
+  line-height: 25px;
+  border-left: 1px solid #fff;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+#banner .slider-3 .caption-1 h1 {
+  font-size: 50px;
+  color: #BF9E58;
+  font-weight: 800;
+}
+#banner .slider-3 .caption-2 h1 {
+ font-size: 55px;
+ font-weight: 800;
+}
+#banner .slider-3 .caption-4 p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  color: #fff;
+  font-style: italic;
+  font-weight: 400;
+}
+#banner .slider-3 .border span {
+ width: 65px;
+ height: 4px;
+ background: #BF9E58;
+ display: inline-block;
+}
+#banner .slider-3 .icon i:before {
+ font-size: 80px;
+ color: #fff;
+}
+
+
+
+
+
+/* call to action area styles */
+
+.call-to-action-area {
+  margin-top: -80px;
+  position: relative;
+  z-index: 9999;
+}
+.call-to-action-area .container {
+  background: #B89B5E;
+  padding: 18px 0px;
+}
+.call-to-action-area .dtc {
+  display: table-cell;
+  vertical-align: middle;
+}
+.call-to-action-area .icon-box {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #CDB98F;
+}
+.call-to-action-area .icon-box .icon {
+  font-size: 40px;
+  color: #271313;
+  color: #fff;
+
+}
+.call-to-action-area .text-one {
+  padding-left: 26px;
+  padding-right: 25px;
+  border-right: 1px solid #CDB98F;
+}
+.call-to-action-area .text-two {
+  padding-left: 30px;
+}
+.call-to-action-area .text-one h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #271313;
+  color: #fff;
+}
+.call-to-action-area .text-one h3 .number {
+  font-family: 'Open Sans';
+  font-size: 28px;
+  color: #271313;
+  color: #fff;
+}
+.call-to-action-area .text-two h4 {
+  font-family: 'PT Serif', sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #271313;
+  color: #fff;
+  margin: 0;
+}
+
+/* contact google map styles */
+
+#contact-google-map {
+  width: 100%;
+  height: 300px;
+}
+
+/* our attorney area home styles */
+
+#our-attorneys-area.home .single-attorney .attorney-name {
+  background: #C6A561;
+}
+#our-attorneys-area.home .single-attorney:hover .attorney-name {
+  background: #B89B5E;
+}
+#our-attorneys-area.home .attorney-name h5 {
+  color: #fff;
+}
+#our-attorneys-area.home .attorney-name p {
+  color: #fff;
+}
