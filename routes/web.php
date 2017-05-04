@@ -13,9 +13,9 @@
 
 
 Route::get('/', function () {
+    $announcements = \App\Http\Models\Backend\Announcement::with('getTranslation')->get();
 
-
-    return view('welcome');
+    return view('welcome', compact('announcements'));
 });
 
 Route::get('locale/{locale?}', ['as' => 'locale.setLocale', 'uses' => 'Frontend\LocaleController@setLocale']);
