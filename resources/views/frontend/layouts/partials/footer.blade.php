@@ -4,12 +4,12 @@
         <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                 <div class="legal-problem-text">
-                    <h2>If you have any legal problem in your life ... We are available</h2>
+                    <h2>{{trans('frontend.watch_word')}}</h2>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <div class="get-free-consultation-button">
-                    <a href="">free consultation <i class="fa fa-arrow-right"></i></a>
+                    <a href="">{{trans('frontend.consultant')}} <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -34,7 +34,8 @@
                     </div>
 
                     <div class="footer-read-more">
-                        <a href="">Read More <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
+                        <a href="">{{trans('frontend.read_more')}} <i class="fa fa-angle-right"></i><i
+                                    class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="widget-social-links">
                         <a href=""><i class="fa fa-facebook mysocial_style"></i></a>
@@ -49,7 +50,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="single-footer-widget">
                     <div class="quick-links">
-                        <h3>Quick links</h3>
+                        <h3>{{trans('frontend.quick_links')}}</h3>
                         <ul class="left-quick-links alignleft">
                             <li><i class="fa fa-angle-right"></i><a href="">Criminal Injury Law</a></li>
                             <li><i class="fa fa-angle-right"></i><a href="">Divorce Law</a></li>
@@ -72,12 +73,12 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="single-footer-widget">
                     <div class="widget-get-intouch">
-                        <h3>Get in Touch</h3>
+                        <h3>{{trans('frontend.get_in_touch')}}</h3>
                         <ul>
-                            <li class="location">Lorance Road 542B, Tailstoi Town 5248 MT, Wordwide Country</li>
-                            <li class="phone">01865 524 8503</li>
-                            <li class="envelop">contact@legalpower.com</li>
-                            <li class="website">http://legalpower.com</li>
+                            <li class="location">Filistin CAD.kader sokak No 6/7 G.O.P / Çankaya / Ankara</li>
+                            <li class="phone">312 466 44 44</li>
+                            <li class="website">312 466 44 52</li>
+                            <li class="envelop">contact@atabayhukuk.com</li>
                         </ul>
                     </div>
                 </div>

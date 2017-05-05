@@ -19,5 +19,9 @@ return [
     'activities'      => 'Our featured services',
     'article_subhead' => 'latest articles of atabay',
     'working_days'    => '6 days a Week From : 9.00 am to 18.00 pm',
+    'quick_links'     => 'Quick links',
+    'get_in_touch'    => 'Get in Touch',
+    'read_more'       => 'Read More',
+    'watch_word'      => 'If you have any legal problem in your life ... We are available',
 
 ];

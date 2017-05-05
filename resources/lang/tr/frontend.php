@@ -19,4 +19,8 @@ return [
     'activities'      => 'Faaliyet alanlarımız',
     'article_subhead' => 'güncel makaleler',
     'working_days'    => '6 gün : 9.00 - 18.00 arası hizmet',
+    'quick_links'     => 'Hızlı bağlantılar',
+    'get_in_touch'    => 'Bağlantıda kalın',
+    'read_more'       => 'Devamı',
+    'watch_word'      => 'Hukuki problemler yaşamakta iseniz ... Yardıma hazırız',
 ];
