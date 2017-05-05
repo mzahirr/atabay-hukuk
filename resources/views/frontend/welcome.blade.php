@@ -334,57 +334,7 @@
     </section>
 
     @if(count($announcements)>0)
-        <section id="testimonial-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
-                        <div class="testimonial-list">
-                            <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner" role="listbox">
-                                @foreach($announcements as $announcement)
-                                    @if ($loop->first)
-                                        <!--Start Testimonial Single Item-->
-                                            <div class="item active">
-                                                <div class="single-testimonial-item text-center">
-                                                    <div class="testimonial-image-holder">
-                                                        <img src="/img/widget-icon-1.png" alt="">
-                                                    </div>
-                                                    <p>
-                                                        “{{$announcement->getTranslation(app()->getLocale())->first()->announcement}}
-                                                        ”</p>
-                                                </div>
-                                            </div>
-                                            <!--End Testimonial Single Item-->
-                                    @else
-                                        <!--Start Testimonial Single Item-->
-                                            <div class="item">
-                                                <div class="single-testimonial-item text-center">
-                                                    <div class="testimonial-image-holder">
-                                                        <img src="/img/widget-icon-1.png" alt="">
-                                                    </div>
-                                                    <p>
-                                                        “{{$announcement->getTranslation(app()->getLocale())->first()->announcement}}
-                                                        ”</p>
-                                                </div>
-                                            </div>
-                                            <!--End Testimonial Single Item-->
-                                        @endif
-                                    @endforeach
-
-
-                                    <a class="left testimonial-control" href="#testimonial-carousel" role="button"
-                                       data-slide="prev"><i
-                                                class="fa fa-long-arrow-left testimonial-ctl-button"></i></a>
-                                    <a class="right testimonial-control" href="#testimonial-carousel" role="button"
-                                       data-slide="next"><i
-                                                class="fa fa-long-arrow-right testimonial-ctl-button"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        @include('frontend.partials.announcements')
     @endif
 
 
@@ -392,109 +342,10 @@
 
 
 
+    @if(count($activities)>0)
+        @include('frontend.partials.activities')
+    @endif
 
-    <section id="featured-services-area">
-        <div class="container">
-            <div class="featured-services">
-                <div class="section-title text-center">
-                    <span>Our Practice Areas</span>
-                    <h2><span>Our featured services</span></h2>
-                </div>
-                <div class="row">
-                    <div class="top-featured">
-                        <!--Star Single Featured Services-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-featured">
-                                <div class="single-featured-icon alignleft">
-                                    <i class="flaticon-familiar17"></i>
-                                </div>
-                                <div class="single-featured-text">
-                                    <h5>family law</h5>
-                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
-                                        esuada fames ant infaucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Featured Services-->
-                        <!--Star Single Featured Services-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-featured">
-                                <div class="single-featured-icon alignleft">
-                                    <i class="flaticon-justice4"></i>
-                                </div>
-                                <div class="single-featured-text">
-                                    <h5>criminal law</h5>
-                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
-                                        esuada fames ant infaucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Featured Services-->
-                        <!--Star Single Featured Services-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-featured">
-                                <div class="single-featured-icon alignleft">
-                                    <i class="flaticon-transport111"></i>
-                                </div>
-                                <div class="single-featured-text">
-                                    <h5>auto Accident law</h5>
-                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
-                                        esuada fames ant infaucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Featured Services-->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="bottom-featured">
-                        <!--Star Single Featured Services-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-featured">
-                                <div class="single-featured-icon alignleft">
-                                    <i class="flaticon-rain7"></i>
-                                </div>
-                                <div class="single-featured-text">
-                                    <h5>real estate law</h5>
-                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
-                                        esuada fames ant infaucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Featured Services-->
-                        <!--Star Single Featured Services-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-featured">
-                                <div class="single-featured-icon alignleft">
-                                    <i class="flaticon-medical85"></i>
-                                </div>
-                                <div class="single-featured-text">
-                                    <h5>Drug Offence</h5>
-                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
-                                        esuada fames ant infaucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Featured Services-->
-                        <!--Star Single Featured Services-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-featured">
-                                <div class="single-featured-icon alignleft">
-                                    <i class="flaticon-sprain"></i>
-                                </div>
-                                <div class="single-featured-text">
-                                    <h5>personal injury</h5>
-                                    <p>Phasellus sit amet tristique ligula. Doc iaculis leo suscipit ultricies Intedum
-                                        esuada fames ant infaucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Featured Services-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!--Start latest news area-->
     <section id="latest-news-area" class="anim-5-all">

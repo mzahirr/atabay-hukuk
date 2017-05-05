@@ -15,7 +15,10 @@
 Route::get('/', function () {
     $announcements = \App\Http\Models\Backend\Announcement::with('getTranslation')->get();
 
-    return view('frontend.welcome', compact('announcements'));
+    $activities = \App\Http\Models\Backend\Activity::with('getTranslation')->get();
+
+
+    return view('frontend.welcome', compact('announcements', 'activities'));
 });
 
 Route::get('locale/{locale?}', ['as' => 'locale.setLocale', 'uses' => 'Frontend\LocaleController@setLocale']);

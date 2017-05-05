@@ -3,6 +3,7 @@
 namespace App\Http\Models\Backend;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\App;
 
 
 /**
@@ -32,8 +33,12 @@ class Activity extends Model
      *
      * @return mixed
      */
-    public function getTranslation($locale = 'tr')
+    public function getTranslation($locale = null)
     {
+        if ($locale == null) {
+            $locale = App::getLocale();
+        }
+
         return $this->hasMany(ActivityTranslation::class)->whereLocale($locale);
     }
 

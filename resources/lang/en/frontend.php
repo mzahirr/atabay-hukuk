@@ -16,5 +16,6 @@ return [
     'contact'    => 'Contact',
     'language'   => 'Language',
     'consultant' => 'Get Free Legal Consultant',
+    'activities' => 'Our featured services',
 
 ];
