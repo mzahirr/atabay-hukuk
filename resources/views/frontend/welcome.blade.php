@@ -10,11 +10,11 @@
                             class="slider-1"
                             data-transition="fade"
                             data-slotamount="7"
-                            data-thumb="/img/slider/1.jpg"
+                            data-thumb="/img/slider/atabay_sldr1.jpg"
                             data-title="WE ARE AVAILABLE">
 
                         <img
-                                src="/img/slider/1.jpg"
+                                src="/img/slider/atabay_sldr1.jpg"
                                 data-bgrepeat="no-repeat"
                                 data-bgfit="cover"
                                 data-bgposition="center center"
@@ -57,11 +57,203 @@
                             class="slider-3"
                             data-transition="fade"
                             data-slotamount="7"
-                            data-thumb="/img/slider/2.jpg"
+                            data-thumb="/img/slider/atabay_sldr2.jpg"
                             data-title="WE ARE AVAILABLE">
 
                         <img
-                                src="/img/slider/2.jpg"
+                                src="/img/slider/atabay_sldr2.jpg"
+                                data-bgrepeat="no-repeat"
+                                data-bgfit="cover"
+                                data-bgposition="center center"
+                                alt="slider image">
+
+                        <div class="caption sfl sfb tp-resizeme caption-1 text-center"
+                             data-x="0"
+                             data-y="400"
+                             data-speed="700"
+                             data-start="1700"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>We Offer Our Clients Only</h1>
+                        </div>
+
+                        <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
+                             data-x="0"
+                             data-y="460"
+                             data-speed="700"
+                             data-start="2000"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>Expert Legal Advice</h1>
+                        </div>
+                        <div class="caption sft tp-resizeme caption-4 italic text-center"
+                             data-x="0"
+                             data-y="543"
+                             data-speed="700"
+                             data-start="2500"
+                             data-easing="easeOutBack"
+                        >
+                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br>
+                                cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
+                        </div>
+                        <div class="caption sft tp-resizeme border text-center"
+                             data-x="0"
+                             data-y="610"
+                             data-speed="700"
+                             data-start="2700"
+                             data-easing="easeOutBack"
+                        >
+                            <span></span>
+                        </div>
+                        <div class="caption sft tp-resizeme icon text-center"
+                             data-x="0"
+                             data-y="680"
+                             data-speed="700"
+                             data-start="3000"
+                             data-easing="easeOutBack"
+                        >
+                            <i class="flaticon-justice4"></i>
+                        </div>
+
+                    </li>
+
+                    <li
+                            class="slider-3"
+                            data-transition="fade"
+                            data-slotamount="7"
+                            data-thumb="/img/slider/atabay_sldr3.jpg"
+                            data-title="WE ARE AVAILABLE">
+
+                        <img
+                                src="/img/slider/atabay_sldr3.jpg"
+                                data-bgrepeat="no-repeat"
+                                data-bgfit="cover"
+                                data-bgposition="center center"
+                                alt="slider image">
+
+                        <div class="caption sfl sfb tp-resizeme caption-1 text-center"
+                             data-x="0"
+                             data-y="400"
+                             data-speed="700"
+                             data-start="1700"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>We Offer Our Clients Only</h1>
+                        </div>
+
+                        <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
+                             data-x="0"
+                             data-y="460"
+                             data-speed="700"
+                             data-start="2000"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>Expert Legal Advice</h1>
+                        </div>
+                        <div class="caption sft tp-resizeme caption-4 italic text-center"
+                             data-x="0"
+                             data-y="543"
+                             data-speed="700"
+                             data-start="2500"
+                             data-easing="easeOutBack"
+                        >
+                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br>
+                                cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
+                        </div>
+                        <div class="caption sft tp-resizeme border text-center"
+                             data-x="0"
+                             data-y="610"
+                             data-speed="700"
+                             data-start="2700"
+                             data-easing="easeOutBack"
+                        >
+                            <span></span>
+                        </div>
+                        <div class="caption sft tp-resizeme icon text-center"
+                             data-x="0"
+                             data-y="680"
+                             data-speed="700"
+                             data-start="3000"
+                             data-easing="easeOutBack"
+                        >
+                            <i class="flaticon-justice4"></i>
+                        </div>
+
+                    </li>
+
+                    <li
+                            class="slider-3"
+                            data-transition="fade"
+                            data-slotamount="7"
+                            data-thumb="/img/slider/atabay_sldr4.jpg"
+                            data-title="WE ARE AVAILABLE">
+
+                        <img
+                                src="/img/slider/atabay_sldr4.jpg"
+                                data-bgrepeat="no-repeat"
+                                data-bgfit="cover"
+                                data-bgposition="center center"
+                                alt="slider image">
+
+                        <div class="caption sfl sfb tp-resizeme caption-1 text-center"
+                             data-x="0"
+                             data-y="400"
+                             data-speed="700"
+                             data-start="1700"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>We Offer Our Clients Only</h1>
+                        </div>
+
+                        <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
+                             data-x="0"
+                             data-y="460"
+                             data-speed="700"
+                             data-start="2000"
+                             data-easing="easeOutBack"
+                        >
+                            <h1>Expert Legal Advice</h1>
+                        </div>
+                        <div class="caption sft tp-resizeme caption-4 italic text-center"
+                             data-x="0"
+                             data-y="543"
+                             data-speed="700"
+                             data-start="2500"
+                             data-easing="easeOutBack"
+                        >
+                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br>
+                                cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
+                        </div>
+                        <div class="caption sft tp-resizeme border text-center"
+                             data-x="0"
+                             data-y="610"
+                             data-speed="700"
+                             data-start="2700"
+                             data-easing="easeOutBack"
+                        >
+                            <span></span>
+                        </div>
+                        <div class="caption sft tp-resizeme icon text-center"
+                             data-x="0"
+                             data-y="680"
+                             data-speed="700"
+                             data-start="3000"
+                             data-easing="easeOutBack"
+                        >
+                            <i class="flaticon-justice4"></i>
+                        </div>
+
+                    </li>
+
+                    <li
+                            class="slider-3"
+                            data-transition="fade"
+                            data-slotamount="7"
+                            data-thumb="/img/slider/atabay_sldr5.jpg"
+                            data-title="WE ARE AVAILABLE">
+
+                        <img
+                                src="/img/slider/atabay_sldr5.jpg"
                                 data-bgrepeat="no-repeat"
                                 data-bgfit="cover"
                                 data-bgposition="center center"

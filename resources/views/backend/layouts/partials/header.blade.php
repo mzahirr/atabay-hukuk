@@ -5,7 +5,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a target="_blank" href="{{url('/')}}">
-                <img style="width: 113px; height: 26px;" src="/assets/pages/img/logo-big.png" alt="logo"
+                <img style="width: 150px; height: 32px;" src="/img/logo-2.png" alt="logo"
                      class="logo-default"/> </a>
             <div class="menu-toggler sidebar-toggler"></div>
         </div>
