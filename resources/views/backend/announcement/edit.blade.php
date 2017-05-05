@@ -30,14 +30,14 @@
                                         <div class="tab-pane active" id="portlet_tab1">
                                             <div class="form-group form-md-line-input form-md-floating-label has-success">
                                         <textarea rows="8" name="announcement" class="form-control"
-                                                  id="announcement">{{$announcement->getTranslation('tr')->first()->announcement}}</textarea>
+                                                  id="announcement">{{$announcement->getTranslation('tr')->first()->announcement ?? ''}}</textarea>
                                                 <label for="announcement">Duyuru metni</label>
                                             </div>
                                         </div>
                                         <div class="tab-pane" id="portlet_tab2">
                                             <div class="form-group form-md-line-input form-md-floating-label has-success">
                                         <textarea rows="8" name="announcementEN" class="form-control"
-                                                  id="announcementEN">{{$announcement->getTranslation('en')->first()->announcement}}</textarea>
+                                                  id="announcementEN">{{$announcement->getTranslation('en')->first()->announcement ?? ''}}</textarea>
                                                 <label for="announcementEN">Duyuru metni ingilizce</label>
                                             </div>
                                         </div>

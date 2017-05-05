@@ -323,7 +323,7 @@
                         <i class="icon icon-Phone2"></i>
                     </div>
                     <div class="dtc text-one">
-                        <h3>{{trans('frontend.consultant')}}: <span class="number">+90 312 466 44 44</span></h3>
+                        <h3>{{trans('frontend.consultant')}}: <span class="number">312 466 44 44</span></h3>
                     </div>
                     <div class="dtc text-two">
                         <h4>7 days a Week From : 8.00 am to 2.30 pm</h4>
