@@ -48,7 +48,7 @@
     <!-- BEGIN LOGIN FORM -->
     <form class="login-form" action="{{route('login')}}" method="post">
         {{ csrf_field() }}
-        <h3 class="form-title font-green">Sign In</h3>
+        <h3 class="form-title font-green">Giriş yap</h3>
         @if(count($errors->all())>0)
             @foreach($errors->all() as $error)
                 <div class="alert alert-danger">
@@ -75,7 +75,7 @@
     </form>
     <!-- END LOGIN FORM -->
 </div>
-<div class="copyright"> 2018 © Phpuzem</div>
+<div class="copyright"> 2018 © {{config('app.name')}}</div>
 <!--[if lt IE 9]>
 <script src="/assets/global/plugins/respond.min.js"></script>
 <script src="/assets/global/plugins/excanvas.min.js"></script>

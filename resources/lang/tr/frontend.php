@@ -15,4 +15,5 @@ return [
     'collection' => 'Tahsilat',
     'contact'    => 'İletişim',
     'language'   => 'Dil',
+    'consultant' => 'Danışmanlık hizmeti'
 ];

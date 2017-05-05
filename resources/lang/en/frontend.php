@@ -15,5 +15,6 @@ return [
     'collection' => 'Payment',
     'contact'    => 'Contact',
     'language'   => 'Language',
+    'consultant' => 'Get Free Legal Consultant',
 
 ];

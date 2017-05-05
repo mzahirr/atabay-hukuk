@@ -2,7 +2,7 @@
 <header class="stricky anim-5-all">
     <div class="container">
         <div class="logo pull-left">
-            <a href="index.html">
+            <a href="{{url('/')}}">
                 <img src="/img/logo-2.png" alt="Logo image">
             </a>
         </div>

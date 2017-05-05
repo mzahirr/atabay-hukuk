@@ -11,7 +11,7 @@
                             data-transition="fade"
                             data-slotamount="7"
                             data-thumb="/img/slider/atabay_sldr1.jpg"
-                            data-title="WE ARE AVAILABLE">
+                            data-title="{{config('app.name')}}">
 
                         <img
                                 src="/img/slider/atabay_sldr1.jpg"
@@ -58,7 +58,7 @@
                             data-transition="fade"
                             data-slotamount="7"
                             data-thumb="/img/slider/atabay_sldr2.jpg"
-                            data-title="WE ARE AVAILABLE">
+                            data-title="{{config('app.name')}}">
 
                         <img
                                 src="/img/slider/atabay_sldr2.jpg"
@@ -122,7 +122,7 @@
                             data-transition="fade"
                             data-slotamount="7"
                             data-thumb="/img/slider/atabay_sldr3.jpg"
-                            data-title="WE ARE AVAILABLE">
+                            data-title="{{config('app.name')}}">
 
                         <img
                                 src="/img/slider/atabay_sldr3.jpg"
@@ -186,7 +186,7 @@
                             data-transition="fade"
                             data-slotamount="7"
                             data-thumb="/img/slider/atabay_sldr4.jpg"
-                            data-title="WE ARE AVAILABLE">
+                            data-title="{{config('app.name')}}">
 
                         <img
                                 src="/img/slider/atabay_sldr4.jpg"
@@ -250,7 +250,7 @@
                             data-transition="fade"
                             data-slotamount="7"
                             data-thumb="/img/slider/atabay_sldr5.jpg"
-                            data-title="WE ARE AVAILABLE">
+                            data-title="{{config('app.name')}}">
 
                         <img
                                 src="/img/slider/atabay_sldr5.jpg"
@@ -323,7 +323,7 @@
                         <i class="icon icon-Phone2"></i>
                     </div>
                     <div class="dtc text-one">
-                        <h3>Get Free Legal Consultatnt: <span class="number">1800 245 6354</span></h3>
+                        <h3>{{trans('frontend.consultant')}}: <span class="number">+90 312 466 44 44</span></h3>
                     </div>
                     <div class="dtc text-two">
                         <h4>7 days a Week From : 8.00 am to 2.30 pm</h4>
@@ -349,7 +349,9 @@
                                                     <div class="testimonial-image-holder">
                                                         <img src="/img/widget-icon-1.png" alt="">
                                                     </div>
-                                                    <p>“{{$announcement->getTranslation(app()->getLocale())->first()->announcement}}”</p>
+                                                    <p>
+                                                        “{{$announcement->getTranslation(app()->getLocale())->first()->announcement}}
+                                                        ”</p>
                                                 </div>
                                             </div>
                                             <!--End Testimonial Single Item-->
@@ -360,7 +362,9 @@
                                                     <div class="testimonial-image-holder">
                                                         <img src="/img/widget-icon-1.png" alt="">
                                                     </div>
-                                                    <p>“{{$announcement->getTranslation(app()->getLocale())->first()->announcement}}”</p>
+                                                    <p>
+                                                        “{{$announcement->getTranslation(app()->getLocale())->first()->announcement}}
+                                                        ”</p>
                                                 </div>
                                             </div>
                                             <!--End Testimonial Single Item-->
