@@ -4,7 +4,7 @@ namespace App\Http\Requests\Backend;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ActivityStore extends FormRequest
+class ArticleUpdate extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,6 +28,7 @@ class ActivityStore extends FormRequest
             'description'   => 'required',
             'subjectEN'     => 'required',
             'descriptionEN' => 'required',
+            'image'         => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 

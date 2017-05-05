@@ -24,7 +24,8 @@ class AnnouncementStore extends FormRequest
     public function rules()
     {
         return [
-            'announcement' => 'required',
+            'announcement'   => 'required',
+            'announcementEN' => 'required',
         ];
     }
 

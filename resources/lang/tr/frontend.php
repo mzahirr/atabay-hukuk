@@ -7,14 +7,16 @@
  */
 
 return [
-    'homepage'   => 'Anasayfa',
-    'about-us'   => 'Hakkımızda',
-    'corporate'  => 'Kurumsal',
-    'attorneys'  => 'Avukatlar',
-    'articles'   => 'Makaleler',
-    'collection' => 'Tahsilat',
-    'contact'    => 'İletişim',
-    'language'   => 'Dil',
-    'consultant' => 'Danışmanlık hizmeti',
-    'activities' => 'Faaliyet alanlarımız',
+    'homepage'        => 'Anasayfa',
+    'about-us'        => 'Hakkımızda',
+    'corporate'       => 'Kurumsal',
+    'attorneys'       => 'Avukatlar',
+    'articles'        => 'Makaleler',
+    'collection'      => 'Tahsilat',
+    'contact'         => 'İletişim',
+    'language'        => 'Dil',
+    'consultant'      => 'Danışmanlık',
+    'activities'      => 'Faaliyet alanlarımız',
+    'article_subhead' => 'güncel makaleler',
+    'working_days'    => '6 gün : 9.00 - 18.00 arası hizmet',
 ];

@@ -26,6 +26,8 @@ class ActivityUpdate extends FormRequest
         return [
             'subject'     => 'required',
             'description' => 'required',
+            'subjectEN'     => 'required',
+            'descriptionEN' => 'required',
         ];
     }
 

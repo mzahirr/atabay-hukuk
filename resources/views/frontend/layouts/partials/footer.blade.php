@@ -95,12 +95,12 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="copy-right-text">
-                    <p>Copyright © Legal Power 2015. All rights reserved. </p>
+                    <p>COPYRIGHT © {{config('app.name')}} {{date('Y')}}. ALL RIGHTS RESERVED. </p>
                 </div>
             </div>
             <div class="col-lg-2 col-lg-offset-5">
                 <div class="created-text">
-                    <p>Created by: <a href="">DesignArc</a></p>
+                    <p><a href="//www.weberkent.com">WEBERKENT INC.</a></p>
                 </div>
             </div>
         </div>

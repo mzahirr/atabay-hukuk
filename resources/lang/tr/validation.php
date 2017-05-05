@@ -113,14 +113,20 @@ return [
     */
 
     'attributes' => [
-        'label'        => 'Ad',
-        'email'        => 'E-posta adresi',
-        'name'         => 'Ad soyad',
-        'password'     => 'Şifre',
-        'identity'     => 'Kimlik numarası',
-        'number'       => 'Numara',
-        'image'        => 'Resim',
-        'announcement' => 'Duyuru',
+        'label'          => 'Ad',
+        'email'          => 'E-posta adresi',
+        'name'           => 'Ad soyad',
+        'password'       => 'Şifre',
+        'identity'       => 'Kimlik numarası',
+        'number'         => 'Numara',
+        'image'          => 'Resim',
+        'announcement'   => 'Duyuru',
+        'announcementEN' => 'İngilizce duyuru',
+        'subject'        => 'Başlık',
+        'subjectEN'      => 'İngilizce başlık',
+        'description'    => 'İçerik',
+        'descriptionEN'  => 'İngilizce içerik',
+
     ],
 
 ];

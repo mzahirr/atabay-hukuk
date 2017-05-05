@@ -49,13 +49,12 @@ class ActivityController extends Controller
             'description' => $request->input('description'),
             'locale'      => 'tr',
         ]));
-        if ($request->has('subjectEN') && $request->has('descriptionEN')) {
-            $activity->translations()->save(new ActivityTranslation([
-                'subject'     => $request->input('subjectEN'),
-                'description' => $request->input('descriptionEN'),
-                'locale'      => 'en',
-            ]));
-        }
+        $activity->translations()->save(new ActivityTranslation([
+            'subject'     => $request->input('subjectEN'),
+            'description' => $request->input('descriptionEN'),
+            'locale'      => 'en',
+        ]));
+
 
         return back()->withNotify('Faaliyet Oluşturuldu!');
     }
@@ -89,13 +88,12 @@ class ActivityController extends Controller
             'locale'      => 'tr',
         ]);
 
-        if ($request->has('subjectEN') && $request->has('descriptionEN')) {
-            $activity->getTranslation('en')->first()->update([
-                'subject'     => $request->input('subjectEN'),
-                'description' => $request->input('descriptionEN'),
-                'locale'      => 'en',
-            ]);
-        }
+        $activity->getTranslation('en')->first()->update([
+            'subject'     => $request->input('subjectEN'),
+            'description' => $request->input('descriptionEN'),
+            'locale'      => 'en',
+        ]);
+
 
         return back()->withNotify('Faaliyet Güncellendi!');
 

@@ -187,6 +187,35 @@
                     </ul>
                 </li>
 
+                <li class="nav-item @if(request()->is('articles/*') || request()->is('articles')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Makaleler</span>
+                        @if(request()->is('articles/*') || request()->is('articles'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('articles/create')) active open @endif">
+                            <a href="{{route('articles.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('articles/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('articles')) active open @endif">
+                            <a href="{{route('articles.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('articles'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
 
             @endcan
 

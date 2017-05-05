@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActivityTranslationsTable extends Migration
+class CreateArticleTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,20 @@ class CreateActivityTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('activity_translations', function (Blueprint $table) {
+        Schema::create('article_translations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('activity_id')->unsigned();
+            $table->integer('article_id')->unsigned();
             $table->string('locale')->index();
 
             $table->text('subject')->nullable();
             $table->text('description')->nullable();
 
-            $table->unique(['activity_id', 'locale']);
+            $table->unique(['article_id', 'locale']);
+        });
+        Schema::table('article_translations', function (Blueprint $table) {
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
         });
 
-        Schema::table('activity_translations', function (Blueprint $table) {
-            $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
-        });
     }
 
     /**
@@ -36,6 +36,6 @@ class CreateActivityTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activity_translations');
+        Schema::dropIfExists('article_translations');
     }
 }

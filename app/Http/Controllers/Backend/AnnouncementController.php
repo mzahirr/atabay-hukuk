@@ -50,12 +50,11 @@ class AnnouncementController extends Controller
             'announcement' => $request->input('announcement'),
             'locale'       => 'tr',
         ]));
-        if ($request->has('announcementEN')) {
-            $announcement->translations()->save(new AnnouncementTranslation([
-                'announcement' => $request->input('announcementEN'),
-                'locale'       => 'en',
-            ]));
-        }
+        $announcement->translations()->save(new AnnouncementTranslation([
+            'announcement' => $request->input('announcementEN'),
+            'locale'       => 'en',
+        ]));
+
 
         return back()->withNotify('Duyuru Oluşturuldu!');
     }
@@ -88,12 +87,11 @@ class AnnouncementController extends Controller
             'locale'       => 'tr',
         ]);
 
-        if ($request->has('announcementEN')) {
-            $announcement->getTranslation('en')->first()->update([
-                'announcement' => $request->input('announcementEN'),
-                'locale'       => 'en',
-            ]);
-        }
+        $announcement->getTranslation('en')->first()->update([
+            'announcement' => $request->input('announcementEN'),
+            'locale'       => 'en',
+        ]);
+
 
         return back()->withNotify('Duyuru Güncellendi!');
 

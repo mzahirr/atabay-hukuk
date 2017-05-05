@@ -18,7 +18,7 @@ class CreateAnnouncementTranslationsTable extends Migration
             $table->integer('announcement_id')->unsigned();
             $table->string('locale')->index();
 
-            $table->text('announcement');
+            $table->text('announcement')->nullable();
 
             $table->unique(['announcement_id', 'locale']);
         });
