@@ -42,6 +42,8 @@ Route::group(['middleware' => 'can:' . env('PANEL-YÖNETİMİ') . ''], function 
 
     Route::group(['middleware' => 'can:' . env('İÇERİK-YÖNETİMİ') . ''], function () {
         Route::resource('announcements', 'Backend\AnnouncementController');
+        Route::resource('activities', 'Backend\ActivityController');
+
     });
 
 

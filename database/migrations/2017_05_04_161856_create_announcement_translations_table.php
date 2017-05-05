@@ -21,6 +21,9 @@ class CreateAnnouncementTranslationsTable extends Migration
             $table->text('announcement');
 
             $table->unique(['announcement_id', 'locale']);
+        });
+
+        Schema::table('announcement_translations', function (Blueprint $table) {
             $table->foreign('announcement_id')->references('id')->on('announcements')->onDelete('cascade');
         });
     }

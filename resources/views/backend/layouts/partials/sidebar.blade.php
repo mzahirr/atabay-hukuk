@@ -156,6 +156,38 @@
                         </li>
                     </ul>
                 </li>
+
+
+                <li class="nav-item @if(request()->is('activities/*') || request()->is('activities')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Faaliyet Alanları</span>
+                        @if(request()->is('activities/*') || request()->is('activities'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('activities/create')) active open @endif">
+                            <a href="{{route('activities.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('activities/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('activities')) active open @endif">
+                            <a href="{{route('activities.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('activities'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
             @endcan
 
 
