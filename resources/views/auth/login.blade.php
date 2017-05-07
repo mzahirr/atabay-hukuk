@@ -67,10 +67,10 @@
             <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off"
                    placeholder="Şifreniz" name="password"/></div>
         <div class="form-actions">
-            <button type="submit" class="btn green uppercase">Log In</button>
+            <button type="submit" class="btn green uppercase">Giriş yap</button>
             <label class="rememberme check">
-                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}/>Remember </label>
-            <a href="{{ route('password.request') }}" class="forget-password">Lost Password?</a>
+                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}/>Beni hatırla </label>
+            <a href="{{ route('password.request') }}" class="forget-password">Şifremi unuttum?</a>
         </div>
     </form>
     <!-- END LOGIN FORM -->

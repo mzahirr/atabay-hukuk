@@ -17,7 +17,6 @@
 </section>
 <!--End legal problem area-->
 
-
 <!--Start Footer widget area-->
 <section id="footer-widget-area">
     <div class="container">
@@ -51,19 +50,16 @@
                 <div class="single-footer-widget">
                     <div class="quick-links">
                         <h3>{{trans('frontend.quick_links')}}</h3>
+
                         <ul class="left-quick-links alignleft">
-                            <li><i class="fa fa-angle-right"></i><a href="">Criminal Injury Law</a></li>
-                            <li><i class="fa fa-angle-right"></i><a href="">Divorce Law</a></li>
-                            <li><i class="fa fa-angle-right"></i><a href="">Industrial Law</a></li>
-                            <li><i class="fa fa-angle-right"></i><a href="">Insurance Law</a></li>
-                            <li><i class="fa fa-angle-right"></i><a href="">Family and Child Law</a></li>
+                            @foreach($links->take(5) as $link)
+                                <li><i class="fa fa-angle-right"></i><a href="{{$link->url}}">{{$link->name}}</a></li>
+                            @endforeach
                         </ul>
                         <ul>
-                            <li><i class="fa fa-angle-right"></i><a href="">Criminal Injury Law</a></li>
-                            <li><i class="fa fa-angle-right"></i><a href="">Divorce Law</a></li>
-                            <li><i class="fa fa-angle-right"></i><a href="">Industrial Law</a></li>
-                            <li><i class="fa fa-angle-right"></i><a href="">Insurance Law</a></li>
-                            <li><i class="fa fa-angle-right"></i><a href="">Family and Child Law</a></li>
+                            @foreach($links->slice(5,count($links))->take(5) as $link)
+                                <li><i class="fa fa-angle-right"></i><a href="{{$link->url}}">{{$link->name}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

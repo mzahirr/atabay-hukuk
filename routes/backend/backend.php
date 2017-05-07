@@ -45,6 +45,8 @@ Route::group(['middleware' => 'can:' . env('PANEL-YÖNETİMİ') . ''], function 
         Route::resource('activities', 'Backend\ActivityController');
         Route::resource('articles', 'Backend\ArticleController',
             ['except' => ['show']]);
+        Route::resource('links', 'Backend\LinkController',
+            ['except' => ['show']]);
     });
 
 
