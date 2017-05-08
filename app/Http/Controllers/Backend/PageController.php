@@ -60,6 +60,14 @@ class PageController extends Controller
     }
 
     /**
+     *
+     */
+    public function show()
+    {
+
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param Page $page

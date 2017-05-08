@@ -67,9 +67,23 @@ class Page extends Model
     }
 
     // Getter for the HTML menu builder
+
+    /**
+     * @param $items
+     *
+     * @return null|string
+     */
     public function getHTML($items)
     {
         return $this->buildMenu($items);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function subPages()
+    {
+        return $this->hasMany(static::class, 'parent_id');
     }
 
 

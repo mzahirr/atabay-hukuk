@@ -1,3 +1,4 @@
+@inject('pages', 'App\Services\PagesService')
 <!--Start Top section-->
 <header class="stricky anim-5-all">
     <div class="container">
@@ -13,9 +14,7 @@
                     <li class="dropdown">
                         <a href="attorney-v1.html">{{trans('frontend.corporate')}}</a>
                         <ul class="submenu">
-                            <li>
-                                <a href="attorney-v2.html">{{trans('frontend.about-us')}}</a>
-                            </li>
+                            {!! $pages->generate() !!}
                         </ul>
                     </li>
                     <li><a href="about.html">{{trans('frontend.attorneys')}}</a></li>
