@@ -16,7 +16,6 @@
     </div>
 </section>
 <!--End legal problem area-->
-
 <!--Start Footer widget area-->
 <section id="footer-widget-area">
     <div class="container">
@@ -50,15 +49,18 @@
                 <div class="single-footer-widget">
                     <div class="quick-links">
                         <h3>{{trans('frontend.quick_links')}}</h3>
-
                         <ul class="left-quick-links alignleft">
                             @foreach($links->take(5) as $link)
-                                <li><i class="fa fa-angle-right"></i><a href="{{$link->url}}">{{$link->name}}</a></li>
+                                <li><i class="fa fa-angle-right"></i>
+                                    <a target="_blank" href="{{$link->url}}">{{$link->name}}</a>
+                                </li>
                             @endforeach
                         </ul>
                         <ul>
                             @foreach($links->slice(5,count($links))->take(5) as $link)
-                                <li><i class="fa fa-angle-right"></i><a href="{{$link->url}}">{{$link->name}}</a></li>
+                                <li><i class="fa fa-angle-right"></i>
+                                    <a target="_blank" href="{{$link->url}}">{{$link->name}}</a>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
@@ -80,12 +82,10 @@
                 </div>
             </div>
             <!--End Single Footer widget-->
-
         </div>
     </div>
 </section>
 <!--End Footer widget area-->
-
 <!--Start Footer area-->
 <section id="footer-area">
     <div class="container">

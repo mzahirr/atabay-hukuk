@@ -41,6 +41,6 @@ class LinkComposer
      */
     public function compose(View $view)
     {
-        $view->with('links', $this->links->take(10)->get());
+        $view->with('links', $this->links->latest()->take(10)->get());
     }
 }

@@ -20,7 +20,9 @@
                     </li>
                     <li><a href="about.html">{{trans('frontend.attorneys')}}</a></li>
                     <li><a href="blog-left-sidebar.html">{{trans('frontend.articles')}}</a></li>
-                    <li><a href="blog-left-sidebar.html">{{trans('frontend.collection')}}</a></li>
+                    <li><a target="_blank"
+                           href="{{env('TURKODEME_URL')}}">{{trans('frontend.collection')}}</a>
+                    </li>
                     <li><a href="contact.html">{{trans('frontend.contact')}}</a></li>
                     <li class="dropdown">
                         <a href="attorney-v1.html">{{trans('frontend.language')}}</a>

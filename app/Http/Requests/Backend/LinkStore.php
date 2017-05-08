@@ -25,7 +25,7 @@ class LinkStore extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|max:17',
             'url'  => [
                 'required',
                 Rule::unique('links'),
