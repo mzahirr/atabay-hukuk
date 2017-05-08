@@ -126,6 +126,10 @@ return [
         'subjectEN'      => 'İngilizce başlık',
         'description'    => 'İçerik',
         'descriptionEN'  => 'İngilizce içerik',
+        'title'          => 'Başlık',
+        'titleEN'        => 'İngilizce başlık',
+        'body'           => 'İçerik',
+        'bodyEN'         => 'İngilizce içerik',
 
     ],
 

@@ -245,6 +245,43 @@
                     </ul>
                 </li>
 
+                <li class="nav-item @if(request()->is('pages/*') || request()->is('pages')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Sayfalar</span>
+                        @if(request()->is('pages/*') || request()->is('pages'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('pages/create')) active open @endif">
+                            <a href="{{route('pages.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('pages/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('pages')) active open @endif">
+                            <a href="{{route('pages.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('pages'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+
+                        <li class="nav-item @if(request()->is('pages/order')) active open @endif">
+                            <a href="{{route('pages.order')}}" class="nav-link ">
+                                <span class="title">Sıralama</span>
+                                @if(request()->is('pages/order'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
             @endcan
 
