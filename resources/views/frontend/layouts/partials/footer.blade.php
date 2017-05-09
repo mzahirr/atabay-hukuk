@@ -36,38 +36,42 @@
                                     class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="widget-social-links">
-                        <a href=""><i class="fa fa-facebook mysocial_style"></i></a>
-                        <a href=""><i class="fa fa-twitter mysocial_style"></i></a>
-                        <a href=""><i class="fa fa-google-plus mysocial_style"></i></a>
-                        <a href=""><i class="fa fa-linkedin mysocial_style"></i></a>
+                        <a href="{{env('FACEBOOK_ADDRESS')}}"><i class="fa fa-facebook mysocial_style"></i></a>
+                        <a href="{{env('TWITTER_ADDRESS')}}"><i class="fa fa-twitter mysocial_style"></i></a>
+                        <a href="{{env('GOOGLE_ADDRESS')}}"><i class="fa fa-google-plus mysocial_style"></i></a>
+                        <a href="{{env('LINKEDIN_ADDRESS')}}"><i class="fa fa-linkedin mysocial_style"></i></a>
                     </div>
                 </div>
             </div>
             <!--End Single Footer widget-->
+
+        @if(count($links)>0)
             <!--Start Single Footer widget-->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="single-footer-widget">
-                    <div class="quick-links">
-                        <h3>{{trans('frontend.quick_links')}}</h3>
-                        <ul class="left-quick-links alignleft">
-                            @foreach($links->take(5) as $link)
-                                <li><i class="fa fa-angle-right"></i>
-                                    <a target="_blank" href="{{$link->url}}">{{$link->name}}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                        <ul>
-                            @foreach($links->slice(5,count($links))->take(5) as $link)
-                                <li><i class="fa fa-angle-right"></i>
-                                    <a target="_blank" href="{{$link->url}}">{{$link->name}}</a>
-                                </li>
-                            @endforeach
-                        </ul>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-footer-widget">
+                        <div class="quick-links">
+                            <h3>{{trans('frontend.quick_links')}}</h3>
+                            <ul class="left-quick-links alignleft">
+                                @foreach($links->take(5) as $link)
+                                    <li><i class="fa fa-angle-right"></i>
+                                        <a target="_blank" href="{{$link->url}}">{{$link->name}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            <ul>
+                                @foreach($links->slice(5,count($links))->take(5) as $link)
+                                    <li><i class="fa fa-angle-right"></i>
+                                        <a target="_blank" href="{{$link->url}}">{{$link->name}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--End Single Footer widget-->
-            <!--Start Single Footer widget-->
+                <!--End Single Footer widget-->
+        @endif
+
+        <!--Start Single Footer widget-->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="single-footer-widget">
                     <div class="widget-get-intouch">

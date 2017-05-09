@@ -49,8 +49,7 @@ Route::group(['middleware' => 'can:' . env('PANEL-YÖNETİMİ') . ''], function 
             ['except' => ['show']]);
         Route::get('pages/order', 'Backend\PageController@order')->name('pages.order');
         Route::post('pages/reorder', 'Backend\PageController@reorder')->name('pages.reorder');
-
-        Route::resource('pages', 'Backend\PageController');
+        Route::resource('pages', 'Backend\PageController', ['except' => ['show']]);
     });
 
 

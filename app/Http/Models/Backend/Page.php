@@ -46,7 +46,7 @@ class Page extends Model
      *
      * @return null|string
      */
-    public function buildMenu($menu, $parentId = 0)
+    public function buildMenu($menu, $parentId = null)
     {
         $result = null;
         foreach ($menu as $item) {

@@ -23,5 +23,11 @@ return [
     'get_in_touch'    => 'Get in Touch',
     'read_more'       => 'Read More',
     'watch_word'      => 'If you have any legal problem in your life ... We are available',
+    'phone'           => 'Phone',
+    'email'           => 'E-mail',
+    'login'           => 'Login',
+    'query'           => 'File query',
+    'management'      => 'Management',
+
 
 ];

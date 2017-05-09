@@ -19,7 +19,7 @@ class CreatePageTranslationsTable extends Migration
             $table->string('locale')->index();
 
             $table->string('title')->nullable();
-            $table->text('body')->nullable();
+            $table->longText('body')->nullable();
 
             $table->unique(['page_id', 'locale']);
         });

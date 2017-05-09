@@ -23,4 +23,9 @@ return [
     'get_in_touch'    => 'Bağlantıda kalın',
     'read_more'       => 'Devamı',
     'watch_word'      => 'Hukuki problemler yaşamakta iseniz ... Yardıma hazırız',
+    'phone'           => 'Telefon',
+    'email'           => 'E-posta',
+    'login'           => 'Giriş',
+    'query'           => 'Dosya sorgula',
+    'management'      => 'Yönetim',
 ];

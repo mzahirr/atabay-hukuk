@@ -315,6 +315,8 @@
     </section>
     <!-- /#banner -->
 
+
+
     <section class="call-to-action-area">
         <div class="container">
             <div class="row">
@@ -325,9 +327,12 @@
                     <div class="dtc text-one">
                         <h3>{{trans('frontend.consultant')}}: <span class="number">312 466 44 44</span></h3>
                     </div>
+
                     <div class="dtc text-two">
                         <h4>{{trans('frontend.working_days')}}</h4>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -345,6 +350,14 @@
 @endsection
 @push('styles')
 <style>
+    .action-bar {
+        padding-left: 90px;
+    }
+
+    .action-bar2 {
+        padding-left: 290px;
+    }
+
     .bottom {
         margin-bottom: 10px;
     }
