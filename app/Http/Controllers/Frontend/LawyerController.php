@@ -14,6 +14,6 @@ class LawyerController extends Controller
     {
         $lawyers = Attorney::all();
 
-        return view('frontend.lawyer.list', compact('lawyers'));
+        return view('frontend.attorney.list', compact('lawyers'));
     }
 }

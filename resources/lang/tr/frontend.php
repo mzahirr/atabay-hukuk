@@ -28,4 +28,12 @@ return [
     'login'           => 'Giriş',
     'query'           => 'Dosya sorgula',
     'management'      => 'Yönetim',
+    'name'            => 'Ad soyad',
+    'message'         => 'Mesaj',
+    'submit'          => 'Gönder',
+    'error'           => 'Hata',
+    'success'         => 'Başarılı',
+    'contact_request' => 'İletişim isteği',
+    'case_number'     => 'Dava numarası',
+    'case_list'       => 'Davalar listelendi!',
 ];

@@ -23,7 +23,10 @@ Route::get('articles/{article}', 'Frontend\ArticleController@show')->name('artic
 Route::get('pages/{page}', 'Frontend\PageController@show')->name('pages.show');
 
 Route::get('lawyers', 'Frontend\LawyerController@index')->name('lawyers.index');
+Route::get('news/{news}', 'Frontend\NewsController@show')->name('news.show');
 Route::get('news', 'Frontend\NewsController@index')->name('news.index');
 Route::get('contacts', 'Frontend\ContactController@index')->name('contacts.index');
-Route::get('query', 'Frontend\ContactController@query')->name('files.query');
-Route::get('actions', 'Frontend\ContactController@index')->name('actions.index');
+Route::post('contacts/add', 'Frontend\ContactController@form')->name('contacts.form');
+Route::get('query', 'Frontend\FileQueryController@query')->name('files.query');
+Route::post('query/check', 'Frontend\FileQueryController@check')->name('files.query_check');
+Route::get('actions', 'Frontend\ActionController@index')->name('actions.index');

@@ -130,7 +130,10 @@ return [
         'titleEN'        => 'İngilizce başlık',
         'body'           => 'İçerik',
         'bodyEN'         => 'İngilizce içerik',
-
+        'phone'          => 'Telefon',
+        'message'        => 'Mesaj',
+        'mail_send'      => 'Mesajınız başarılı bir şekilde iletilmiştir.',
+        'case_number'    => 'Dava numarası',
     ],
 
 ];

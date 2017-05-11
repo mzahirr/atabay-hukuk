@@ -14,7 +14,7 @@
                             <div class="news-image-holder">
                                 <img src="{{$article->image ?? '/img/news-1.jpg'}}" alt="{{$article->subject}}">
                                 <div class="overlay">
-                                    <a href="{{route('articles.show',$article->id)}}"><i class="fa fa-link"></i></a>
+                                    <a href="{{route('news.show',$article->id)}}"><i class="fa fa-link"></i></a>
                                 </div>
                                 <div class="published-date-wrapper">
                                     <div class="published-date">
@@ -25,7 +25,7 @@
                             </div>
                             <div class="latest-news-text">
                                 <ul class="meta text-center">
-                                    <li><a href="{{route('articles.show',$article->id)}}"><i
+                                    <li><a href="{{route('news.show',$article->id)}}"><i
                                                     class="fa fa-user"></i> {{$article->user->name}}</a></li>
                                 </ul>
                                 <h4 title="{{$article->getTranslation->first()->subject}}">{{str_limit($article->getTranslation->first()->subject,20)}}</h4>

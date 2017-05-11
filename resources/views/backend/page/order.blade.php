@@ -37,7 +37,7 @@
                         rootOrder[index] = $(elem).attr('data-id');
                     });
                 }
-                $.post('{{url("pages/reorder/")}}',
+                $.post('{{route("pages.reorder")}}',
                     {
                         source: details.sourceId,
                         destination: details.destId,

@@ -28,6 +28,13 @@ return [
     'login'           => 'Login',
     'query'           => 'File query',
     'management'      => 'Management',
-
-
+    'name'            => 'Name surname',
+    'message'         => 'Message',
+    'submit'          => 'Submit',
+    'error'           => 'Error',
+    'success'         => 'Success',
+    'mail_send'       => 'Your message has been sent.',
+    'contact_request' => 'Contact request',
+    'case_number'     => 'Case number',
+    'case_list'       => 'Case are listed!',
 ];
