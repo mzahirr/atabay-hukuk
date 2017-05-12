@@ -21,7 +21,7 @@ class FileQueryController extends Controller
 
     public function check(QueryCheck $request)
     {
-        $trials = Trial::whereNumber($request->only('case_number'))->get();
+        $trials = Trial::with('attorneys', 'clients', 'status')->whereNumber($request->only('case_number'))->get();
 
         return back()->with(['trials' => $trials])->withNotify(trans('frontend.case_list'));
     }

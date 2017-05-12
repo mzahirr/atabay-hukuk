@@ -17,7 +17,7 @@ class PagesService
      */
     public function generate()
     {
-        $pages = Page::with('getTranslation', 'subPages')->orderBy('order')->get();
+        $pages = Page::with('getTranslation', 'subPages.getTranslation')->orderBy('order')->get();
 
         $view = view('frontend.services.page', compact('pages'))->render();
 

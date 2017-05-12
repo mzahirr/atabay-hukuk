@@ -9,7 +9,8 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <div class="get-free-consultation-button">
-                    <a href="">{{trans('frontend.consultant')}} <i class="fa fa-arrow-right"></i></a>
+                    <a href="{{route('contacts.index')}}">{{trans('frontend.consultant')}} <i
+                                class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -27,13 +28,11 @@
                         <img src="/img/footer-logo.png" alt="">
                     </div>
                     <div class="widget-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna ali qua. Ut enim ad veniam, quis no strud exercitation.</p>
-                    </div>
-
-                    <div class="footer-read-more">
-                        <a href="">{{trans('frontend.read_more')}} <i class="fa fa-angle-right"></i><i
-                                    class="fa fa-angle-right"></i></a>
+                        <p>Ulusal ve uluslararası şirketleri, finansal kuruluşları ve gerçek kişileri, ceza hukuku,
+                            dava, tahkim ve uyuşmazlık hukuku ve icra hukuku başta olmak üzere Türkiye’deki hukuki
+                            ihtiyaçlar konusunda uluslararası standartlarda temsil eden Atabay Hukuk Bürosu, insan
+                            haklarına saygı ve hukuk devleti ilkelerine dayalı ısrarlı bir hukuki mücadeleyi ilke
+                            edinmiştir...</p>
                     </div>
                     <div class="widget-social-links">
                         <a href="{{env('FACEBOOK_ADDRESS')}}"><i class="fa fa-facebook mysocial_style"></i></a>
@@ -44,7 +43,6 @@
                 </div>
             </div>
             <!--End Single Footer widget-->
-
         @if(count($links)>0)
             <!--Start Single Footer widget-->
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">

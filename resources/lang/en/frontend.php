@@ -37,4 +37,6 @@ return [
     'contact_request' => 'Contact request',
     'case_number'     => 'Case number',
     'case_list'       => 'Case are listed!',
+    'clients'         => 'Clients',
+
 ];

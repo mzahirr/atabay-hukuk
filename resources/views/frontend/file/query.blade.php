@@ -57,83 +57,69 @@
                                     <ul class="practice-law-box" role="tablist">
                                     @foreach(session('trials') as $trial)
                                         <!--Start single law box-->
-                                            <li class="single-law-box active" data-tab-name="Criminal">
-                                                <a href="#Criminal" aria-controls="Criminal" role="tab"
+                                            <li class="single-law-box active"
+                                                data-tab-name="{{str_slug($trial->subject)}}">
+                                                <a href="#{{str_slug($trial->subject)}}"
+                                                   aria-controls="{{str_slug($trial->subject)}}" role="tab"
                                                    data-toggle="tab"
                                                    aria-expanded="true">{{$trial->subject}}<i
                                                             class="fa fa-angle-right"></i></a>
                                             </li>
                                             <!--End single law box-->
-                                    @endforeach
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <!--End practice right single sidebar-->
+
+                            @if(count($trial->attorneys)>0)
                                 <!--Start practice right single sidebar-->
-                                <div class="practice-right-single-sidebar">
-                                    <div class="practice-v4-sidebar-title">
-                                        <h3><span>Download Docs</span></h3>
+                                    <div class="practice-right-single-sidebar">
+                                        <div class="practice-v4-sidebar-title">
+                                            <h3><span>{{trans('frontend.attorneys')}}</span></h3>
+                                        </div>
+                                        <div class="doenload-items">
+                                            <ul>
+                                                @foreach($trial->attorneys as $attorney)
+                                                    <li><a href="mailto:{{$attorney->email}}">{{$attorney->name}}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="doenload-items">
-                                        <ul>
-                                            <li><a href="">Download Brochure</a></li>
-                                            <li><a href="">Download PDF</a></li>
-                                        </ul>
+                                    <!--End practice right single sidebar-->
+                            @endif
+
+                            @if(count($trial->clients)>0)
+                                <!--Start practice right single sidebar-->
+                                    <div class="practice-right-single-sidebar">
+                                        <div class="practice-v4-sidebar-title">
+                                            <h3><span>{{trans('frontend.clients')}}</span></h3>
+                                        </div>
+                                        <div class="doenload-items">
+                                            <ul>
+                                                @foreach($trial->clients as $client)
+                                                    <li><a href="mailto:{{$client->email}}">{{$client->name}}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--End practice right single sidebar-->
+                                    <!--End practice right single sidebar-->
+                                @endif
+
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 tab-content">
                             <div class="practice-left-content tab-pane fade active in" id="Criminal">
-                                <div class="fix practice-left-top-img">
-                                    <div class="fix practice-left-top-left-img">
-                                        <img src="img/practice-top-1.jpg" alt="">
-                                    </div>
-                                    <div class="fix practice-left-top-right-img">
-                                        <img src="img/practice-top-2.jpg" alt="">
-                                    </div>
-                                </div>
                                 <div class="fix practice-left-middle-text">
-                                    <h2>Criminal Law</h2>
-                                    <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
-                                        quia
-                                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                                        porro
-                                        quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                                        velit,
-                                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-                                        aliquam
-                                        quaerat voluptatem.<br><br>Ut enim ad minima veniam, quis nostrum exercitationem
-                                        ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                                        Quis
-                                        autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                                        molestiae
-                                        consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                                    <h2>{{$trial->subject}}</h2>
+                                    <p>{{$trial->description}}</p>
                                 </div>
-                                <div class="fix practice-left-bottom-text">
-                                    <div class="fix practice-bottom-left-img">
-                                        <img src="img/practice-left-bottom.jpg" alt="">
+                                @if(count($trial->status))
+                                    <div class="fix right-content-contact-box">
+                                        <h1>{{$trial->status->label}}</h1>
                                     </div>
-                                    <div class="fix practice-bottom-right-text">
-                                        <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
-                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                                            sed
-                                            quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                                            Neque
-                                            porro quisquam est, qui dolorem ipsum quia dolor sit amet.<br><br>Ut enim ad
-                                            minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                                            laboriosam,
-                                            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                                            reprehenderit
-                                            qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
-                                            qui
-                                            dolorem eum fugiat quo voluptas nulla pariatur</p>
-                                    </div>
-                                </div>
-                                <div class="fix right-content-contact-box">
-                                    <h1>All people are equal before the law. A good attorney.</h1>
-                                    <a href="">Contact us</a>
-                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -147,6 +133,7 @@
     #contact-area {
         padding-top: 95px;
         padding-bottom: 0px;
+        margin-bottom: 20px;
     }
 </style>
 @endpush
