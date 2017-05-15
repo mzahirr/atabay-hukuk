@@ -347,82 +347,30 @@
     @if(count($articles)>0)
         @include('frontend.partials.articles')
     @endif
+    @if(count($partners))
+        <div class="container">
+            <div class="row">
+                <div class="main-carousel">
+                    @foreach($partners as $partner)
+                        <div class="col-md-2 carousel-cell">
+                            <div class="custom_slider">
+                                <img src="{{asset($partner->image)}}" alt="{{$partner->name}}">
+                            </div>
+                        </div>
+                    @endforeach
+                    <div style="clear: both"></div>
+                </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="main-carousel">
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div class="col-md-2 carousel-cell">
-                    <div class="custom_slider">
-                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
-                    </div>
-                </div>
-                <div style="clear: both"></div>
             </div>
-
         </div>
-    </div>
-    <div style="clear: both"></div>
-
-
-
+        <div style="clear: both"></div>
+    @endif
 @endsection
 @push('styles')
+<link href="https://unpkg.com/flickity@2.0.5/dist/flickity.css" rel="stylesheet" type="text/css"/>
+
 <style>
+
     .action-bar {
         padding-left: 90px;
     }
@@ -439,7 +387,6 @@
         padding: 25px;
     }
 </style>
-<link href="https://unpkg.com/flickity@2.0.5/dist/flickity.css" rel="stylesheet" type="text/css"/>
 @endpush
 
 @push('scripts')
@@ -450,7 +397,7 @@
         contain: true,
         autoPlay: true,
         prevNextButtons: false,
-        pageDots: false
+        pageDots: false,
     });
 </script>
 @endpush

@@ -245,6 +245,35 @@
                     </ul>
                 </li>
 
+                <li class="nav-item @if(request()->is('partners/*') || request()->is('partners')) active open @endif">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-layers"></i>
+                        <span class="title">Referanslar</span>
+                        @if(request()->is('partners/*') || request()->is('partners'))
+                            <span class="selected"></span>
+                        @endif
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item @if(request()->is('partners/create')) active open @endif">
+                            <a href="{{route('partners.create')}}" class="nav-link ">
+                                <span class="title">Ekle</span>
+                                @if(request()->is('partners/create'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item @if(request()->is('partners')) active open @endif">
+                            <a href="{{route('partners.index')}}" class="nav-link ">
+                                <span class="title">Listele</span>
+                                @if(request()->is('partners'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="nav-item @if(request()->is('pages/*') || request()->is('pages')) active open @endif">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="icon-layers"></i>
