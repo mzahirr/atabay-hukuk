@@ -38,5 +38,7 @@ return [
     'case_number'     => 'Case number',
     'case_list'       => 'Case are listed!',
     'clients'         => 'Clients',
+    'panel'           => 'Dashboard',
+    'logout'          => 'Logout',
 
 ];

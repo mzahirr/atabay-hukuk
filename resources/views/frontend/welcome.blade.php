@@ -347,6 +347,79 @@
     @if(count($articles)>0)
         @include('frontend.partials.articles')
     @endif
+
+    <div class="container">
+        <div class="row">
+            <div class="main-carousel">
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div class="col-md-2 carousel-cell">
+                    <div class="custom_slider">
+                        <img src="http://orig14.deviantart.net/afd0/f/2010/295/1/3/lil_wayne_350x150_by_ikella-d319cgn.png">
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+
+        </div>
+    </div>
+    <div style="clear: both"></div>
+
+
+
 @endsection
 @push('styles')
 <style>
@@ -361,5 +434,23 @@
     .bottom {
         margin-bottom: 10px;
     }
+
+    .main-carousel {
+        padding: 25px;
+    }
 </style>
+<link href="https://unpkg.com/flickity@2.0.5/dist/flickity.css" rel="stylesheet" type="text/css"/>
+@endpush
+
+@push('scripts')
+<script src="https://unpkg.com/flickity@2.0.5/dist/flickity.pkgd.min.js"></script>
+<script>
+    $('.main-carousel').flickity({
+        cellAlign: 'center',
+        contain: true,
+        autoPlay: true,
+        prevNextButtons: false,
+        pageDots: false
+    });
+</script>
 @endpush

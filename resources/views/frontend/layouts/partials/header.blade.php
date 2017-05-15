@@ -4,7 +4,7 @@
     <div class="container">
         <div class="logo pull-left">
             <a href="{{url('/')}}">
-                <img src="/img/logo-2.png" alt="Logo image">
+                <img src="/img/logo-2.png" alt="{{config('app.name')}}">
             </a>
         </div>
         <nav class="mainmenu pull-right">
@@ -30,14 +30,15 @@
                             @if(auth()->check())
                                 @can(env('PANEL-YÖNETİMİ'))
                                     <li>
-                                        <a target="_blank" href="{{route('backend.dashboard')}}">Panel</a>
+                                        <a target="_blank"
+                                           href="{{route('backend.dashboard')}}">{{trans('frontend.panel')}}</a>
                                     </li>
                                 @endcan
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
-                                        Çıkış yap</a>
+                                        {{trans('frontend.logout')}}</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                           style="display: none;visibility: hidden;">
                                         {{ csrf_field() }}

@@ -134,6 +134,9 @@ return [
         'message'        => 'Mesaj',
         'mail_send'      => 'Mesajınız başarılı bir şekilde iletilmiştir.',
         'case_number'    => 'Dava numarası',
+        'panel'          => 'Panel',
+        'logout'         => 'Çıkış yap',
+
     ],
 
 ];
