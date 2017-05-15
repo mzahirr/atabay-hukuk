@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\DataTables\Backend\LinksDataTable;
 use App\DataTables\Backend\PartnersDataTable;
-use App\Http\Models\Backend\Link;
 use App\Http\Models\Backend\Partner;
-use App\Http\Requests\Backend\LinkStore;
-use App\Http\Requests\Backend\LinkUpdate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\PartnerStore;
 use App\Http\Requests\Backend\PartnerUpdate;
