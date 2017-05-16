@@ -51,7 +51,6 @@ Route::group(['middleware' => 'can:' . env('PANEL-YÖNETİMİ') . ''], function 
         Route::post('pages/process/reorder', 'Backend\PageController@reorder')->name('pages.reorder');
         Route::resource('pages', 'Backend\PageController', ['except' => ['show']]);
         Route::resource('partners', 'Backend\PartnerController', ['except' => ['show']]);
-
     });
 
 

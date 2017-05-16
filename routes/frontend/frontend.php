@@ -13,15 +13,10 @@
 
 
 Route::get('/', 'Frontend\WelcomeController');
-
 Route::get('locale/{locale?}', 'Frontend\LocaleController@setLocale')->name('locale.setLocale');
-
 Auth::routes();
-
-Route::get('articles/{article}', 'Frontend\ArticleController@show')->name('articles.show');
-
+Route::get('articles/{article}/show', 'Frontend\ArticleController@show')->name('articles.show');
 Route::get('pages/{page}', 'Frontend\PageController@show')->name('pages.show');
-
 Route::get('lawyers', 'Frontend\LawyerController@index')->name('lawyers.index');
 Route::get('news/{news}', 'Frontend\NewsController@show')->name('news.show');
 Route::get('news', 'Frontend\NewsController@index')->name('news.index');
