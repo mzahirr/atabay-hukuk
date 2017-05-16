@@ -2,4 +2,5 @@
 .DS_Store
 /vendor
 /.env
-public/storage/
+public/storage
+storage/images/
