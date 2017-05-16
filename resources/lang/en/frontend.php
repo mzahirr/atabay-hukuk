@@ -37,6 +37,7 @@ return [
     'contact_request' => 'Contact request',
     'case_number'     => 'Case number',
     'case_list'       => 'Case are listed!',
+    'case_list_empty' => 'No result!',
     'clients'         => 'Clients',
     'panel'           => 'Dashboard',
     'logout'          => 'Logout',
