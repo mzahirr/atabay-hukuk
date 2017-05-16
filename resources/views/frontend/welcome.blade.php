@@ -386,6 +386,11 @@
     .main-carousel {
         padding: 25px;
     }
+
+    .custom_slider > img {
+        min-width: 200px;
+        min-height: 200px;
+    }
 </style>
 @endpush
 
