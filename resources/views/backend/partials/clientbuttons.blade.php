@@ -1,6 +1,3 @@
-<a href="{{route('clients.show',$client->id)}}" class="btn btn-sm purple btn-outline filter-submit margin-bottom">
-    <i class="fa fa-shield" aria-hidden="true"></i> Yetkilendir
-</a>
 <a href="{{route('clients.edit',$client->id)}}" class="btn btn-sm blue btn-outline filter-submit margin-bottom">
     <i class="fa fa-pencil"></i> Düzenle
 </a>

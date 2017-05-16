@@ -58,7 +58,7 @@ class ClientsDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->ajax(route('clients.index'))
-            ->addAction(["data" => "action", "name" => "action", "title" => "İşlemler", 'width' => '25%'])
+            ->addAction(["data" => "action", "name" => "action", "title" => "İşlemler", 'width' => '13%'])
             ->parameters($this->getBuilderParameters());
     }
 
