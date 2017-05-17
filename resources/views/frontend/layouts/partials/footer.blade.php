@@ -36,9 +36,11 @@
                     </div>
                     <div class="widget-social-links">
                         <a href="{{env('FACEBOOK_ADDRESS')}}"><i class="fa fa-facebook mysocial_style"></i></a>
+{{--
                         <a href="{{env('TWITTER_ADDRESS')}}"><i class="fa fa-twitter mysocial_style"></i></a>
                         <a href="{{env('GOOGLE_ADDRESS')}}"><i class="fa fa-google-plus mysocial_style"></i></a>
                         <a href="{{env('LINKEDIN_ADDRESS')}}"><i class="fa fa-linkedin mysocial_style"></i></a>
+--}}
                     </div>
                 </div>
             </div>
