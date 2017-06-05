@@ -3,7 +3,7 @@
 <meta property="og:url" content="{{route('news.show',$article->id)}}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="{{ config('app.name') }}"/>
-<meta property="og:description" content="{{ config('app.name') }}"/>
+<meta property="og:description" content="{{str_limit($article->getTranslation->first()->subject,160)}}"/>
 <meta property="og:image" content="{{asset($article->image)}}"/>
 @endpush
 @section('content')
