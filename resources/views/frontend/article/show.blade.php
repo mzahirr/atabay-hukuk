@@ -45,6 +45,11 @@
                             <div class="single-blog-text">
                                 <p>{{$article->getTranslation->first()->description}}</p>
                             </div>
+                            <div class="fb-share-button" data-href="{{request()->fullUrl()}}"
+                                 data-layout="button_count" data-size="small" data-mobile-iframe="true"><a
+                                        class="fb-xfbml-parse-ignore" target="_blank"
+                                        href="https://www.facebook.com/sharer/sharer.php?u={{request()->fullUrl()}}">Paylaş</a>
+                            </div>
                         </div>
                         <!--End Single blog item-->
 

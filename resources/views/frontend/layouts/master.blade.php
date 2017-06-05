@@ -10,6 +10,12 @@
     <!-- Reponsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Reponsive meta -->
+    <meta property="og:url" content="{{request()->fullUrl()}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ config('app.name') }}"/>
+    <meta property="og:description" content="{{ config('app.name') }}"/>
+    <meta property="og:image" content="/img/favicon.png"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @include('frontend.layouts.partials.corestyles')
 
@@ -17,6 +23,18 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v2.9&appId=132280227345572";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
