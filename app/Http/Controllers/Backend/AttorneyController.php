@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\DataTables\Backend\AttorneysDataTable;
 use App\Http\Models\Backend\Attorney;
+use App\Http\Models\Backend\AttorneyTranslation;
 use App\Http\Requests\Backend\AttorneyStore;
 use App\Http\Requests\Backend\AttorneyUpdate;
 use App\Http\Controllers\Controller;
@@ -45,6 +46,17 @@ class AttorneyController extends Controller
     public function store(AttorneyStore $request)
     {
         $attorney = Attorney::create($request->only('name', 'email', 'number'));
+
+        $attorney->translations()->save(new AttorneyTranslation([
+            'description' => $request->input('description'),
+            'locale'      => 'tr',
+        ]));
+        $attorney->translations()->save(new AttorneyTranslation([
+            'description' => $request->input('descriptionEN'),
+            'locale'      => 'en',
+        ]));
+
+
         if ($request->hasFile('image')) {
             if ($request->file('image')->isValid()) {
                 $img      = Image::make($request->file('image'))->fit(200, 200)->encode('jpg');
@@ -82,6 +94,17 @@ class AttorneyController extends Controller
     public function update(AttorneyUpdate $request, Attorney $attorney)
     {
         $attorney->update($request->only('name', 'email', 'number'));
+
+        $attorney->getTranslation('tr')->first()->update([
+            'description' => $request->input('description'),
+            'locale'      => 'tr',
+        ]);
+
+        $attorney->getTranslation('en')->first()->update([
+            'description' => $request->input('descriptionEN'),
+            'locale'      => 'en',
+        ]);
+
 
         if ($request->hasFile('image')) {
             if ($request->file('image')->isValid()) {

@@ -12,7 +12,7 @@ class LawyerController extends Controller
      */
     public function index()
     {
-        $lawyers = Attorney::all();
+        $lawyers = Attorney::with('getTranslation')->get();
 
         return view('frontend.attorney.list', compact('lawyers'));
     }

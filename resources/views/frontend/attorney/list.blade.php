@@ -51,6 +51,9 @@
                                             <p>{{trans('frontend.email')}}: {{$lawyer->email}}</p>
                                         </div>
                                     </div>
+                                    <div class="practice-v2-single-item-title practice-v3-title">
+                                        <span>{{$lawyer->getTranslation->first()->description}}</span>
+                                    </div>
                                 </div>
                             </div>
                             <!--End Single Best Attorney-->

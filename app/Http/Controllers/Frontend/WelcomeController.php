@@ -16,7 +16,7 @@ class WelcomeController extends Controller
     public function __invoke()
     {
         $announcements = Announcement::with('getTranslation')->get();
-        $activities    = Activity::with('getTranslation')->take(6)->get();
+        $activities    = Activity::with('getTranslation')->orderBy('order')->take(6)->get();
         $articles      = Article::with('getTranslation', 'user')->take(9)->get();
         $partners      = Partner::all();
 

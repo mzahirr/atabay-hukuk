@@ -184,6 +184,14 @@
                                 @endif
                             </a>
                         </li>
+                        <li class="nav-item @if(request()->is('activities/order')) active open @endif">
+                            <a href="{{route('activities.order')}}" class="nav-link ">
+                                <span class="title">Sıralama</span>
+                                @if(request()->is('activities/order'))
+                                    <span class="selected"></span>
+                                @endif
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

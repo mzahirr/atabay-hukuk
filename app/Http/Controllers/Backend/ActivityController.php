@@ -112,4 +112,49 @@ class ActivityController extends Controller
 
         return back()->withNotify('Faaliyet Silindi!');
     }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function order()
+    {
+        $items = Activity::with('getTranslation')->orderBy('order')->get();
+        $menu  = new Activity;
+        $menu  = $menu->getHTML($items);
+
+        return view('backend.activity.order', compact('menu'));
+    }
+
+    // AJAX Reordering function
+
+    /**
+     * @return string
+     */
+    public function reorder()
+    {
+        $source          = request('source');
+        $destination     = request('destination', null);
+        $item            = Activity::find($source);
+        $item->parent_id = $destination;
+        $item->save();
+        $ordering     = json_decode(request('order'));
+        $rootOrdering = json_decode(request('rootOrder'));
+        if ($ordering) {
+            foreach ($ordering as $order => $item_id) {
+                if ($itemToOrder = Activity::find($item_id)) {
+                    $itemToOrder->order = $order;
+                    $itemToOrder->save();
+                }
+            }
+        } else {
+            foreach ($rootOrdering as $order => $item_id) {
+                if ($itemToOrder = Activity::find($item_id)) {
+                    $itemToOrder->order = $order;
+                    $itemToOrder->save();
+                }
+            }
+        }
+
+        return 'Düzenlenme başarılı';
+    }
 }

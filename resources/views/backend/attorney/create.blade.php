@@ -26,6 +26,25 @@
                             <label for="number">Numara</label>
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-md-line-input form-md-floating-label has-success">
+                            <textarea rows="8" name="description" class="form-control" id="description"
+                                      title="description">{{old('description')}}</textarea>
+                                    <label for="description">Açıklama</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-md-line-input form-md-floating-label has-success">
+                            <textarea rows="8" name="descriptionEN" class="form-control" id="descriptionEN"
+                                      title="descriptionEN">{{old('descriptionEN')}}</textarea>
+                                    <label for="descriptionEN">İngilizce açıklama</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+
                         <div class="form-group">
 
                             <div class="fileinput fileinput-new" data-provides="fileinput">

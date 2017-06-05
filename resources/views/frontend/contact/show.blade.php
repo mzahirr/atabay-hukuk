@@ -46,11 +46,20 @@
         </div>
     </section>
     <!--End contact area-->
+
+    <!--start map area-->
+    <section id="map-area">
+        <div class="google-map" id="contact-google-map" data-map-lat="39.897345" data-map-lng="32.867724"
+             data-icon-path="/img/map-marker.png" data-map-title="Atabay" data-map-zoom="17"></div>
+    </section>
+    <!--End map area-->
 @endsection
 @push('styles')
 
 @endpush
 
 @push('scripts')
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBacr_9FoaE1G3od4zv0edn43_vDFRZSK4"></script>
+<script src="/js/gmap.js"></script>
 
 @endpush

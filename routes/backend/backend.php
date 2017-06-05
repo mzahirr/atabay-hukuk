@@ -37,6 +37,10 @@ Route::group(['middleware' => 'can:' . env('PANEL-YÖNETİMİ') . ''], function 
 
     Route::group(['middleware' => 'can:' . env('İÇERİK-YÖNETİMİ') . ''], function () {
         Route::resource('announcements', 'Backend\AnnouncementController');
+
+        Route::get('activities/process/order', 'Backend\ActivityController@order')->name('activities.order');
+        Route::post('activities/process/reorder', 'Backend\ActivityController@reorder')->name('activities.reorder');
+        
         Route::resource('activities', 'Backend\ActivityController');
         Route::resource('articles', 'Backend\ArticleController',
             ['except' => ['show']]);

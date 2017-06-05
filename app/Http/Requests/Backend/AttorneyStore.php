@@ -25,18 +25,20 @@ class AttorneyStore extends FormRequest
     public function rules()
     {
         return [
-            'name'   => 'required',
-            'number' => [
+            'description'   => 'required',
+            'descriptionEN' => 'required',
+            'name'          => 'required',
+            'number'        => [
                 'min:10',
                 'max:11',
                 'nullable',
             ],
-            'email'  => [
+            'email'         => [
                 'required',
                 Rule::unique('attorneys'),
                 'email',
             ],
-            'image'  => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image'         => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 

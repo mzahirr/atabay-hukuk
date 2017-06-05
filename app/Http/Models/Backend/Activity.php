@@ -17,6 +17,8 @@ class Activity extends Model
      */
     protected $fillable = [
         'is_active',
+        'parent_id',
+        'order',
     ];
 
     /**
@@ -40,6 +42,52 @@ class Activity extends Model
         }
 
         return $this->hasMany(ActivityTranslation::class)->whereLocale($locale);
+    }
+
+    /**
+     * @param $menu
+     * @param int $parentId
+     *
+     * @return null|string
+     */
+    public function buildMenu($menu, $parentId = null)
+    {
+        $result = null;
+        foreach ($menu as $item) {
+            if ($item->parent_id == $parentId) {
+                $result .= "<li class='dd-item dd3-item' data-order='{$item->order}' data-id='{$item->id}'>
+      <div class='dd-handle dd3-handle'>
+        <span class='glyphicon glyphicon-move'></span>
+      </div>
+      <div class='dd3-content'>{$item->getTranslation->first()->subject}
+        <div class='pull-right'>
+          <a href='" . route("activities.edit", $item->id) . "'>Düzenle</a>
+        </div>
+      </div>" . $this->buildMenu($menu, $item->id) . "</li>";
+            }
+        }
+
+        return $result ? "\n<ol class=\"dd-list\">\n$result</ol>\n" : null;
+    }
+
+    // Getter for the HTML menu builder
+
+    /**
+     * @param $items
+     *
+     * @return null|string
+     */
+    public function getHTML($items)
+    {
+        return $this->buildMenu($items);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function subActivities()
+    {
+        return $this->hasMany(static::class, 'parent_id');
     }
 
 
