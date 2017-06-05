@@ -1,4 +1,11 @@
 @extends('frontend.layouts.master')
+@push('meta')
+<meta property="og:url" content="{{route('news.show',$article->id)}}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{ config('app.name') }}"/>
+<meta property="og:description" content="{{ config('app.name') }}"/>
+<meta property="og:image" content="{{asset($article->image)}}"/>
+@endpush
 @section('content')
     <section class="breadcrumb-area">
         <div class="breadcrumb-text-area">
