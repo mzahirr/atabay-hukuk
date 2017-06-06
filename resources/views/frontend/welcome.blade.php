@@ -45,7 +45,8 @@
                              data-start="2800"
                              data-easing="easeOutBack"
                         >
-                            <a href="{{route('actions.index')}}">{{trans('frontend.activities')}} <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{route('actions.index')}}">{{trans('frontend.activities')}} <i
+                                        class="fa fa-arrow-right"></i></a>
                         </div>
 
                     </li>
@@ -158,7 +159,6 @@
                              data-start="2700"
                              data-easing="easeOutBack"
                         >
-                            <span></span>
                         </div>
                         <div class="caption sft tp-resizeme icon text-center"
                              data-x="0"
