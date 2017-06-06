@@ -27,7 +27,7 @@
                              data-start="1700"
                              data-easing="easeOutBack"
                         >
-                            <h1>Equal . justic . under . law</h1>
+                            <h1>EQUAL . JUSTIC . UNDER . LAW</h1>
                         </div>
 
                         <div class="caption sfr sfb tp-resizeme p-tag text-center"
@@ -167,7 +167,6 @@
                              data-start="3000"
                              data-easing="easeOutBack"
                         >
-                            <i class="flaticon-justice4"></i>
                         </div>
 
                     </li>
@@ -218,7 +217,6 @@
                              data-start="2700"
                              data-easing="easeOutBack"
                         >
-                            <span></span>
                         </div>
                         <div class="caption sft tp-resizeme icon text-center"
                              data-x="0"
@@ -227,7 +225,6 @@
                              data-start="3000"
                              data-easing="easeOutBack"
                         >
-                            <i class="flaticon-justice4"></i>
                         </div>
 
                     </li>
@@ -278,7 +275,6 @@
                              data-start="2700"
                              data-easing="easeOutBack"
                         >
-                            <span></span>
                         </div>
                         <div class="caption sft tp-resizeme icon text-center"
                              data-x="0"
@@ -287,7 +283,6 @@
                              data-start="3000"
                              data-easing="easeOutBack"
                         >
-                            <i class="flaticon-justice4"></i>
                         </div>
 
                     </li>
