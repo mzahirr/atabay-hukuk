@@ -38,4 +38,5 @@ return [
     'case_list'       => 'Davalar listelendi!',
     'case_list_empty' => 'Kayıtlı dava bulunamadı!',
     'clients'         => 'Müvekkiller',
+    'article_exists'  => 'Sisteme eklenmiş makale bulunamadı.',
 ];

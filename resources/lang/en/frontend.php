@@ -41,5 +41,6 @@ return [
     'clients'         => 'Clients',
     'panel'           => 'Dashboard',
     'logout'          => 'Logout',
+    'article_exists'  => 'No records found.',
 
 ];
