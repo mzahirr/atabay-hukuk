@@ -63,7 +63,7 @@ return [
         'array'   => ':attribute must have at least :min items.',
     ],
     'not_in'               => 'selected :attribute is invalid.',
-    'numeric'              => ':attribute must be a number.',
+    'numeric'              => ':attribute sayısal bir değer olmalıdır.',
     'present'              => ':attribute field must be present.',
     'regex'                => ':attribute format is invalid.',
     'required'             => ':attribute alanı gereklidir.',

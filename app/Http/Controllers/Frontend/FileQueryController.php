@@ -32,7 +32,7 @@ class FileQueryController extends Controller
             return back()->with(['trials' => $trials])->withNotify(trans('frontend.case_list'));
         }
 
-        return back()->withNotify(trans('frontend.case_list_empty'));
+        return back()->withErrors(trans('frontend.case_list_empty'));
 
     }
 }
