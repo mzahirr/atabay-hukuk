@@ -41,7 +41,7 @@
                             <div class="col-md-6">
                                 <div class="form-group form-md-line-input form-md-floating-label has-success">
                             <textarea rows="8" name="descriptionEN" class="form-control" id="descriptionEN"
-                                      title="descriptionEN">{{$attorney->getTranslation('tr')->first()->descriptionEN}}</textarea>
+                                      title="descriptionEN">{{$attorney->getTranslation('en')->first()->description}}</textarea>
                                     <label for="descriptionEN">İngilizce açıklama</label>
                                 </div>
                             </div>

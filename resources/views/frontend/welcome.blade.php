@@ -37,9 +37,6 @@
                              data-start="2000"
                              data-easing="easeOutBack"
                         >
-                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus
-                                mal suada faci lisis.<br> Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum
-                                nec odio ipsum. </p>
                         </div>
                         <div class="caption sft tp-resizeme thm-btn text-center"
                              data-x="0"
@@ -48,7 +45,7 @@
                              data-start="2800"
                              data-easing="easeOutBack"
                         >
-                            <a href="#">View Services <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{route('actions.index')}}">{{trans('frontend.activities')}} <i class="fa fa-arrow-right"></i></a>
                         </div>
 
                     </li>
@@ -74,7 +71,7 @@
                              data-start="1700"
                              data-easing="easeOutBack"
                         >
-                            <h1>We Offer Our Clients Only</h1>
+                            <h1>WE OFFER OUR CLIENTS ONLY</h1>
                         </div>
 
                         <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
@@ -84,7 +81,7 @@
                              data-start="2000"
                              data-easing="easeOutBack"
                         >
-                            <h1>Expert Legal Advice</h1>
+                            <h1>EXPERT LEGAL ADVICE</h1>
                         </div>
                         <div class="caption sft tp-resizeme caption-4 italic text-center"
                              data-x="0"
@@ -93,8 +90,6 @@
                              data-start="2500"
                              data-easing="easeOutBack"
                         >
-                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br>
-                                cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
                         </div>
                         <div class="caption sft tp-resizeme border text-center"
                              data-x="0"
@@ -138,7 +133,6 @@
                              data-start="1700"
                              data-easing="easeOutBack"
                         >
-                            <h1>We Offer Our Clients Only</h1>
                         </div>
 
                         <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
@@ -148,7 +142,6 @@
                              data-start="2000"
                              data-easing="easeOutBack"
                         >
-                            <h1>Expert Legal Advice</h1>
                         </div>
                         <div class="caption sft tp-resizeme caption-4 italic text-center"
                              data-x="0"
@@ -157,8 +150,6 @@
                              data-start="2500"
                              data-easing="easeOutBack"
                         >
-                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br>
-                                cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
                         </div>
                         <div class="caption sft tp-resizeme border text-center"
                              data-x="0"
@@ -202,7 +193,6 @@
                              data-start="1700"
                              data-easing="easeOutBack"
                         >
-                            <h1>We Offer Our Clients Only</h1>
                         </div>
 
                         <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
@@ -212,7 +202,6 @@
                              data-start="2000"
                              data-easing="easeOutBack"
                         >
-                            <h1>Expert Legal Advice</h1>
                         </div>
                         <div class="caption sft tp-resizeme caption-4 italic text-center"
                              data-x="0"
@@ -221,8 +210,6 @@
                              data-start="2500"
                              data-easing="easeOutBack"
                         >
-                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br>
-                                cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
                         </div>
                         <div class="caption sft tp-resizeme border text-center"
                              data-x="0"
@@ -266,7 +253,6 @@
                              data-start="1700"
                              data-easing="easeOutBack"
                         >
-                            <h1>We Offer Our Clients Only</h1>
                         </div>
 
                         <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
@@ -276,7 +262,6 @@
                              data-start="2000"
                              data-easing="easeOutBack"
                         >
-                            <h1>Expert Legal Advice</h1>
                         </div>
                         <div class="caption sft tp-resizeme caption-4 italic text-center"
                              data-x="0"
@@ -285,8 +270,6 @@
                              data-start="2500"
                              data-easing="easeOutBack"
                         >
-                            <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br>
-                                cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
                         </div>
                         <div class="caption sft tp-resizeme border text-center"
                              data-x="0"
