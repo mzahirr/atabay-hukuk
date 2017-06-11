@@ -34,7 +34,7 @@
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                 <div class="single-attorney single-best-attorney">
                                     <div class="attorney-image-holder">
-                                        <img src="{{asset($lawyer->image}}" alt="{{$lawyer->name}}">
+                                        <img src="{{asset($lawyer->image)}}" alt="{{$lawyer->name}}">
                                         <div class="attorney-overlay">
                                             <div class="attorney-ninus-icon">
                                                 <img src="/img/attorney-ninus-icon.png" alt="">
