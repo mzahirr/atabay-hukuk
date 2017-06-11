@@ -36,6 +36,7 @@ return [
     'mail_send'       => 'Your message has been sent.',
     'contact_request' => 'Contact request',
     'case_number'     => 'Case number',
+    'identity_number' => 'Identity number',
     'case_list'       => 'Case are listed!',
     'case_list_empty' => 'No result!',
     'clients'         => 'Clients',

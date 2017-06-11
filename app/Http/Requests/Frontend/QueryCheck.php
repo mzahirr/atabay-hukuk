@@ -24,7 +24,7 @@ class QueryCheck extends FormRequest
     public function rules()
     {
         return [
-            'case_number' => 'required|numeric',
+            'identity_number' => 'required|numeric|digits:11',
         ];
     }
 

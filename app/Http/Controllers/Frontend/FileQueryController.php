@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers\Frontend;
 
+use App\Http\Models\Backend\Client;
 use App\Http\Models\Backend\Trial;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -26,7 +27,9 @@ class FileQueryController extends Controller
      */
     public function check(QueryCheck $request)
     {
-        $trials = Trial::with('attorneys', 'clients', 'status')->whereNumber($request->only('case_number'))->get();
+        $client = Client::whereIdentity($request->only('identity_number'))->firstOrFail();
+
+        $trials = $client->trials;
 
         if (count($trials) > 0) {
             return back()->with(['trials' => $trials])->withNotify(trans('frontend.case_list'));
