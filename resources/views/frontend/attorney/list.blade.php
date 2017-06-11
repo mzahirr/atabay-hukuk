@@ -51,8 +51,8 @@
                                             <p>{{trans('frontend.email')}}: {{$lawyer->email}}</p>
                                         </div>
                                     </div>
-                                    <div class="practice-v2-single-item-title practice-v3-title">
-                                        <span>{{$lawyer->getTranslation->first()->description}}</span>
+                                    <div class="">
+                                        <span>{{str_limit($lawyer->getTranslation->first()->description,200)}}</span>
                                     </div>
                                 </div>
                             </div>
