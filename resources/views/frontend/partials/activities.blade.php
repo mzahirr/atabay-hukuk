@@ -13,8 +13,35 @@
                                 <i class="flaticon-familiar17"></i>
                             </div>
                             <div class="single-featured-text">
-                                <h5>{{$activity->getTranslation->first()->subject}}</h5>
-                                <p>{{str_limit($activity->getTranslation->first()->description,100)}}</p>
+                                <h5>
+                                    {{$activity->getTranslation->first()->subject}}
+                                </h5>
+                                <p class="pointer" data-toggle="modal"
+                                   data-target="#myModal{{$activity->id}}">{{str_limit($activity->getTranslation->first()->description,100)}}</p>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal{{$activity->id}}" tabindex="-1" role="dialog"
+                                     aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span
+                                                            aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title"
+                                                    id="myModalLabel">{{$activity->getTranslation->first()->subject}}</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{$activity->getTranslation->first()->description}}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -32,7 +59,31 @@
                                 </div>
                                 <div class="single-featured-text">
                                     <h5>{{$activity->getTranslation->first()->subject}}</h5>
-                                    <p>{{str_limit($activity->getTranslation->first()->description,100)}}</p>
+                                    <p class="pointer" data-toggle="modal"
+                                       data-target="#myModal{{$activity->id}}">{{str_limit($activity->getTranslation->first()->description,100)}}</p>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal{{$activity->id}}" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span
+                                                                aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title"
+                                                        id="myModalLabel">{{$activity->getTranslation->first()->subject}}</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    {{$activity->getTranslation->first()->description}}
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                        Close
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -43,3 +94,30 @@
         </div>
     </div>
 </section>
+
+@push('styles')
+<style type="text/css">
+    .pointer {
+        cursor: pointer;
+    }
+
+    .modal {
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+</style>
+@endpush

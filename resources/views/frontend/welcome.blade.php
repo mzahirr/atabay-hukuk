@@ -343,6 +343,10 @@
         </div>
         <div style="clear: both"></div>
     @endif
+
+
+
+
 @endsection
 @push('styles')
 <link href="https://unpkg.com/flickity@2.0.5/dist/flickity.css" rel="stylesheet" type="text/css"/>
