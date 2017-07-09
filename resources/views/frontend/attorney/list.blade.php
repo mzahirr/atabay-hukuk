@@ -52,7 +52,33 @@
                                         </div>
                                     </div>
                                     <div class="">
-                                        <span>{{str_limit($lawyer->getTranslation->first()->description,200)}}</span>
+                                        <span class="pointer" data-toggle="modal"
+                                              data-target="#myModal{{$lawyer->id}}">{{str_limit($lawyer->getTranslation->first()->description,200)}}</span>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal{{$lawyer->id}}" tabindex="-1" role="dialog"
+                                             aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close"><span
+                                                                    aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title"
+                                                            id="myModalLabel">{{$lawyer->name}}</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        {!! $lawyer->getTranslation->first()->description !!}
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                                data-dismiss="modal">
+                                                            Close
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -65,6 +91,3 @@
         </div>
     </section>
 @endsection
-@push('styles')
-
-@endpush

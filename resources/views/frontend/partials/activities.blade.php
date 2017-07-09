@@ -32,7 +32,7 @@
                                                     id="myModalLabel">{{$activity->getTranslation->first()->subject}}</h4>
                                             </div>
                                             <div class="modal-body">
-                                                {{$activity->getTranslation->first()->description}}
+                                                {!! $activity->getTranslation->first()->description !!}
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -74,7 +74,7 @@
                                                         id="myModalLabel">{{$activity->getTranslation->first()->subject}}</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    {{$activity->getTranslation->first()->description}}
+                                                    {!! $activity->getTranslation->first()->description !!}
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -95,29 +95,3 @@
     </div>
 </section>
 
-@push('styles')
-<style type="text/css">
-    .pointer {
-        cursor: pointer;
-    }
-
-    .modal {
-        text-align: center;
-        padding: 0 !important;
-    }
-
-    .modal:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -4px;
-    }
-
-    .modal-dialog {
-        display: inline-block;
-        text-align: left;
-        vertical-align: middle;
-    }
-</style>
-@endpush

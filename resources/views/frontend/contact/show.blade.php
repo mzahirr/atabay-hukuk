@@ -49,7 +49,7 @@
 
     <!--start map area-->
     <section id="map-area">
-        <div class="google-map" id="contact-google-map" data-map-lat="39.897345" data-map-lng="32.867724"
+        <div class="google-map" id="contact-google-map" data-map-lat="39.9245834" data-map-lng="32.8495374"
              data-icon-path="/img/map-marker.png" data-map-title="Atabay" data-map-zoom="17"></div>
     </section>
     <!--End map area-->
