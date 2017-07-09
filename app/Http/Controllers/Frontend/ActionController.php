@@ -12,7 +12,7 @@ class ActionController extends Controller
 {
     public function index()
     {
-        $activities = Activity::latest()->paginate(5);
+        $activities = Activity::orderBy('order')->paginate(5);
 
         return view('frontend.activity.list', compact('activities'));
     }
