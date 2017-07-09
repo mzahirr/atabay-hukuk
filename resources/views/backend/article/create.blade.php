@@ -32,11 +32,10 @@
                                                        value="{{old('subject')}}">
                                                 <label for="subject">Başlık</label>
                                             </div>
-                                            <div class="form-group form-md-line-input form-md-floating-label has-success">
+                                            <div class="form-group form-md-line-input form-md-floating-label">
                                                 <textarea rows="8" name="description" class="form-control"
                                                           id="description"
                                                           title="description">{{old('description')}}</textarea>
-                                                <label for="description">Açıklama</label>
                                             </div>
                                         </div>
                                         <div class="tab-pane" id="portlet_tab2">
@@ -45,11 +44,10 @@
                                                        value="{{old('subjectEN')}}">
                                                 <label for="subjectEN">Başlık ingilizce</label>
                                             </div>
-                                            <div class="form-group form-md-line-input form-md-floating-label has-success">
+                                            <div class="form-group form-md-line-input form-md-floating-label">
                                                 <textarea rows="8" name="descriptionEN" class="form-control"
                                                           id="descriptionEN"
                                                           title="descriptionEN">{{old('descriptionEN')}}</textarea>
-                                                <label for="descriptionEN">Açıklama ingilizce</label>
                                             </div>
                                         </div>
 
@@ -93,4 +91,19 @@
 @endpush
 @push('scripts')
 <script src="/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#description').summernote({
+            height: 300,
+            minHeight: null,
+            maxHeight: null
+        });
+        $('#descriptionEN').summernote({
+            height: 300,
+            minHeight: null,
+            maxHeight: null
+        });
+    });
+
+</script>
 @endpush

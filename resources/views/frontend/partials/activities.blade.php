@@ -17,7 +17,7 @@
                                     {{$activity->getTranslation->first()->subject}}
                                 </h5>
                                 <p class="pointer" data-toggle="modal"
-                                   data-target="#myModal{{$activity->id}}">{{str_limit($activity->getTranslation->first()->description,100)}}</p>
+                                   data-target="#myModal{{$activity->id}}">{{str_limit(strip_tags($activity->getTranslation->first()->description),100)}}</p>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal{{$activity->id}}" tabindex="-1" role="dialog"
@@ -60,7 +60,7 @@
                                 <div class="single-featured-text">
                                     <h5>{{$activity->getTranslation->first()->subject}}</h5>
                                     <p class="pointer" data-toggle="modal"
-                                       data-target="#myModal{{$activity->id}}">{{str_limit($activity->getTranslation->first()->description,100)}}</p>
+                                       data-target="#myModal{{$activity->id}}">{{str_limit(strip_tags($activity->getTranslation->first()->description),100)}}</p>
                                     <!-- Modal -->
                                     <div class="modal fade" id="myModal{{$activity->id}}" tabindex="-1" role="dialog"
                                          aria-labelledby="myModalLabel">

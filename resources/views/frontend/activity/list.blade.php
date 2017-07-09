@@ -35,7 +35,7 @@
                                             <h4><span>{{$activity->getTranslation->first()->subject}}</span></h4>
                                         </div>
                                         <div class="practice-v2-single-item-text">
-                                            <p>{{$activity->getTranslation->first()->description}}</p>
+                                            <p>{!! $activity->getTranslation->first()->description !!}</p>
                                         </div>
                                     </div>
                                 </div>

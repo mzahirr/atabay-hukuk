@@ -23,4 +23,5 @@
 
 
 <link rel="shortcut icon" href="/favicon.ico"/>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
 @stack('styles')

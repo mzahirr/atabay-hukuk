@@ -34,11 +34,10 @@
                                                        value="{{$article->getTranslation('tr')->first()->subject ?? ''}}">
                                                 <label for="subject">Başlık</label>
                                             </div>
-                                            <div class="form-group form-md-line-input form-md-floating-label has-success">
+                                            <div class="form-group form-md-line-input form-md-floating-label">
                                                 <textarea rows="8" name="description" class="form-control"
                                                           id="description"
                                                           title="description">{{$article->getTranslation('tr')->first()->description ?? ''}}</textarea>
-                                                <label for="description">Açıklama</label>
                                             </div>
 
                                         </div>
@@ -48,11 +47,10 @@
                                                        value="{{$article->getTranslation('en')->first()->subject ?? ''}}">
                                                 <label for="subjectEN">Başlık ingilizce</label>
                                             </div>
-                                            <div class="form-group form-md-line-input form-md-floating-label has-success">
+                                            <div class="form-group form-md-line-input form-md-floating-label">
                                                 <textarea rows="8" name="descriptionEN" class="form-control"
                                                           id="descriptionEN"
                                                           title="descriptionEN">{{$article->getTranslation('en')->first()->description ?? ''}}</textarea>
-                                                <label for="descriptionEN">Açıklama ingilizce</label>
                                             </div>
                                         </div>
 
@@ -103,4 +101,19 @@
 @endpush
 @push('scripts')
 <script src="/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#description').summernote({
+            height: 300,
+            minHeight: null,
+            maxHeight: null
+        });
+        $('#descriptionEN').summernote({
+            height: 300,
+            minHeight: null,
+            maxHeight: null
+        });
+    });
+
+</script>
 @endpush
