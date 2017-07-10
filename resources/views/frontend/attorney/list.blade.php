@@ -33,7 +33,8 @@
                         <!--Start Single Best Attorney-->
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                 <div class="single-attorney single-best-attorney">
-                                    <div class="attorney-image-holder">
+                                    <div class="attorney-image-holder" data-toggle="modal"
+                                         data-target="#myModal{{$lawyer->id}}">
                                         <img src="{{asset($lawyer->image)}}" alt="{{$lawyer->name}}">
                                         <div class="attorney-overlay">
                                             <div class="attorney-ninus-icon">
