@@ -8,6 +8,7 @@ use App\Http\Models\Backend\ArticleTranslation;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\ArticleStore;
 use App\Http\Requests\Backend\ArticleUpdate;
+use Facebook\Facebook;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
@@ -67,6 +68,32 @@ class ArticleController extends Controller
                 $article->save();
             }
         }
+
+        $fb = new Facebook([
+            'app_id'                => config('social.facebook_app_id'),
+            'app_secret'            => config('social.facebook_app_secret'),
+            'default_graph_version' => 'v2.9',
+        ]);
+
+        $longLivedToken = $fb->getOAuth2Client()->getLongLivedAccessToken(config('social.facebook_user_access_token'));
+
+        $fb->setDefaultAccessToken($longLivedToken);
+
+        $response = $fb->sendRequest('GET', config('social.facebook_page_id'), ['fields' => 'access_token'])
+            ->getDecodedBody();
+
+        $foreverPageAccessToken = $response['access_token'];
+        $fb                     = new Facebook([
+            'app_id'                => config('social.facebook_app_id'),
+            'app_secret'            => config('social.facebook_app_secret'),
+            'default_graph_version' => 'v2.9',
+        ]);
+
+        $fb->setDefaultAccessToken($foreverPageAccessToken);
+        $fb->sendRequest('POST', config('social.facebook_page_id') . "/feed", [
+            'message' => strip_tags($article->getTranslation('tr')->first()->description),
+            'link'    => route('news.show', $article->id),
+        ]);
 
 
         return back()->withNotify('Makale Oluşturuldu!');
