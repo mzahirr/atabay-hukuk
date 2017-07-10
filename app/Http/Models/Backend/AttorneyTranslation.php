@@ -22,6 +22,7 @@ class AttorneyTranslation extends Model
     protected $fillable = [
         'description',
         'locale',
+        'title',
     ];
 
 

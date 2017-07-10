@@ -46,6 +46,7 @@
                                     </div>
                                     <div class="attorney-name text-center">
                                         <h5>{{$lawyer->name}}</h5>
+                                        <h5>{{$lawyer->getTranslation->first()->title}}</h5>
                                         <div class="phone-and-mail-number">
                                             <p>{{trans('frontend.phone')}}: {{$lawyer->number}}</p>
                                             <p>{{trans('frontend.email')}}: {{$lawyer->email}}</p>

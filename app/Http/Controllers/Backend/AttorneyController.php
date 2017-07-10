@@ -48,10 +48,12 @@ class AttorneyController extends Controller
         $attorney = Attorney::create($request->only('name', 'email', 'number'));
 
         $attorney->translations()->save(new AttorneyTranslation([
+            'title'       => $request->input('title'),
             'description' => $request->input('description'),
             'locale'      => 'tr',
         ]));
         $attorney->translations()->save(new AttorneyTranslation([
+            'title'       => $request->input('titleEN'),
             'description' => $request->input('descriptionEN'),
             'locale'      => 'en',
         ]));
@@ -96,11 +98,13 @@ class AttorneyController extends Controller
         $attorney->update($request->only('name', 'email', 'number'));
 
         $attorney->getTranslation('tr')->first()->update([
+            'title'       => $request->input('title'),
             'description' => $request->input('description'),
             'locale'      => 'tr',
         ]);
 
         $attorney->getTranslation('en')->first()->update([
+            'title'       => $request->input('titleEN'),
             'description' => $request->input('descriptionEN'),
             'locale'      => 'en',
         ]);

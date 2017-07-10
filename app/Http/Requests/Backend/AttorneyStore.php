@@ -27,6 +27,8 @@ class AttorneyStore extends FormRequest
         return [
             'description'   => 'required',
             'descriptionEN' => 'required',
+            'title'         => 'required',
+            'titleEN'       => 'required',
             'name'          => 'required',
             'number'        => [
                 'min:10',

@@ -30,6 +30,19 @@
                             <label for="number">Numara</label>
                         </div>
 
+                        <div class="form-group form-md-line-input form-md-floating-label has-success">
+                            <input type="text" name="title" value="{{$attorney->getTranslation('tr')->first()->title}}"
+                                   class="form-control" id="title">
+                            <label for="title">Ünvan</label>
+                        </div>
+                        <div class="form-group form-md-line-input form-md-floating-label has-success">
+                            <input type="text" name="titleEN"
+                                   value="{{$attorney->getTranslation('en')->first()->title}}" class="form-control"
+                                   id="titleEN">
+                            <label for="titleEN">Ünvan İngilizce</label>
+                        </div>
+
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-md-line-input form-md-floating-label has-success">
