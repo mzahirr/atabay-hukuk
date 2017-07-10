@@ -46,7 +46,7 @@
                                         </div>
                                     </div>
                                     <div class="single-blog-text">
-                                        <p>{{str_limit($article->getTranslation->first()->description,500)}}</p>
+                                        <p>{{str_limit(strip_tags($article->getTranslation->first()->description),500)}}</p>
                                         <div class="single-blog-read-more">
                                             <a href="{{route('news.show',$article->id)}}">{{trans('frontend.read_more')}}
                                                 <i
