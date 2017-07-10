@@ -29,7 +29,7 @@
                                                     class="fa fa-user"></i> {{$article->user->name}}</a></li>
                                 </ul>
                                 <h4 title="{{$article->getTranslation->first()->subject}}">{{str_limit($article->getTranslation->first()->subject,20)}}</h4>
-                                <p>{{str_limit($article->getTranslation->first()->description,100)}}</p>
+                                <p>{{str_limit(strip_tags($article->getTranslation->first()->description),100)}}</p>
                             </div>
                         </div>
                     </div>

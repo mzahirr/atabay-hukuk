@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="single-blog-text">
-                                <p>{{$article->getTranslation->first()->description}}</p>
+                                <p>{!! $article->getTranslation->first()->description !!}</p>
                             </div>
                             <div class="fb-share-button" data-href="{{request()->fullUrl()}}"
                                  data-layout="button_count" data-size="small" data-mobile-iframe="true"><a
