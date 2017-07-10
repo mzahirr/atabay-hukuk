@@ -91,7 +91,7 @@ class ArticleController extends Controller
 
         $fb->setDefaultAccessToken($foreverPageAccessToken);
         $fb->sendRequest('POST', config('social.facebook_page_id') . "/feed", [
-            'message' => strip_tags($article->getTranslation('tr')->first()->description),
+            'message' => strip_tags(str_limit($article->getTranslation('tr')->first()->description, 300)),
             'link'    => route('news.show', $article->id),
         ]);
 
