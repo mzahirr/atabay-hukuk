@@ -96,6 +96,33 @@ class ArticleController extends Controller
         ]);
 
 
+        $fb = new Facebook([
+            'app_id'                => config('social.levent_app_id'),
+            'app_secret'            => config('social.levent_app_secret'),
+            'access_token'          => config('social.levent_user_access_token'),
+            'default_graph_version' => 'v2.9',
+        ]);
+
+
+        //Post property to Facebook
+        $linkData        = [
+            'link'    => route('news.show', $article->id),
+            'message' => strip_tags(str_limit($article->getTranslation('tr')->first()->description, 300)),
+        ];
+        $pageAccessToken = config('social.levent_user_access_token');
+
+        try {
+            $response = $fb->post('/me/feed', $linkData, $pageAccessToken);
+        } catch (Facebook\Exceptions\FacebookResponseException $e) {
+            echo 'Graph returned an error: ' . $e->getMessage();
+            exit;
+        } catch (Facebook\Exceptions\FacebookSDKException $e) {
+            echo 'Facebook SDK returned an error: ' . $e->getMessage();
+            exit;
+        }
+        $graphNode = $response->getGraphNode();
+
+
         return back()->withNotify('Makale Oluşturuldu!');
     }
 
