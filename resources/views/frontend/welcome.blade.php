@@ -303,7 +303,8 @@
                         <i class="icon icon-Phone2"></i>
                     </div>
                     <div class="dtc text-one">
-                        <h3>{{trans('frontend.consultant')}}: <span class="number">312 466 44 44</span></h3>
+                        <h3 style="text-align: center;">{{trans('frontend.consultant')}}</h3>
+                        <h3><span class="number">312 466 44 44</span></h3>
                     </div>
 
                     <div class="dtc text-two">

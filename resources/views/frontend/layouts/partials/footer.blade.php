@@ -2,7 +2,7 @@
 <section id="legal-problem-area" class="anim-5-all">
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                 <div class="legal-problem-text">
                     <h2>{{trans('frontend.watch_word')}}</h2>
                 </div>
