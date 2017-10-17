@@ -5,287 +5,55 @@
         <div class="banner-container">
             <div class="banner home-v1">
                 <ul>
+                    @if(count($sliders) > 0)
+                        @foreach($sliders as $key => $slider)
+                            <li
+                                    class="slider-{{$key}}"
+                                    data-transition="fade"
+                                    data-slotamount="7"
+                                    data-thumb="{{$slider->img_source}}"
+                                    data-title="{{config('app.name')}}">
 
-                    <li
-                            class="slider-1"
-                            data-transition="fade"
-                            data-slotamount="7"
-                            data-thumb="/img/slider/atabay_sldr1.jpg"
-                            data-title="{{config('app.name')}}">
+                                <img
+                                        src="{{$slider->img_source}}"
+                                        data-bgrepeat="no-repeat"
+                                        data-bgfit="cover"
+                                        data-bgposition="center center"
+                                        alt="{{$slider->getTranslation->first()->title}}">
 
-                        <img
-                                src="/img/slider/atabay_sldr1.jpg"
-                                data-bgrepeat="no-repeat"
-                                data-bgfit="cover"
-                                data-bgposition="center center"
-                                alt="slider image">
+                                <div class="caption sfl sfb tp-resizeme caption-bold-heading text-center"
+                                     data-x="0"
+                                     data-y="480"
+                                     data-speed="700"
+                                     data-start="1700"
+                                     data-easing="easeOutBack"
+                                >
+                                    <h1>{{$slider->getTranslation->first()->title}}</h1>
+                                </div>
 
-                        <div class="caption sfl sfb tp-resizeme caption-bold-heading text-center"
-                             data-x="0"
-                             data-y="480"
-                             data-speed="700"
-                             data-start="1700"
-                             data-easing="easeOutBack"
-                        >
-                            <h1>EQUAL . JUSTIC . UNDER . LAW</h1>
-                        </div>
+                                <div class="caption sfr sfb tp-resizeme p-tag text-center"
+                                     data-x="0"
+                                     data-y="570"
+                                     data-speed="700"
+                                     data-start="2000"
+                                     data-easing="easeOutBack"
+                                >
+                                </div>
+                                <div class="caption sft tp-resizeme thm-btn text-center"
+                                     data-x="0"
+                                     data-y="660"
+                                     data-speed="700"
+                                     data-start="2800"
+                                     data-easing="easeOutBack"
+                                >
+                                    <a href="{{route('actions.index')}}">{{trans('frontend.activities')}} <i
+                                                class="fa fa-arrow-right"></i></a>
+                                </div>
 
-                        <div class="caption sfr sfb tp-resizeme p-tag text-center"
-                             data-x="0"
-                             data-y="570"
-                             data-speed="700"
-                             data-start="2000"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme thm-btn text-center"
-                             data-x="0"
-                             data-y="660"
-                             data-speed="700"
-                             data-start="2800"
-                             data-easing="easeOutBack"
-                        >
-                            <a href="{{route('actions.index')}}">{{trans('frontend.activities')}} <i
-                                        class="fa fa-arrow-right"></i></a>
-                        </div>
+                            </li>
+                        @endforeach
+                    @endif
 
-                    </li>
-
-                    <li
-                            class="slider-3"
-                            data-transition="fade"
-                            data-slotamount="7"
-                            data-thumb="/img/slider/atabay_sldr2.jpg"
-                            data-title="{{config('app.name')}}">
-
-                        <img
-                                src="/img/slider/atabay_sldr2.jpg"
-                                data-bgrepeat="no-repeat"
-                                data-bgfit="cover"
-                                data-bgposition="center center"
-                                alt="slider image">
-
-                        <div class="caption sfl sfb tp-resizeme caption-1 text-center"
-                             data-x="0"
-                             data-y="400"
-                             data-speed="700"
-                             data-start="1700"
-                             data-easing="easeOutBack"
-                        >
-                            <h1>WE OFFER OUR CLIENTS ONLY</h1>
-                        </div>
-
-                        <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
-                             data-x="0"
-                             data-y="460"
-                             data-speed="700"
-                             data-start="2000"
-                             data-easing="easeOutBack"
-                        >
-                            <h1>EXPERT LEGAL ADVICE</h1>
-                        </div>
-                        <div class="caption sft tp-resizeme caption-4 italic text-center"
-                             data-x="0"
-                             data-y="543"
-                             data-speed="700"
-                             data-start="2500"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme border text-center"
-                             data-x="0"
-                             data-y="610"
-                             data-speed="700"
-                             data-start="2700"
-                             data-easing="easeOutBack"
-                        >
-                            <span></span>
-                        </div>
-                        <div class="caption sft tp-resizeme icon text-center"
-                             data-x="0"
-                             data-y="680"
-                             data-speed="700"
-                             data-start="3000"
-                             data-easing="easeOutBack"
-                        >
-                            <i class="flaticon-justice4"></i>
-                        </div>
-
-                    </li>
-
-                    <li
-                            class="slider-3"
-                            data-transition="fade"
-                            data-slotamount="7"
-                            data-thumb="/img/slider/atabay_sldr3.jpg"
-                            data-title="{{config('app.name')}}">
-
-                        <img
-                                src="/img/slider/atabay_sldr3.jpg"
-                                data-bgrepeat="no-repeat"
-                                data-bgfit="cover"
-                                data-bgposition="center center"
-                                alt="slider image">
-
-                        <div class="caption sfl sfb tp-resizeme caption-1 text-center"
-                             data-x="0"
-                             data-y="400"
-                             data-speed="700"
-                             data-start="1700"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-
-                        <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
-                             data-x="0"
-                             data-y="460"
-                             data-speed="700"
-                             data-start="2000"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme caption-4 italic text-center"
-                             data-x="0"
-                             data-y="543"
-                             data-speed="700"
-                             data-start="2500"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme border text-center"
-                             data-x="0"
-                             data-y="610"
-                             data-speed="700"
-                             data-start="2700"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme icon text-center"
-                             data-x="0"
-                             data-y="680"
-                             data-speed="700"
-                             data-start="3000"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-
-                    </li>
-
-                    <li
-                            class="slider-3"
-                            data-transition="fade"
-                            data-slotamount="7"
-                            data-thumb="/img/slider/atabay_sldr4.jpg"
-                            data-title="{{config('app.name')}}">
-
-                        <img
-                                src="/img/slider/atabay_sldr4.jpg"
-                                data-bgrepeat="no-repeat"
-                                data-bgfit="cover"
-                                data-bgposition="center center"
-                                alt="slider image">
-
-                        <div class="caption sfl sfb tp-resizeme caption-1 text-center"
-                             data-x="0"
-                             data-y="400"
-                             data-speed="700"
-                             data-start="1700"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-
-                        <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
-                             data-x="0"
-                             data-y="460"
-                             data-speed="700"
-                             data-start="2000"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme caption-4 italic text-center"
-                             data-x="0"
-                             data-y="543"
-                             data-speed="700"
-                             data-start="2500"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme border text-center"
-                             data-x="0"
-                             data-y="610"
-                             data-speed="700"
-                             data-start="2700"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme icon text-center"
-                             data-x="0"
-                             data-y="680"
-                             data-speed="700"
-                             data-start="3000"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-
-                    </li>
-
-                    <li
-                            class="slider-3"
-                            data-transition="fade"
-                            data-slotamount="7"
-                            data-thumb="/img/slider/atabay_sldr5.jpg"
-                            data-title="{{config('app.name')}}">
-
-                        <img
-                                src="/img/slider/atabay_sldr5.jpg"
-                                data-bgrepeat="no-repeat"
-                                data-bgfit="cover"
-                                data-bgposition="center center"
-                                alt="slider image">
-
-                        <div class="caption sfl sfb tp-resizeme caption-1 text-center"
-                             data-x="0"
-                             data-y="400"
-                             data-speed="700"
-                             data-start="1700"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-
-                        <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
-                             data-x="0"
-                             data-y="460"
-                             data-speed="700"
-                             data-start="2000"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme caption-4 italic text-center"
-                             data-x="0"
-                             data-y="543"
-                             data-speed="700"
-                             data-start="2500"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme border text-center"
-                             data-x="0"
-                             data-y="610"
-                             data-speed="700"
-                             data-start="2700"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-                        <div class="caption sft tp-resizeme icon text-center"
-                             data-x="0"
-                             data-y="680"
-                             data-speed="700"
-                             data-start="3000"
-                             data-easing="easeOutBack"
-                        >
-                        </div>
-
-                    </li>
 
                 </ul>
             </div>

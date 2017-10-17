@@ -12,6 +12,7 @@ use Facebook\Facebook;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use Twitter;
 
 class ArticleController extends Controller
 {
@@ -49,19 +50,19 @@ class ArticleController extends Controller
     {
         $article = Article::create(['is_active' => false, 'user_id' => Auth::id()]);
         $article->translations()->save(new ArticleTranslation([
-            'subject'     => $request->input('subject'),
+            'subject' => $request->input('subject'),
             'description' => $request->input('description'),
-            'locale'      => 'tr',
+            'locale' => 'tr',
         ]));
         $article->translations()->save(new ArticleTranslation([
-            'subject'     => $request->input('subjectEN'),
+            'subject' => $request->input('subjectEN'),
             'description' => $request->input('descriptionEN'),
-            'locale'      => 'en',
+            'locale' => 'en',
         ]));
 
         if ($request->hasFile('image')) {
             if ($request->file('image')->isValid()) {
-                $img      = Image::make($request->file('image'))->fit(370, 188)->encode('jpg');
+                $img = Image::make($request->file('image'))->fit(370, 188)->encode('jpg');
                 $filename = 'images/' . time() . '.jpg';
                 Storage::put('public/' . $filename . '', $img->__toString());
                 $article->image = $filename;
@@ -69,9 +70,11 @@ class ArticleController extends Controller
             }
         }
 
+        Twitter::postTweet(['status' => strip_tags(str_limit($article->getTranslation('tr')->first()->description . ' ' . route('news.show', $article->id), 180)), 'format' => 'json']);
+
         $fb = new Facebook([
-            'app_id'                => config('social.facebook_app_id'),
-            'app_secret'            => config('social.facebook_app_secret'),
+            'app_id' => config('social.facebook_app_id'),
+            'app_secret' => config('social.facebook_app_secret'),
             'default_graph_version' => 'v2.9',
         ]);
 
@@ -83,36 +86,30 @@ class ArticleController extends Controller
             ->getDecodedBody();
 
         $foreverPageAccessToken = $response['access_token'];
-        $fb                     = new Facebook([
-            'app_id'                => config('social.facebook_app_id'),
-            'app_secret'            => config('social.facebook_app_secret'),
-            'default_graph_version' => 'v2.9',
-        ]);
 
         $fb->setDefaultAccessToken($foreverPageAccessToken);
         $fb->sendRequest('POST', config('social.facebook_page_id') . "/feed", [
             'message' => strip_tags(str_limit($article->getTranslation('tr')->first()->description, 300)),
-            'link'    => route('news.show', $article->id),
+            'link' => route('news.show', $article->id),
         ]);
-
-
-        $fb = new Facebook([
-            'app_id'                => config('social.levent_app_id'),
-            'app_secret'            => config('social.levent_app_secret'),
-            'access_token'          => config('social.levent_user_access_token'),
+        
+        $fbLevent = new Facebook([
+            'app_id' => config('social.levent_app_id'),
+            'app_secret' => config('social.levent_app_secret'),
+            'access_token' => config('social.levent_user_access_token'),
             'default_graph_version' => 'v2.9',
         ]);
 
 
         //Post property to Facebook
-        $linkData        = [
-            'link'    => route('news.show', $article->id),
+        $linkData = [
+            'link' => route('news.show', $article->id),
             'message' => strip_tags(str_limit($article->getTranslation('tr')->first()->description, 300)),
         ];
         $pageAccessToken = config('social.levent_user_access_token');
 
         try {
-            $response = $fb->post('/me/feed', $linkData, $pageAccessToken);
+            $response = $fbLevent->post('/me/feed', $linkData, $pageAccessToken);
         } catch (Facebook\Exceptions\FacebookResponseException $e) {
             echo 'Graph returned an error: ' . $e->getMessage();
             exit;
@@ -153,21 +150,21 @@ class ArticleController extends Controller
         ]);
 
         $article->getTranslation('tr')->first()->update([
-            'subject'     => $request->input('subject'),
+            'subject' => $request->input('subject'),
             'description' => $request->input('description'),
-            'locale'      => 'tr',
+            'locale' => 'tr',
         ]);
 
         $article->getTranslation('en')->first()->update([
-            'subject'     => $request->input('subjectEN'),
+            'subject' => $request->input('subjectEN'),
             'description' => $request->input('descriptionEN'),
-            'locale'      => 'en',
+            'locale' => 'en',
         ]);
 
         if ($request->hasFile('image')) {
             if ($request->file('image')->isValid()) {
                 Storage::delete('public/' . $article->image);
-                $img      = Image::make($request->file('image'))->fit(370, 188)->encode('jpg');
+                $img = Image::make($request->file('image'))->fit(370, 188)->encode('jpg');
                 $filename = 'images/' . time() . '.jpg';
                 Storage::put('public/' . $filename . '', $img->__toString());
                 $article->image = $filename;

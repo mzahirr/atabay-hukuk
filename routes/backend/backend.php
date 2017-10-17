@@ -50,6 +50,9 @@ Route::group(['middleware' => 'can:' . env('PANEL-YÖNETİMİ') . ''], function 
         Route::post('pages/process/reorder', 'Backend\PageController@reorder')->name('pages.reorder');
         Route::resource('pages', 'Backend\PageController', ['except' => ['show']]);
         Route::resource('partners', 'Backend\PartnerController', ['except' => ['show']]);
+        Route::resource('sliders', 'Backend\SliderController', ['except' => ['show']]);
+        Route::get('sliders/process/order', 'Backend\SliderController@order')->name('sliders.order');
+        Route::post('sliders/process/reorder', 'Backend\SliderController@reorder')->name('sliders.reorder');
     });
 
     Route::group(['middleware' => 'can:' . env('AVUKAT-YÖNETİMİ') . ''], function () {

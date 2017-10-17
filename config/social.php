@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: halilcosdu
- * Date: 10.07.2017
- * Time: 14:10
- */
 
 return [
     'facebook_app_id'            => '132280227345572',
@@ -13,7 +7,7 @@ return [
     'facebook_user_access_token' => 'EAAB4TuP2NKQBACV45xXBiPsxaXxWGiRPxQELzUcIRhcnUtBUtTZAKIMBQSRyJVKwEmPxCLKzfGgphoY0FWnX730bvZCZCiBNlU29iDLkD8KGNNA0UlkIS3rTadt2xvdQCtF99PZABzcRxCEh16m3EYf1TWZBueoTnZAx2TOPCDI2FxEXLpcq2D',
     'levent_app_id'              => '489785588021031',
     'levent_app_secret'          => 'a7acdf97a19f7ede5a0e1b20e2079287',
-    'levent_user_access_token'   => 'EAAG9dRf9dycBAG24og9O77Bp8zZBBL389dOZB6sAbwL5hcpi53ZBzjQSvev426HtcdxSFQrBKIkHLpCJiupvXglnfoESVq1R42tOXXLK9tCEVrzxfZAaUHaodTrFKD12RQFwN40Cs7GuSfx2SesAzrEZB1XFF1nj2vIKiZBsTZAyYVnV4Pt6kw7OZCa0zGSOpMwZD',
+    'levent_user_access_token'   => 'EAAG9dRf9dycBAHawZB37PosZBkxU99TZBjv3786okdJKP4B0dRCW672Tpf0yk62ZBK9gSI6D0VzE47cwoOd7FUWGmX3d9JNZCCXdXZBI9ggFErnowK0TlG1HmJkn5mcfyXnNp4bsOnpWZAI76Gyz2zPhRiSUyVlniK93LNGd93TrIQS1PEkh9DnwmkWbhDK5PL5Lv0GgnvRFwZDZD',
     'levent_page_id'             => '1379603775408101',
 ];
 
