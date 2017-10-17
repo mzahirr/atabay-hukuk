@@ -92,7 +92,7 @@ class ArticleController extends Controller
             'message' => strip_tags(str_limit($article->getTranslation('tr')->first()->description, 300)),
             'link' => route('news.show', $article->id),
         ]);
-        
+
         $fbLevent = new Facebook([
             'app_id' => config('social.levent_app_id'),
             'app_secret' => config('social.levent_app_secret'),
@@ -186,7 +186,9 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        Storage::delete('public/' . $article->image);
+        if (!empty($article->image)) {
+            Storage::delete('public/' . $article->image);
+        }
         $article->delete();
 
         return back()->withNotify('Makale Silindi!');
